@@ -16,6 +16,21 @@ Route::get('/', function () {
 });
 
 
-Route::get('/test', function(){
-   return 'testing';
-});
+Route::get('/about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact');
+
+Route::get('/teachers', 'TeachersController@index');
+
+Route::resource('/tests', 'TestsController');
+
+/*
+ *
+ * /
+ * /about               GET
+ * /contact             GET
+ * /products            GET
+ * /products/23         GET
+ * /products/23         PUT
+ * /products/
+ *
+ */

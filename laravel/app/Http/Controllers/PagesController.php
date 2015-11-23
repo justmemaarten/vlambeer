@@ -9,11 +9,17 @@ use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
-    public function contact() {
 
+    public function home() {
+
+    }
+
+    public function contact() {
+        return view('pages/contact');
     }
 
     public function about() {
-        
+        return view('pages/about');
     }
 }
+
