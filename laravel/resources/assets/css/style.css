@@ -23,3 +23,29 @@ li {
 .test {
     background: blue;
 }
+
+/* quote */
+
+#quote
+{
+	text-align:center;
+	padding-top:10px;
+	color:#000;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
+	font-style:italic;
+	height:34px;
+	background-color:#ddd;
+}
+
+#quote .name
+{
+	font-size:10px;
+	color:#666;
+}
+
+#quote a
+{
+	font-size:10px;
+	color:#666;	
+}
