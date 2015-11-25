@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
 </head>
 <body>
+    <div class="container">
 
     @yield('content')
 
-
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    </div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </body>
 </html>

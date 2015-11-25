@@ -11,7 +11,11 @@ class PagesController extends Controller
 {
 
     public function home() {
+        return view('pages/home');
+    }
 
+    public function products() {
+        return view('pages/shop/store');
     }
 
     public function contact() {
@@ -19,6 +23,7 @@ class PagesController extends Controller
     }
 
     public function about() {
+
         return view('pages/about');
     }
 }

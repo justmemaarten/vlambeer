@@ -3,8 +3,8 @@
 @section('content')
 
 
-        <h1>About</h1>
+    <h1>Index</h1>
 
-    {{$teachers}}
+
 
 @stop

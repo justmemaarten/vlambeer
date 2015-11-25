@@ -11,17 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
 
+Route::get('/products', 'PagesController@products');
 
 Route::get('/about', 'PagesController@about');
+
 Route::get('/contact', 'PagesController@contact');
-
-Route::get('/teachers', 'TeachersController@index');
-
-Route::resource('/tests', 'TestsController');
 
 /*
  *
