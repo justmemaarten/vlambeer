@@ -1,4 +1,25 @@
 li {
     display: inline-block;
-    font-size: 30px;
+}
+
+.game-item {
+    height: 200px;
+    padding: 0px 20px;
+}
+
+.content {
+    background: blue;
+    height: 200px;
+}
+
+.row-game-item {
+    margin-bottom: 40px;
+}
+
+.row-game-item:last-of-type{
+    margin-bottom: 0px;
+}
+
+.test {
+    background: blue;
 }
