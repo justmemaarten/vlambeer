@@ -31,8 +31,7 @@
             {{--these are the texts which are being dropped down when you click on a link--}}
             <div class="panel-collapse collapse" id="gunGodz">
                 <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at blanditiis consequuntur cupiditate delectus et eum exercitationem
-                        explicabo fuga inventore iure magnam, minus mollitia pariatur, perferendis perspiciatis rem repellat tempora.</p>
+                    <p><a href="{{ action("PagesController@product",'id=6') }}">Gun Godz</a></p>
                 </div>
             </div>
             <div class="collapse collapse" id="lufTrausers">

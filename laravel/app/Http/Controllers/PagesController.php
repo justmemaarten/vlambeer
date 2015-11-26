@@ -27,7 +27,7 @@ class PagesController extends Controller
     }
 
     public function product() {
-        $id = 4;
+        $id = $_GET['id'];
 
         switch($id) {
            case  1:
