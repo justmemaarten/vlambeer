@@ -12,21 +12,43 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Games</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">About</a></li>
-            </ul>
+            <div class="dropdown">
+                <a href="">Home</a>
+                <button id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Games
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropGames">
+                    <li>
+                        <a href="#">Luftrausers</a>
+                    </li>
+                    <li>
+                        <a href="#">Nuclear Throne</a>
+                    </li>
+                    <li>
+                        <a href="#">Rediculous Fishing - A tale of Redemption</a>
+                    </li>
+                    <li>
+                        <a href="#">Gun Godz</a>
+                    </li>
+                    <li>
+                        <a href="#">Serious Sam: The Random Encounter</a>
+                    </li>
+                    <li>
+                        <a href="#">Super Crate Box</a>
+                    </li>
+                </ul>
+                <a href="">Contact</a>
+                <a href="">About</a>
+            </div>
         </nav>
     </header>
     <div class="container">
         <div id="quote"></div>
-    
+
         @yield('content')
 
     </div>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
