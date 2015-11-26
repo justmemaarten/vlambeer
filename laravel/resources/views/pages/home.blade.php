@@ -5,7 +5,7 @@
         <div class="panel panel-default">
             <div class="row row-game-item">
 
-                <div class="game-item col-md-4">
+                <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary" data-toggle="collapse" data-parent="#accordion" href="#gunGodz">
                             <img src="http://www.lorempixel.com/200/200" alt="">
@@ -46,21 +46,21 @@
                 </div>
             </div>
             <div class="row row-game-item">
-                <div class="game-item col-md-4">
+                <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary" data-toggle="collapse" data-parent="#accordion" href="#ridiculous-Fishing">
                             <img src="http://www.lorempixel.com/200/200" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="game-item col-md-4">
+                <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary" data-toggle="collapse" data-parent="#accordion" href="#serious-Sam">
                             <img src="http://www.lorempixel.com/200/200" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="game-item col-md-4">
+                <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary" data-toggle="collapse" data-parent="#accordion" href="#super-Crate-Box">
                             <img src="http://www.lorempixel.com/200/200" alt="">
