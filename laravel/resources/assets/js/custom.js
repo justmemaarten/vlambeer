@@ -1,3 +1,4 @@
+/* phrases */
 $(document).ready(function () {
  var phrases =
 [
