@@ -31,7 +31,7 @@
             {{--these are the texts which are being dropped down when you click on a link--}}
             <div class="panel-collapse collapse" id="gunGodz">
                 <div class="panel-body">
-                    <p><a href="{{ action("PagesController@product",'id=6') }}">Gun Godz</a></p>
+                    <p><a href="{{ action("PagesController@product",'id=3030-37491') }}">Gun Godz</a></p>
                     <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
                         <img src="../resources/assets/img/downloadIcon.png" alt="download" height="25px" width="25px">
                     </a>
