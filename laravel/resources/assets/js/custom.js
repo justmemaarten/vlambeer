@@ -485,27 +485,27 @@ $(document).ready(function () {
 //read more
 
 $(function () {
-    $("#panel6").hover(function () {
-        $(this).children("#title6, .more-less").fadeToggle(1000);
-    });
-    $('.read-more').on('click', function(){
-        $('#picture62').css('display', 'block' ).animate({
-            'height':$('#picture62 img').height()
-        }, 300 , function(){
-            $(this).height('auto')
-        });
-        $('.more-less > span').toggleClass('hidden');
-    });
 
-    $('.read-less').on('click', function(){
-        $('#picture62').animate({
-            'height':0
-        }, 300 , function(){
-            $(this).css('display','none');
-        });
-        $('.more-less > span').toggleClass('hidden');
+ $('.read-more').on('click', function(){
+  $('#info-read-more').css('display', 'block' ).animate({
+   'height':$('#info-read-more img').height()
+  }, 300 , function(){
+   $(this).height('auto')
+  });
+  $('.more-less > span').toggleClass('hidden');
+ });
 
-    });
+ $('.read-less').on('click', function(){
+  $('#info-read-more').animate({
+   'height':0
+  }, 300 , function(){
+   $(this).css('display','none');
+  });
+  $('.more-less > span').toggleClass('hidden');
+
+ });
 });
+
+
 //end read more
 //>>>>>>> origin/master

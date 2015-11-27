@@ -87,6 +87,8 @@ li {
 
 /*game style per pagina */
 
+
+
 .game-img-2 {
 	margin-top: 21px;
 }
@@ -99,6 +101,16 @@ li {
 .slide {
 	margin-top: 35px;
 	margin-bottom: 35px;
+}
+
+/*readmore*/
+
+.more-less span {
+  color: red;
+}
+
+.more-less {
+  margin-bottom: 50px;
 }
 
 /*lightbox*/

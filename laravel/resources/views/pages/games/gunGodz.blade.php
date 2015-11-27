@@ -53,12 +53,29 @@
     </div>
 
     <div class="row">
-        <div id="panel6" class="panels" style=" cursor: move; z-index: 46">
-            <div id="picture61"><img src="http://i.imgur.com/4tSkJ5b.png"/></div>
-            <div id="picture62" style="display: none;height: 0;"><img src="http://i.imgur.com/XgWhBQi.png"/></div>
-            <div class="more-less" style="display: none;">
-                <span style=" cursor: pointer" class="read-less hidden">READ LESS</span>
-                <span style=" cursor: pointer" class="read-more">READ MORE</span>
+        <div id="game-info" class="panels">
+            <h1>TEST</h1>
+            <div id="info-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus accusantium
+                    exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
+                    quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
+                    possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.
+                </p>
+            </div>
+            <div id="info-read-more" style="display: none;height: 0;">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicingelit. Voluptatibus accusantium
+                    exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
+                    quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
+                    possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.asperiores laboriosam dolorem
+                    que labore, totam nobis quod maxime eius rem nulla provident ullam quia, odio repellendus libero.
+                </p>
+            </div>
+            <div class="more-less">
+                <span class="read-less hidden">Sluiten</span>
+                <span class="read-more">Lees meer</span>
             </div>
         </div>
     </div>
