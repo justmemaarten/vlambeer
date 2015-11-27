@@ -14,8 +14,8 @@
 
         <nav  data-spy="affix">
             <div class="dropdown">
-                <a href="">Home</a>
-                <button id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="" class="btn btn-primary" role="button">Home</a>
+                <button class="btn btn-primary" id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Games
                     <span class="caret"></span>
                 </button>
@@ -39,8 +39,8 @@
                         <a href="#">Super Crate Box</a>
                     </li>
                 </ul>
-                <a href="">Contact</a>
-                <a href="">About</a>
+                <a href="" class="btn btn-primary" role="button">Contact</a>
+                <a href="" class="btn btn-primary" role="button">About</a>
             </div>
         </nav>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
