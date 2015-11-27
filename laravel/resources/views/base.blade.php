@@ -10,8 +10,9 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="container">
+
+        <nav  data-spy="affix">
             <div class="dropdown">
                 <a href="">Home</a>
                 <button id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,7 +49,13 @@
 
         @yield('content')
 
+
     </div>
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
 
 </body>
 </html>

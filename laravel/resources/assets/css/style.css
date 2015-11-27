@@ -1,3 +1,7 @@
+header nav {
+	z-index: 1000;
+}
+
 li {
     display: inline-block;
 }
@@ -28,6 +32,7 @@ li {
 
 #quote
 {
+	margin-top: 50px;
 	text-align:center;
 	padding-top:10px;
 	color:#000;
