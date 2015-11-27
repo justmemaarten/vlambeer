@@ -27,7 +27,9 @@ $(document).ready(function () {
  document.getElementById("quote").innerHTML = phrase + '<a href="' + link + '" target="_blank"><span class="name">' + author + '</span></a>';
 });
 
+/* end phrase */
 
+<<<<<<< HEAD
 /* end phrase */
 
 
@@ -479,3 +481,32 @@ $(document).ready(function () {
 
  return new Lightbox();
 }));
+=======
+//read more
+
+$(function () {
+ $("#panel6").hover(function () {
+  $(this).children(".more-less").fadeToggle(1000);
+ });
+ $('.read-more').on('click', function(){
+  $('#picture62').css('display', 'block' ).animate({
+   'height':$('#picture62 img').height()
+  }, 300 , function(){
+   $(this).height('auto')
+  });
+  $('.more-less > span').toggleClass('hidden');
+ });
+
+ $('.read-less').on('click', function(){
+  $('#picture62').animate({
+   'height':0
+  }, 300 , function(){
+   $(this).css('display','none');
+  });
+  $('.more-less > span').toggleClass('hidden');
+
+ });
+});
+
+//end read more
+>>>>>>> origin/master

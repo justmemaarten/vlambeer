@@ -53,6 +53,13 @@
     </div>
 
     <div class="row">
-        
+        <div id="panel6" class="panels" style=" cursor: move; z-index: 46">
+            <div id="picture61"><img src="http://i.imgur.com/4tSkJ5b.png"/></div>
+            <div id="picture62" style="display: none;height: 0;"><img src="http://i.imgur.com/XgWhBQi.png"/></div>
+            <div class="more-less" style="display: none;">
+                <span style=" cursor: pointer" class="read-less hidden">READ LESS</span>
+                <span style=" cursor: pointer" class="read-more">READ MORE</span>
+            </div>
+        </div>
     </div>
 @stop
