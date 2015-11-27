@@ -10,9 +10,9 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header>
+    <header data-spy="affix">
         <div class="container">
-            <nav  data-spy="affix">
+            <nav>
                 <div class="dropdown">
                     <a href="" class="btn btn-primary" role="button">Home</a>
                     <button class="btn btn-primary" id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

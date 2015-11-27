@@ -1,5 +1,11 @@
-header nav {
+header {
 	z-index: 1000;
+	background: #616161;
+	width: 100%;
+}
+
+footer {
+	background: #616161;
 }
 
 li {
