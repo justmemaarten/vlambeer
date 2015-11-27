@@ -1,3 +1,9 @@
+.game-img {
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
 header {
 	z-index: 1000;
 	background: #dddddd;
@@ -16,9 +22,12 @@ li {
     display: inline-block;
 }
 
+.panel-collapse {
+	background: #fac846;
+}
+
 .panel-heading {
 	background: #fac846;
-	border: none !important;
 }
 
 .game-item {
@@ -32,8 +41,8 @@ li {
 }
 
 .row-game-item {
-    margin-bottom: 40px;
-	background: #dddddd;
+    padding-bottom: 40px;
+	background: #fac846;
 }
 
 .row-game-item:last-of-type{
@@ -42,6 +51,11 @@ li {
 
 .test {
     background: blue;
+}
+
+.panel {
+	border: none ;
+	box-shadow: none ;
 }
 
 /* quote */
