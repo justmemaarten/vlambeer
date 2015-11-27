@@ -116,8 +116,8 @@
             <div class="row row-game-item">
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
-                        <a class="btn btn-primary" data-toggle="collapse" data-parent="#accordion" href="#super-bread-box">
-                            <img src="http://www.lorempixel.com/200/200" alt="">
+                        <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#super-bread-box">
+                            <img src="http://www.lorempixel.com/350/200" alt="">
                         </a>
                     </div>
                 </div>
