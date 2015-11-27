@@ -87,11 +87,16 @@ li {
 
 /*game style per pagina */
 
-.game-img {
-	float: left;
+.game-img-2 {
 	margin-top: 21px;
 }
 
 .game-info h4 {
 	float: left;
+}
+
+/*slider*/
+.slide {
+	height: 400px;
+	margin-top: 35px;
 }

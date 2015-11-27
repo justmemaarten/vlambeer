@@ -26,4 +26,6 @@ $(document).ready(function () {
  var link = phrases[phrasenum][2];
  document.getElementById("quote").innerHTML = phrase + '<a href="' + link + '" target="_blank"><span class="name">' + author + '</span></a>';
 });
+
+
 /* end phrase */
