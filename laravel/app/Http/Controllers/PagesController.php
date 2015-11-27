@@ -45,7 +45,7 @@ class PagesController extends Controller
             case 5:
                 return view('pages/games/seriousSamTheRandomEncounter');
         break;
-            case 6:
+            case '3030-37491':
                 return view('pages/games/gunGodz');
         break;
             case 7:
