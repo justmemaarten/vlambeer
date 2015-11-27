@@ -1,15 +1,24 @@
 header {
 	z-index: 1000;
-	background: #616161;
+	background: #dddddd;
 	width: 100%;
 }
 
 footer {
-	background: #616161;
+	background: #dddddd;
+}
+
+body {
+	background: #fac846;
 }
 
 li {
     display: inline-block;
+}
+
+.panel-heading {
+	background: #fac846;
+	border: none !important;
 }
 
 .game-item {
@@ -24,6 +33,7 @@ li {
 
 .row-game-item {
     margin-bottom: 40px;
+	background: #dddddd;
 }
 
 .row-game-item:last-of-type{
