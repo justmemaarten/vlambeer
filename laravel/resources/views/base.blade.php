@@ -10,44 +10,47 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header class="container">
+    <header>
+        <div class="container">
+            <nav  data-spy="affix">
+                <div class="dropdown">
+                    <a href="" class="btn btn-primary" role="button">Home</a>
+                    <button class="btn btn-primary" id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropGames">
+                        <li>
+                            <a href="#">Luftrausers</a>
+                        </li>
+                        <li>
+                            <a href="#">Nuclear Throne</a>
+                        </li>
+                        <li>
+                            <a href="#">Rediculous Fishing - A tale of Redemption</a>
+                        </li>
+                        <li>
+                            <a href="#">Gun Godz</a>
+                        </li>
+                        <li>
+                            <a href="#">Serious Sam: The Random Encounter</a>
+                        </li>
+                        <li>
+                            <a href="#">Super Crate Box</a>
+                        </li>
+                    </ul>
+                    <a href="" class="btn btn-primary" role="button">Contact</a>
+                    <a href="" class="btn btn-primary" role="button">About</a>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-register">
+                        Login / Register
+                    </button>
+                </div>
+            </nav>
+        </div>
 
-        <nav  data-spy="affix">
-            <div class="dropdown">
-                <a href="" class="btn btn-primary" role="button">Home</a>
-                <button class="btn btn-primary" id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Games
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropGames">
-                    <li>
-                        <a href="#">Luftrausers</a>
-                    </li>
-                    <li>
-                        <a href="#">Nuclear Throne</a>
-                    </li>
-                    <li>
-                        <a href="#">Rediculous Fishing - A tale of Redemption</a>
-                    </li>
-                    <li>
-                        <a href="#">Gun Godz</a>
-                    </li>
-                    <li>
-                        <a href="#">Serious Sam: The Random Encounter</a>
-                    </li>
-                    <li>
-                        <a href="#">Super Crate Box</a>
-                    </li>
-                </ul>
-                <a href="" class="btn btn-primary" role="button">Contact</a>
-                <a href="" class="btn btn-primary" role="button">About</a>
-            </div>
-        </nav>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-            Launch demo modal
-        </button>
+
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="login-register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
