@@ -5,8 +5,6 @@
     <title>Vlambeer</title>
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
     <link rel="stylesheet" href="../resources/assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="../resources/assets/js/custom.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -165,5 +163,9 @@
         </div>
     </footer>
 
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="../resources/assets/js/custom.js"></script>
+    <script src="../resources/assets/js/lightbox.js"></script>
 </body>
 </html>
