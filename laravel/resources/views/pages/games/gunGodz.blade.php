@@ -24,18 +24,21 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="..." alt="...">
+                <img src="http://lorempixel.com/1180/400/" alt="slider-photo-0">
                 <div class="carousel-caption">
-                    ...
                 </div>
             </div>
             <div class="item">
-                <img src="..." alt="...">
+                <img src="http://lorempixel.com/1180/400/" alt="slider-photo-1">
                 <div class="carousel-caption">
-                    ...
                 </div>
             </div>
-            ...
+            <div class="item">
+                <img src="http://lorempixel.com/1180/400/" alt="slider-photo-2">
+                <div class="carousel">
+
+                </div>
+            </div>
         </div>
 
         <!-- Controls -->
@@ -47,5 +50,9 @@
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+    </div>
+
+    <div class="row">
+        
     </div>
 @stop
