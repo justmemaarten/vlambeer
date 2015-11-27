@@ -29,7 +29,7 @@ $(document).ready(function () {
 
 /* end phrase */
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 /* end phrase */
 
 
@@ -481,7 +481,7 @@ $(document).ready(function () {
 
  return new Lightbox();
 }));
-=======
+//=======
 //read more
 
 $(function () {
@@ -509,4 +509,4 @@ $(function () {
 });
 
 //end read more
->>>>>>> origin/master
+//>>>>>>> origin/master
