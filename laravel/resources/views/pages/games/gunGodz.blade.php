@@ -36,7 +36,6 @@
             <div class="item">
                 <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="http://lorempixel.com/1180/400/" alt="slider-photo-2"></a>
                 <div class="carousel">
-
                 </div>
             </div>
         </div>
