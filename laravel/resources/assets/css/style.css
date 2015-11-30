@@ -26,6 +26,10 @@ li {
 	background: #fac846;
 }
 
+.panel-group #gunGodz {
+  background: red;
+}
+
 .panel-heading {
 	background: #fac846;
 }

@@ -3,6 +3,8 @@
 @section('content')
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
+
+
             <div class="row row-game-item">
 
                 <div class="game-item col-md-4 panel-heading">
@@ -56,6 +58,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="row row-game-item">
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
