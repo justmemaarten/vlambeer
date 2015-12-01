@@ -24,11 +24,16 @@ $(document).ready(function () {
  var phrase = phrases[phrasenum][0];
  var author = phrases[phrasenum][1];
  var link = phrases[phrasenum][2];
+
  document.getElementById("quote").innerHTML = phrase + '<a href="' + link + '" target="_blank"><span class="name">' + author + '</span></a>';
+
 });
 
 /* end phrase */
-
+$(document).ready(function () {
+ var randYear = Math.floor(Math.random()*(2000-1700+1)+1700);
+ document.getElementById("sub").innerHTML = 'Bringing back arcade since ' + randYear;
+});
 //<<<<<<< HEAD
 /* end phrase */
 

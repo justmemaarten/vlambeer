@@ -3,26 +3,28 @@
 @section('content')
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
+
+
             <div class="row row-game-item">
 
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#gunGodz">
-                            <img src="http://www.lorempixel.com/350/200" alt="">
+                            <img src="../resources/assets/img/gungodz.png" alt="GunGodz" width="350" height="200">
                         </a>
                     </div>
                 </div>
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#lufTrausers">
-                            <img src="http://www.lorempixel.com/350/200" alt="">
+                            <img src="../resources/assets/img/luftrausers.png" alt="luftrausers" width="350" height="200">
                         </a>
                     </div>
                 </div>
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#nuclear-Throne">
-                            <img src="http://www.lorempixel.com/350/200" alt="">
+                            <img src="../resources/assets/img/nuclear_throne.png" alt="Nuclear Throne" width="350" height="200">
                         </a>
                     </div>
                 </div>
@@ -56,25 +58,26 @@
                     </a>
                 </div>
             </div>
+
             <div class="row row-game-item">
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#ridiculous-Fishing">
-                            <img src="http://www.lorempixel.com/350/200" alt="">
+                            <img src="../resources/assets/img/Ridiculous-Fishing.png" alt="Ridiculous Fishing" width="350" height="200">
                         </a>
                     </div>
                 </div>
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#serious-Sam">
-                            <img src="http://www.lorempixel.com/350/200" alt="">
+                            <img src="../resources/assets/img/serious-sam.jpg" alt="Serious Sam" width="350" height="200">
                         </a>
                     </div>
                 </div>
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#super-Crate-Box">
-                            <img src="http://www.lorempixel.com/350/200" alt="">
+                            <img src="../resources/assets/img/super-crate-box.jpg" alt="Super Crate Box" width="350" height="200">
                         </a>
                     </div>
                 </div>
@@ -117,7 +120,7 @@
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#super-bread-box">
-                            <img src="http://www.lorempixel.com/350/200" alt="">
+                            <img src="../resources/assets/img/super-bread-box.png" alt="Super Bread Box" width="350" height="200">
                         </a>
                     </div>
                 </div>

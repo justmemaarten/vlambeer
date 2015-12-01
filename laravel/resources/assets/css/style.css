@@ -26,6 +26,10 @@ li {
 	background: #fac846;
 }
 
+.panel-group #gunGodz {
+  background: red;
+}
+
 .panel-heading {
 	background: #fac846;
 }
@@ -36,7 +40,6 @@ li {
 }
 
 .content {
-    background: blue;
     height: 200px;
 }
 
@@ -47,10 +50,6 @@ li {
 
 .row-game-item:last-of-type{
     margin-bottom: 0px;
-}
-
-.test {
-    background: blue;
 }
 
 .panel {
@@ -107,6 +106,7 @@ li {
 
 .more-less span {
   color: red;
+  cursor: pointer;
 }
 
 .more-less {
@@ -324,3 +324,4 @@ body:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
