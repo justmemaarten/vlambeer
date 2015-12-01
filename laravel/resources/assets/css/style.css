@@ -62,6 +62,7 @@ li {
 #quote
 {
 	margin-top: 50px;
+    margin-bottom: 40px;
 	text-align:center;
 	padding-top:10px;
 	color:#000;
@@ -85,12 +86,6 @@ li {
 }
 
 /*game style per pagina */
-
-
-
-.game-img-2 {
-	margin-top: 21px;
-}
 
 .game-info h4 {
 	float: left;
