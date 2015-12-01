@@ -20,22 +20,25 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropGames">
                         <li>
-                            <a href="#">Luftrausers</a>
+                            <a href="{{ action("PagesController@product",'id=3030-39474') }}">Luftrausers</a>
                         </li>
                         <li>
-                            <a href="#">Nuclear Throne</a>
+                            <a href="{{ action("PagesController@product",'id=3030-41999') }}">Nuclear Throne</a>
                         </li>
                         <li>
-                            <a href="#">Rediculous Fishing - A tale of Redemption</a>
+                            <a href="{{ action("PagesController@product",'id=3030-40158') }}">Rediculous Fishing - A tale of Redemption</a>
                         </li>
                         <li>
-                            <a href="#">Gun Godz</a>
+                            <a href="{{ action("PagesController@product",'id=3030-37491') }}">Gun Godz</a>
                         </li>
                         <li>
-                            <a href="#">Serious Sam: The Random Encounter</a>
+                            <a href="{{ action("PagesController@product",'id=3030-34402') }}">Serious Sam: The Random Encounter</a>
                         </li>
                         <li>
-                            <a href="#">Super Crate Box</a>
+                            <a href="{{ action("PagesController@product",'id=3030-32945') }}">Super Crate Box</a>
+                        </li>
+                        <li>
+                            <a href="{{ action("PagesController@product",'id=3030-46090') }}">Super Bread Box</a>
                         </li>
                     </ul>
                     <a href="" class="btn btn-primary" role="button">Contact</a>
@@ -47,9 +50,7 @@
             </nav>
         </div>
 
-    @foreach($errors->all() as $error)
-        {{$error}}
-    @endforeach
+
     </header>
 
     <!-- Modal -->
@@ -70,10 +71,10 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="login">
-                            @include('auth/login')
+                            @yield('pages/login')
                         </div>
                         <div role="tabpanel" class="tab-pane" id="register">
-                            @include('auth/register')
+
                         </div>
                     </div>
 

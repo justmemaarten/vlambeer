@@ -30,25 +30,25 @@ class PagesController extends Controller
         $id = $_GET['id'];
 
         switch($id) {
-           case  1:
+           case  '3030-40158':
                return view('pages/games/ridiculousFishing');
         break;
-            case 2:
+            case '3030-41999':
                 return view('pages/games/nuclearThrone');
         break;
-            case 3:
+            case '3030-39474':
                 return view('pages/games/luftrausers');
         break;
-            case 4:
+            case '3030-32945':
                 return view('pages/games/superCrateBox');
         break;
-            case 5:
+            case '3030-34402':
                 return view('pages/games/seriousSamTheRandomEncounter');
         break;
             case '3030-37491':
                 return view('pages/games/gunGodz');
         break;
-            case 7:
+            case '3030-46090':
                 return view('pages/games/superBreadBox');
         break;
 

@@ -41,7 +41,7 @@
             </div>
             <div class="panel-collapse collapse" id="lufTrausers">
                 <div class="panel-body">
-                    <p><a href="">Luftrausers</a></p>
+                    <p><a href="{{ action("PagesController@product",'id=3030-39474') }}">Luftrausers</a></p>
                     <a href="http://store.steampowered.com/app/233150/" target="_blank">
                         <img src="../resources/assets/img/steam.ico" alt="steam" height="25px" width="25px">
                     </a>
@@ -52,7 +52,7 @@
             </div>
             <div class="panel-collapse collapse" id="nuclear-Throne">
                 <div class="panel-body">
-                    <p><a href="">Nuclear Throne</a></p>
+                    <p><a href="{{ action("PagesController@product",'id=3030-41999') }}">Nuclear Throne</a></p>
                     <a href="http://store.steampowered.com/app/242680/" target="_blank">
                         <img src="../resources/assets/img/steam.ico" alt="steam" height="25px" width="25px">
                     </a>
@@ -86,7 +86,7 @@
             {{--these are the texts which are being dropped down when you click on a link--}}
             <div class="panel-collapse collapse" id="ridiculous-Fishing">
                 <div class="panel-body">
-                    <p><a href="">Ridiculous Fishing</a></p>
+                    <p><a href="{{ action("PagesController@product",'id=3030-40158') }}">Ridiculous Fishing</a></p>
                     <a href="https://itunes.apple.com/us/app/ridiculous-fishing-tale-redemption/id601831815?mt=8" target="_blank">
                         <img src="../resources/assets/img/App-store.ico" alt="app store" height="25px" width="25px">
                     </a>
@@ -97,7 +97,7 @@
             </div>
             <div class="panel-collapse collapse" id="serious-Sam">
                 <div class="panel-body">
-                    <p><a href="">Serious Sam: The Random Encounter</a></p>
+                    <p><a href="{{ action("PagesController@product",'id=3030-34402') }}">Serious Sam: The Random Encounter</a></p>
                     <a href="http://store.steampowered.com/app/201480/" target="_blank">
                         <img src="../resources/assets/img/steam.ico" alt="steam" height="25px" width="25px">
                     </a>
@@ -105,7 +105,7 @@
             </div>
             <div class="panel-collapse collapse" id="super-Crate-Box">
                 <div class="panel-body">
-                    <p><a href="">Super Crate Box</a></p>
+                    <p><a href="{{ action("PagesController@product",'id=3030-32945') }}">Super Crate Box</a></p>
                     <a href="http://store.steampowered.com/app/212800/" target="_blank">
                         <img src="../resources/assets/img/steam.ico" alt="steam" height="25px" width="25px">
                     </a>
@@ -128,7 +128,7 @@
 
             <div class="panel-collapse collapse" id="super-bread-box">
                 <div class="panel-body">
-                    <p><a href="">Super Bread Box</a></p>
+                    <p><a href="{{ action("PagesController@product",'id=3030-46090') }}">Super Bread Box</a></p>
                     <a href="https://play.google.com/store/apps/details?id=com.vlambeer.RidiculousFishing" target="_blank">
                         <img src="../resources/assets/img/Commodore-64.png" alt="play store" height="25px" width="25px">
                     </a>
