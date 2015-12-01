@@ -1,8 +1,8 @@
 @extends('base')
 
 @section('content')
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
+    <div class="panel-group animatedParent" id="accordion">
+        <div class="panel panel-default animated fadeIn">
 
 
             <div class="row row-game-item">

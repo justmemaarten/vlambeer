@@ -56,9 +56,9 @@
         </a>
     </div>
 
-    <div class="row">
+    <div class="row animatedParent">
         <div id="game-info" class="panels">
-            <div class="col-md-6">
+            <div class="col-md-6 animated fadeInLeftShort">
                 <h1>TEST</h1>
                 <div id="info-text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus accusantium
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 animated fadeInRightShort">
             <div id="maker-info" class="panels">
                 <h1>TEST</h1>
                 <div id="info-text">

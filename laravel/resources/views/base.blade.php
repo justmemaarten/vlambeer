@@ -5,6 +5,8 @@
     <title>Vlambeer</title>
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
     <link rel="stylesheet" href="../resources/assets/css/style.css">
+    <link rel="stylesheet" href="../resources/assets/css/animations.css">
+
 
 </head>
 <body>
@@ -173,5 +175,6 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="../resources/assets/js/giantbomb.js"></script>
     <script src="../resources/assets/js/games.js"></script>
+    <script src="../resources/assets/js/css3-animate-it.js"></script>
 </body>
 </html>
