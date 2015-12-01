@@ -29,7 +29,31 @@ li {
 }
 
 .panel-group #gunGodz {
-  background: red;
+  background: #1E1E1E;
+}
+
+.panel-group #lufTrausers {
+  background: #B06459;
+}
+
+.panel-group #nuclear-Throne {
+  background: #4ADA17;
+}
+
+.panel-group #ridiculous-Fishing {
+  background: #6496A4;
+}
+
+.panel-group #serious-Sam {
+  background: #FEEC2C;
+}
+
+.panel-group #super-Crate-Box {
+  background: #E12434;
+}
+
+.panel-group #super-bread-box {
+  background: #727671;
 }
 
 .panel-heading {
