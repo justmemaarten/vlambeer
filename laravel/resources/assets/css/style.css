@@ -369,3 +369,6 @@ body:after {
   opacity: 1;
 }
 
+.stores {
+  float: right;
+}

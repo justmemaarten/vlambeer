@@ -13,7 +13,7 @@
             <div id="sub"></div>
             <nav>
                 <div class="dropdown">
-                    <a href="" class="btn btn-primary" role="button">Home</a>
+                    <a href="{{ action("PagesController@home") }}" class="btn btn-primary" role="button">Home</a>
                     <button class="btn btn-primary" id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Games
                         <span class="caret"></span>
