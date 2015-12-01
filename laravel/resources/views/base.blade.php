@@ -46,7 +46,9 @@
             </nav>
         </div>
 
-
+    @foreach($errors->all() as $error)
+        {{$error}}
+    @endforeach
     </header>
 
     <!-- Modal -->
@@ -67,10 +69,10 @@
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="login">
-                            @yield('pages/login')
+                            @include('auth/login')
                         </div>
                         <div role="tabpanel" class="tab-pane" id="register">
-
+                            @include('auth/register')
                         </div>
                     </div>
 
