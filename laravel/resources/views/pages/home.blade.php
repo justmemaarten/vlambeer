@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('content')
-    <div class="panel-group animatedParent" id="accordion">
+    <div class="panel-group animatedParent animateOnce" id="accordion">
         <div class="panel panel-default animated fadeIn">
 
 
