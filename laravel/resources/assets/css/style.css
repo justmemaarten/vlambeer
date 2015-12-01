@@ -28,7 +28,12 @@ li {
 	background: #fac846;
 }
 
+.panel .row {
+  margin-bottom: 30px;
+}
+
 .panel-group #gunGodz {
+<<<<<<< Updated upstream
   background: #1E1E1E;
 }
 
@@ -54,6 +59,22 @@ li {
 
 .panel-group #super-bread-box {
   background: #727671;
+=======
+  background: red;
+  position: relative;
+}
+
+.panel-group #gunGodz:before {
+  content:"";
+  position: absolute;
+  left: 155px;
+  top: -30px;
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-bottom: 26px solid red;
+  border-right: 13px solid transparent;
+>>>>>>> Stashed changes
 }
 
 .panel-heading {
@@ -61,16 +82,10 @@ li {
 }
 
 .game-item {
-    height: 200px;
     padding: 0px 20px;
 }
 
-.content {
-    height: 200px;
-}
-
 .row-game-item {
-    padding-bottom: 40px;
 	background: #fac846;
 }
 
