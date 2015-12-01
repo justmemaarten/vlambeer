@@ -491,8 +491,8 @@ $(document).ready(function () {
 
 $(function () {
 
- $('.read-more').on('click', function(){
-  $('#info-read-more').css('display', 'block' ).animate({
+ $('.read-more', '.read-more2').on('click', function(){
+  $('#info-read-more', '#info-read-more2').css('display', 'block' ).animate({
    'height':$('#info-read-more img').height()
   }, 300 , function(){
    $(this).height('auto')
@@ -500,8 +500,8 @@ $(function () {
   $('.more-less > span').toggleClass('hidden');
  });
 
- $('.read-less').on('click', function(){
-  $('#info-read-more').animate({
+ $('.read-less', 'read-less2').on('click', function(){
+  $('#info-read-more', '#info-read-more2').animate({
    'height':0
   }, 300 , function(){
    $(this).css('display','none');

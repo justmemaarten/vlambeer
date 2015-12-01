@@ -144,6 +144,11 @@ li {
 	float: left;
 }
 
+#maker-info {
+
+  float: right;
+}
+
 /*slider*/
 .slide {
 	margin-top: 35px;
