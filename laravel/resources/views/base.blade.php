@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
     <link rel="stylesheet" href="../resources/assets/css/style.css">
     <link rel="stylesheet" href="../resources/assets/css/animations.css">
+    <link href="../resources/assets/css/twitter-styles.css" rel="stylesheet">
 
 
 </head>
@@ -141,6 +142,7 @@
                         <a href="http://www.thepoppenkast.com/"><li>The Poppenkast</li></a>
                         <a href="http://www.venuspatrol.com/"><li>Venus Patrol</li></a>
                         <a href="http://www.control-online.nl/"><li>Control Magazine</li></a>
+                        <a href="http://www.facebook.com/Vlambeer"><li style="color:#fff;">Become friends too?</li></a>
                     </ul>
                 </div>
             </div>
@@ -162,8 +164,11 @@
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
-                        <a href="http://www.facebook.com/Vlambeer"><li style="color:#fff;">Become friends too?</li></a>
+
                     </ul>
+                </div>
+                <div id="twitter-feed">
+
                 </div>
             </div>
         </div>
@@ -176,5 +181,6 @@
     <script src="../resources/assets/js/giantbomb.js"></script>
     <script src="../resources/assets/js/games.js"></script>
     <script src="../resources/assets/js/css3-animate-it.js"></script>
+    <script src="../resources/assets/js/twitterfeed.js"></script>
 </body>
 </html>
