@@ -28,7 +28,7 @@ class PagesController extends Controller
 
     public function product() {
         $id = $_GET['id'];
-        return view('pages/game', $id);
+        return view('pages/game')->with($id);
 
     }
 }
