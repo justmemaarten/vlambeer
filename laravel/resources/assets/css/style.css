@@ -1,52 +1,91 @@
-.game-img {
-	padding: 0;
-	border: none;
-	background: transparent;
+* {
+
 }
 
+body {
+    /*background: #fac846;*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fac846+0,f9df9d+25,fac846+50,f9df9d+75,f9cf63+100 */
+    background: #fac846; /* Old browsers */
+    background: -moz-linear-gradient(left,  #fac846 0%, #f9df9d 25%, #fac846 50%, #f9df9d 75%, #f9cf63 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #fac846 0%,#f9df9d 25%,#fac846 50%,#f9df9d 75%,#f9cf63 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #fac846 0%,#f9df9d 25%,#fac846 50%,#f9df9d 75%,#f9cf63 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fac846', endColorstr='#f9cf63',GradientType=1 ); /* IE6-9 */
+
+}
+
+.container {
+
+}
+
+/*========*/
+/* Header */
+/*========*/
+
 header {
-	z-index: 1000;
-	background: #dddddd;
-	width: 100%;
+    z-index: 1000;
+    background: #dddddd;
+    width: 100%;
+}
+
+header nav li {
+    display: inline-block;
 }
 
 footer {
-	background: #dddddd;
+    background: #dddddd;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-body {
-	background: #fac846;
+
+.game-img {
+	padding: 0;
+	border: none;
+	background: transparent;
+    box-shadow: 0 0 18px #000000;
+    transition: 0.2s;
 }
 
-li {
-    display: inline-block;
+.game-img:hover {
+    box-shadow: 0 0 7px #000000;
+    transition: 0.3s;
+}
+
+
+
+/*===========*/
+/* Home page */
+/*===========*/
+
+.panel-group .panel {
+    border: none ;
+    box-shadow: none ;
+    background: transparent !important;
 }
 
 .panel-collapse {
-	background: #fac846;
+
 }
 
 .panel .row {
-  margin-bottom: 15px;
+    padding-bottom: 30px;
 }
 
 .panel-group #gunGodz {
-  background: #1E1E1E;
-  position: relative;
+    background: #1E1E1E;
+    position: relative;
 }
 
 .panel-group #gunGodz:before {
-  content:"";
-  position: absolute;
-  right: 100%;
-  top: 26px;
-  width: 0;
-  height: 0;
-  border-top: 13px solid transparent;
-  border-right: 1000px solid red;
-  border-bottom: 13px solid transparent;
+    content:"";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 1000px solid red;
+    border-bottom: 13px solid transparent;
 }
 
 .panel-group #lufTrausers {
@@ -71,8 +110,6 @@ li {
 
 .panel-group #super-bread-box {
   background: #727671;
-=======
-  background: red;
   position: relative;
 }
 
@@ -86,11 +123,10 @@ li {
   border-left: 13px solid transparent;
   border-bottom: 26px solid red;
   border-right: 13px solid transparent;
->>>>>>> Stashed changes
 }
 
 .panel-heading {
-	background: #fac846;
+
 }
 
 .game-item {
@@ -98,17 +134,13 @@ li {
 }
 
 .row-game-item {
-	background: #fac846;
+
 }
 
 .row-game-item:last-of-type{
     margin-bottom: 0px;
 }
 
-.panel {
-	border: none ;
-	box-shadow: none ;
-}
 
 /* quote */
 
