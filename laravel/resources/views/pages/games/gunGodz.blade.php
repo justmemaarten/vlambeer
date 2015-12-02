@@ -105,7 +105,7 @@
                         que labore, totam nobis quod maxime eius rem nulla provident ullam quia, odio repellendus libero.
                     </p>
                 </div>
-                <div class="more-less">
+                <div class="more-less2">
                     <span class="read-less2 hidden">Sluiten</span>
                     <span class="read-more2">Lees meer</span>
                 </div>

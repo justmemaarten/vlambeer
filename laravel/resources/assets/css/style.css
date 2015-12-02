@@ -166,6 +166,14 @@ li {
   margin-bottom: 50px;
 }
 
+.more-less2 span {
+  color: red;
+  cursor: pointer;
+}
+
+.more-less2 {
+  margin-bottom: 50px;
+}
 /*lightbox*/
 /* Preload images */
 body:after {

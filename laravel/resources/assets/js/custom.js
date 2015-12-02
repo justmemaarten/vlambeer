@@ -491,22 +491,41 @@ $(document).ready(function () {
 
 $(function () {
 
- $('.read-more', '.read-more2').on('click', function(){
-  $('#info-read-more', '#info-read-more2').css('display', 'block' ).animate({
-   'height':$('#info-read-more img').height()
+ $('.read-more').on('click', function(){
+  $('#info-read-more').css('display', 'block' ).animate({
+   'height':$('#info-read-more').height()
   }, 300 , function(){
    $(this).height('auto')
   });
   $('.more-less > span').toggleClass('hidden');
  });
 
- $('.read-less', 'read-less2').on('click', function(){
-  $('#info-read-more', '#info-read-more2').animate({
+ $('.read-less').on('click', function(){
+  $('#info-read-more').animate({
    'height':0
   }, 300 , function(){
    $(this).css('display','none');
   });
   $('.more-less > span').toggleClass('hidden');
+
+ });
+
+ $('.read-more2').on('click', function(){
+  $('#info-read-more2').css('display', 'block' ).animate({
+   'height':$('#info-read-more2').height()
+  }, 300 , function(){
+   $(this).height('auto')
+  });
+  $('.more-less2 > span').toggleClass('hidden');
+ });
+
+ $('.read-less2').on('click', function(){
+  $('#info-read-more2').animate({
+   'height':0
+  }, 300 , function(){
+   $(this).css('display','none');
+  });
+  $('.more-less2 > span').toggleClass('hidden');
 
  });
 });
