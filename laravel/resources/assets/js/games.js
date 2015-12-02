@@ -5,18 +5,22 @@
         .done( function(data) {
             var id = '3030-37491';
             var data = data.results;
+            $('#' + id + 'Icon').attr('src', data.image.icon_url);
+            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
-            console.log(data.name);
+
+            //console.log(data.name);
             //$('#game-title').html(data.description);
         });
     var luftrausers = GB.getGameData('3030-39474')
         .done( function(data) {
             var id = '3030-39474';
             var data = data.results;
+            $('#' + id + 'Icon').attr('src', data.image.icon_url);
             $('#' + id + 'Title').html(data.name);
-            $('#' + id + 'Deck').html(data.deck);
-            console.log(data.name);
+                $('#' + id + 'Deck').html(data.deck);
+            //console.log(data.name);
             //$('#game-title').html(data.description);
         });
 
@@ -24,9 +28,10 @@
         .done( function(data) {
             var id = '3030-41999';
             var data = data.results;
+            $('#' + id + 'Icon').attr('src', data.image.icon_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
-            console.log(data.name);
+            //console.log(data.name);
             //$('#game-title').html(data.description);
         });
 
@@ -34,9 +39,10 @@
         .done( function(data) {
             var id = '3030-40158';
             var data = data.results;
+            $('#' + id + 'Icon').attr('src', data.image.icon_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
-            console.log(data.name);
+            //console.log(data.name);
             //$('#game-title').html(data.description);
         });
 
@@ -44,9 +50,10 @@
         .done( function(data) {
             var id = '3030-34402';
             var data = data.results;
+            $('#' + id + 'Icon').attr('src', data.image.icon_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
-            console.log(data.name);
+            //console.log(data.name);
             //$('#game-title').html(data.description);
         });
 
@@ -54,9 +61,10 @@
         .done( function(data) {
             var id = '3030-46090';
             var data = data.results;
+            $('#' + id + 'Icon').attr('src', data.image.icon_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
-            console.log(data.name);
+            //console.log(data.name);
             //$('#game-title').html(data.description);
         });
 
@@ -64,9 +72,10 @@
         .done( function(data) {
             var id = '3030-32945';
             var data = data.results;
+            $('#' + id + 'Icon').attr('src', data.image.icon_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
-            console.log(data.name);
+            //console.log(data.name);
             //$('#game-title').html(data.description);
         });
 
