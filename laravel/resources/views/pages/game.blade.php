@@ -1,16 +1,22 @@
 @extends('base')
 
 @section('content')
+    <?php $id = $_GET['id']; ?>
     <div class="row">
         <div class="col-md-3 pull-left game-img-2">
             <img src="http://lorempixel.com/250/250/" alt="pixel">
         </div>
         <div class="col-md-9 game-info">
-            <h1>Gun Godz</h1>
-            <h4>Electronic arts &nbsp;</h4>
-            <h4>Sportgames &nbsp;</h4>
-            <h4>Actie en avontuur &nbsp;</h4>
-            <h4>XXXXXX &nbsp;</h4>
+            <h1 id="<?=$id?>Title"></h1>
+            <h4 id="<?=$id?>Deck"></h4>
+            {{--<h4>Sportgames &nbsp;</h4>--}}
+            {{--<h4>Actie en avontuur &nbsp;</h4>--}}
+            {{--<h4>XXXXXX &nbsp;</h4>--}}
+        </div>
+        <div class="stores">
+            <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
+                <img src="../resources/assets/img/downloadIcon.png" alt="download" height="40px" width="40px">
+            </a>
         </div>
         <div class="stores">
             <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
