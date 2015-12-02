@@ -14,7 +14,7 @@ $(document).ready(function () {
 	
 	var headerHTML = '';
 	var loadingHTML = '';
-	headerHTML += '<a href="https://twitter.com/" target="_blank"><img src="../resources/assets/img/twitter-bird-light.png" width="34" style="float:left;padding:3px 12px 0px 6px" alt="twitter bird" /></a>';
+	headerHTML += '<a href="https://twitter.com/" target="_blank"><img src="../resources/assets/img/twitter-bird-light.png" width="34" style="float:left;" alt="twitter bird" /></a>';
 	headerHTML += '<h1>'+screenname+' <span style="font-size:13px"><a href="https://twitter.com/'+twitterprofile+'" target="_blank">@'+twitterprofile+'</a></span></h1>';
 	loadingHTML += '<div id="loading-container"><img src="images/ajax-loader.gif" width="32" height="32" alt="tweet loader" /></div>';
 	
