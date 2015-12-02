@@ -12,6 +12,11 @@
             <h4>Actie en avontuur &nbsp;</h4>
             <h4>XXXXXX &nbsp;</h4>
         </div>
+        <div class="stores">
+            <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
+                <img src="../resources/assets/img/downloadIcon.png" alt="download" height="40px" width="40px">
+            </a>
+        </div>
     </div>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -24,19 +29,18 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="http://lorempixel.com/1180/400/" alt="slider-photo-0">
+                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="http://lorempixel.com/1180/400/" alt="slider-photo-0"></a>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <img src="http://lorempixel.com/1180/400/" alt="slider-photo-1">
+                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="http://lorempixel.com/1180/400/" alt="slider-photo-1"></a>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <img src="http://lorempixel.com/1180/400/" alt="slider-photo-2">
+                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="http://lorempixel.com/1180/400/" alt="slider-photo-2"></a>
                 <div class="carousel">
-
                 </div>
             </div>
         </div>
@@ -52,7 +56,60 @@
         </a>
     </div>
 
-    <div class="row">
-
+    <div class="row animatedParent">
+        <div id="game-info" class="panels">
+            <div class="col-md-6 animated fadeInLeftShort">
+                <h1>TEST</h1>
+                <div id="info-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus accusantium
+                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
+                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
+                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.
+                    </p>
+                </div>
+                <div id="info-read-more" style="display: none;height: 0;">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicingelit. Voluptatibus accusantium
+                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
+                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
+                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.asperiores laboriosam dolorem
+                        que labore, totam nobis quod maxime eius rem nulla provident ullam quia, odio repellendus libero.
+                    </p>
+                </div>
+                <div class="more-less">
+                    <span class="read-less hidden">Sluiten</span>
+                    <span class="read-more">Lees meer</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 animated fadeInRightShort">
+            <div id="maker-info" class="panels">
+                <h1>TEST</h1>
+                <div id="info-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus accusantium
+                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
+                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
+                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.
+                    </p>
+                </div>
+                <div id="info-read-more2" style="display: none;height: 0;">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicingelit. Voluptatibus accusantium
+                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
+                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
+                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.asperiores laboriosam dolorem
+                        que labore, totam nobis quod maxime eius rem nulla provident ullam quia, odio repellendus libero.
+                    </p>
+                </div>
+                <div class="more-less2">
+                    <span class="read-less2 hidden">Sluiten</span>
+                    <span class="read-more2">Lees meer</span>
+                </div>
+            </div>
+        </div>
     </div>
 @stop
