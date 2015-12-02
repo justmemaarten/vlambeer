@@ -38,37 +38,54 @@ footer {
 }
 
 
-.game-img {
-	padding: 0;
-	border: none;
-	background: transparent;
-    box-shadow: 0 0 18px #000000;
-    transition: 0.2s;
-}
 
-.game-img:hover {
-    box-shadow: 0 0 7px #000000;
-    transition: 0.3s;
-}
 
 
 
 /*===========*/
 /* Home page */
 /*===========*/
-
 .panel-group .panel {
     border: none ;
     box-shadow: none ;
     background: transparent !important;
 }
 
-.panel-collapse {
+    .panel-group .panel .row {
+        padding-bottom: 30px;
+    }
 
+    .panel-group .panel .game-img {
+        padding: 0;
+        border: none;
+        background: transparent;
+        box-shadow: 0 0 18px #000000;
+        transition: 0.2s;
+    }
+
+    .panel-group .panel .game-img:hover {
+        box-shadow: 0 0 7px #000000;
+        transition: 0.3s;
+    }
+
+    .panel-group .panel .panel-collapse {
+        margin: 0px 5px 30px 5px;
+        box-shadow: 0 0 18px #000000;
+    }
+.panel-group .panel-collapse {
+    position: relative;
 }
 
-.panel .row {
-    padding-bottom: 30px;
+.panel-group .collapse:before {
+    content: "";
+    position: absolute;
+    left: 13.8%;
+    top: -25px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-bottom: 26px solid #1E1E1E;
+    border-right: 20px solid transparent;
 }
 
 .panel-group #gunGodz {
@@ -76,58 +93,58 @@ footer {
     position: relative;
 }
 
-.panel-group #gunGodz:before {
-    content:"";
-    position: absolute;
-    right: 100%;
-    top: 26px;
-    width: 0;
-    height: 0;
-    border-top: 13px solid transparent;
-    border-right: 1000px solid red;
-    border-bottom: 13px solid transparent;
-}
-
 .panel-group #lufTrausers {
   background: #B06459;
+}
+
+.panel-group #lufTrausers:before {
+    left: 48.3%;
+    border-bottom: 26px solid #B06459;
 }
 
 .panel-group #nuclear-Throne {
   background: #4ADA17;
 }
 
+.panel-group #nuclear-Throne:before {
+    left: 83%;
+    border-bottom: 26px solid #4ADA17;
+}
+
 .panel-group #ridiculous-Fishing {
   background: #6496A4;
+}
+
+.panel-group #ridiculous-Fishing:before {
+    border-bottom: 26px solid #6496A4;
 }
 
 .panel-group #serious-Sam {
   background: #FEEC2C;
 }
 
+.panel-group #serious-Sam:before {
+    border-bottom: 26px solid #FEEC2C;
+    left: 48.3%;
+}
+
 .panel-group #super-Crate-Box {
   background: #E12434;
 }
 
+.panel-group #super-Crate-Box:before {
+    border-bottom: 26px solid #E12434;
+    left: 83%;
+}
+
 .panel-group #super-bread-box {
   background: #727671;
-  position: relative;
 }
 
-.panel-group #gunGodz:before {
-  content:"";
-  position: absolute;
-  left: 155px;
-  top: -30px;
-  width: 0;
-  height: 0;
-  border-left: 13px solid transparent;
-  border-bottom: 26px solid red;
-  border-right: 13px solid transparent;
+.panel-group #super-bread-box:before {
+    border-bottom: 26px solid #727671;
 }
 
-.panel-heading {
-
-}
 
 .game-item {
     padding: 0px 20px;
@@ -167,7 +184,7 @@ footer {
 #quote a
 {
 	font-size:10px;
-	color:#666;	
+	color:#666;
 }
 
 /*game style per pagina */
