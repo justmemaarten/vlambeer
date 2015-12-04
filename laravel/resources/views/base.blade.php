@@ -167,9 +167,7 @@ if(!isset($_GET['id'])){
                     </ul>
                 </div>
             </div>
-            <div id="twitter-feed">
-
-            </div>
+            <div id="twitter-feed"></div>
         </div>
     </footer>
 

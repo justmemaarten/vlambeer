@@ -19,7 +19,7 @@ $(document).ready(function () {
 	loadingHTML += '<div id="loading-container"><img src="images/ajax-loader.gif" width="32" height="32" alt="tweet loader" /></div>';
 	
 	$('#twitter-feed').html(headerHTML + loadingHTML);
-	 
+
     $.getJSON('../resources/assets/php/get-tweets.php',
         function(feeds) {   
 		   //alert(feeds);
