@@ -106,7 +106,7 @@
                     </div>
 
                     <div class="team-rami">
-                        <img src="../resources/assets/media/images/team_rami.png">
+                        <img src="{{asset('media/images/team_rami.png')}}">
                         <strong>Rami Ismail</strong><br>
                         <i>Business and Development</i><br>
                         rami@vlambeer.com<br>
@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="team-jw">
-                        <img src="../resources/assets/media/images/team_jw.png">
+                        <img src="{{asset('media/images/team_jw.png')}}">
                         <strong>Jan Willem Nijman</strong><br>
                         <i>Game Design</i><br>
                         jw@vlambeer.com<br>
