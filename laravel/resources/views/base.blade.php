@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
-    <link rel="stylesheet" href="{{asset('css/twitter-styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/twitter-style.css')}}">
 
 
 </head>
@@ -175,11 +175,11 @@ if(!isset($_GET['id'])){
 
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="{{asset('js/custom.js')}}"></script>
+    <script src="../resources/assets/js/custom.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="{{asset('js/giantbomb.js')}}"></script>
-    <script src="{{asset('js/games.js')}}"></script>
-    <script src="{{asset('js/css3-animate-it.js')}}"></script>
-    <script src="{{asset('js/twitterfeed.js')}}"></script>
+    <script src="../resources/assets/js/giantbomb.js"></script>
+    <script src="../resources/assets/js/games.js"></script>
+    <script src="../resources/assets/js/css3-animate-it.js"></script>
+    <script src="../resources/assets/js/twitterfeed.js"></script>
 </body>
 </html>
