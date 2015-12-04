@@ -17,7 +17,7 @@
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#lufTrausers">
-                            <img src="../resources/assets/img/luftrausers.png" alt="luftrausers" width="350" height="200">
+                            <img src="{{ asset('media/img/luftrausers.png') }}" alt="luftrausers" width="350" height="200">
                         </a>
                     </div>
                 </div>

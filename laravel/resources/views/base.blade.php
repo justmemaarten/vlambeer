@@ -10,6 +10,10 @@
 
 
 </head>
+<?php
+if(!isset($_GET['id'])){
+    $id = 0;
+}?>
 <body class="game-<?=$id?>">
     <header data-spy="affix">
         <div class="container">
