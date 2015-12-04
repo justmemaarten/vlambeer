@@ -124,7 +124,7 @@
                     <div class="contact">info@vlambeer.com | Neude 5, 3512 AD, Utrecht, the Netherlands | +31621206363</div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="friends">
                     <strong>FRIENDS OF VLAMBEER</strong>
                     <ul>
@@ -146,10 +146,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <div class="friends">
-                    <strong>FRIENDS OF VLAMBEER</strong>
                     <ul>
+                        <h1></h1>
                         <a href="http://www.iimusic.net/"><li>Pause music</li></a>
                         <a href="http://notch.tumblr.com/"><li>Notch</li></a>
                         <a href="http://adamatomic.com/"><li>Adam Atomic</li></a>
@@ -159,17 +159,12 @@
                         <a href="http://www.bramruiter.nl/"><li>Bram Ruiter</li></a>
                         <a href="http://www.bitcollective.ca/"><li>Bit Collective</li></a>
                         <a href="http://www.glitchhiker.com/"><li>Aardbever</li></a>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
-                        <li>&nbsp;</li>
 
                     </ul>
                 </div>
-                <div id="twitter-feed">
+            </div>
+            <div id="twitter-feed">
 
-                </div>
             </div>
         </div>
     </footer>

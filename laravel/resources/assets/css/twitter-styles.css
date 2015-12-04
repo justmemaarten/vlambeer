@@ -13,13 +13,13 @@ img  {
 }
  
 #twitter-feed {
-    width:258px;
+    float: right;
+    width:230px;
     margin:auto;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top:60px;
     padding:8px 10px 5px 10px;
     border-radius:12px;
-    background-color:#FFF;
+    background: #dddddd;
     color:#333;
     overflow:auto;
 }
@@ -30,6 +30,7 @@ img  {
     padding:9px 0px 9px 0px;
     font-size:18px;
     font-weight:lighter;
+
 }
  
 .twitter-article, #loading-container {
