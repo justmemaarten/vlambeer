@@ -339,7 +339,7 @@ body:after {
     width: 34%;
     left: 0;
     float: left;
-    background: url(../img/prev.png) left 48% no-repeat;
+    background: url(../media/img/prev.png) left 48% no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.6s;
@@ -357,7 +357,7 @@ body:after {
     width: 64%;
     right: 0;
     float: right;
-    background: url(../img/next.png) right 48% no-repeat;
+    background: url(../media/img/next.png) right 48% no-repeat;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.6s;
@@ -457,4 +457,43 @@ body:after {
     box-sizing: border-box;
     padding: 20px;
     background: red;
+}
+
+/*===============*/
+/* Game ID style */
+/*===============*/
+
+body.game-3030-37491 {
+    background: url("../media/img/gun-godz-bg.png") no-repeat;
+    background-attachment: fixed;
+}
+
+body.game-3030-39474 {
+    background: url("../media/img/luftrausers-bg.png") no-repeat;
+    background-attachment: fixed;
+}
+
+body.game-3030-40158 {
+    background: url("../media/img/ridiculous-bg.png") no-repeat;
+    background-attachment: fixed;
+}
+
+body.game-3030-41999 {
+    background: url("../media/img/nuclear-throne-bg.png");
+    background-attachment: fixed;
+}
+
+body.game-3030-34402 {
+    background: url("../media/img/serious-sam-bg.png");
+    background-attachment: fixed;
+}
+
+body.game-3030-32945 {
+    background: url("../media/img/super-crate-bg.png");
+    background-attachment: fixed;
+}
+
+body.game-3030-46090 {
+    background: url("../media/img/super-bread-bg.png");
+    background-attachment: fixed;
 }
