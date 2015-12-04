@@ -19,7 +19,10 @@ function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oa
 $connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
  
 $tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser."&count=".$notweets);
-
-echo json_encode($tweets);
+$tweets2 = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser2."&count=".$notweets);
+$tweets3 = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser3."&count=".$notweets);
+$all = array_merge($tweets, $tweets2);
+$all = array_merge($all, $tweets3);
+echo json_encode($all);
 
 ?>

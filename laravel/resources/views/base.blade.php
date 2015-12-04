@@ -11,9 +11,10 @@
 
 </head>
 <?php
-if(!isset($_GET['id'])){
+if(!isset($_GET['id'])) {
     $id = 0;
-}?>
+}
+?>
 <body class="game-<?=$id?>">
     <header data-spy="affix">
         <div class="container">
@@ -75,8 +76,6 @@ if(!isset($_GET['id'])){
                         <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
                     </ul>
 
-    <?php require '../resources/views/pages/header.blade.php';?>
-
     <div class="container">
         <div id="quote"></div>
 
@@ -135,7 +134,6 @@ if(!isset($_GET['id'])){
             <div class="col-md-2">
                 <div class="friends">
                     <ul>
-                        <h1></h1>
                         <a href="http://www.iimusic.net/"><li>Pause music</li></a>
                         <a href="http://notch.tumblr.com/"><li>Notch</li></a>
                         <a href="http://adamatomic.com/"><li>Adam Atomic</li></a>
