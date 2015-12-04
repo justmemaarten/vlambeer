@@ -446,6 +446,7 @@ body:after {
       background: red;
   }
 
+<<<<<<< Updated upstream
 .stores
 
 
@@ -459,4 +460,44 @@ body:after {
     width: 250px;
     height: 250px;
     background: red;
+=======
+
+/*===============*/
+/* Game ID style */
+/*===============*/
+
+body.game-3030-37491 {
+    background: url("../img/gun-godz-bg.png") no-repeat;
+    background-attachment: fixed;
+}
+
+body.game-3030-39474 {
+    background: url("../img/luftrausers-bg.png") no-repeat;
+    background-attachment: fixed;
+}
+
+body.game-3030-40158 {
+    background: url("../img/ridiculous-bg.png") no-repeat;
+    background-attachment: fixed;
+}
+
+body.game-3030-41999 {
+    background: url("../img/nuclear-throne-bg.png");
+    background-attachment: fixed;
+}
+
+body.game-3030-34402 {
+    background: url("../img/serious-sam-bg.png");
+    background-attachment: fixed;
+}
+
+body.game-3030-32945 {
+    background: url("../img/super-crate-bg.png");
+    background-attachment: fixed;
+}
+
+body.game-3030-46090 {
+    background: url("../img/super-bread-bg.png");
+    background-attachment: fixed;
+>>>>>>> Stashed changes
 }

@@ -16,11 +16,6 @@
                 <img src="../resources/assets/img/downloadIcon.png" alt="download" height="40px" width="40px">
             </a>
         </div>
-        <div class="stores">
-            <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
-                <img src="../resources/assets/img/downloadIcon.png" alt="download" height="40px" width="40px">
-            </a>
-        </div>
     </div>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->

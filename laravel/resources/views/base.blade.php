@@ -10,7 +10,7 @@
 
 
 </head>
-<body>
+<body class="game-<?=$id?>">
     <header data-spy="affix">
         <div class="container">
             <div id="sub"></div>
