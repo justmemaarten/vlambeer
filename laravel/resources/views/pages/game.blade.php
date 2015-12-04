@@ -2,7 +2,7 @@
 
 @section('content')
     <?php $id = $_GET['id']; ?>
-    <div class="row">
+    <div class="row game-<?=$id?>">
         <div class="col-md-3 pull-left game-img-2">
             <img class="game-icon" id="<?=$id?>Icon" alt="pixel">
         </div>
