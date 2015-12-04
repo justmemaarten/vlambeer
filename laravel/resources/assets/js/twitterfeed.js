@@ -20,7 +20,7 @@ $(document).ready(function () {
 	
 	$('#twitter-feed').html(headerHTML + loadingHTML);
 	 
-    $.getJSON('../resources/assets/php/get-tweets.php',
+    $.getJSON('../public/php/get-tweets.php',
         function(feeds) {   
 		   //alert(feeds);
             var feedHTML = '';
