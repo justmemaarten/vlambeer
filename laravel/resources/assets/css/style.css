@@ -438,18 +438,6 @@ body:after {
   opacity: 1;
 }
 
-.stores {
-  float: right;
-}
-
-.game-3030-37491 .stores {
-      background: red;
-  }
-
-<<<<<<< Updated upstream
-.stores
-
-
         /* Shopping cart style */
         /* Shopping cart style */
         /* Shopping cart style */
@@ -460,7 +448,8 @@ body:after {
     width: 250px;
     height: 250px;
     background: red;
-=======
+}
+
 
 /*===============*/
 /* Game ID style */
@@ -499,5 +488,4 @@ body.game-3030-32945 {
 body.game-3030-46090 {
     background: url("../img/super-bread-bg.png");
     background-attachment: fixed;
->>>>>>> Stashed changes
 }
