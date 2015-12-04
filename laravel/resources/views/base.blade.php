@@ -75,30 +75,12 @@ if(!isset($_GET['id'])){
                         <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
                     </ul>
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="login">
-                            @yield('pages/login')
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="register">
+    <?php require '../resources/views/pages/header.blade.php';?>
 
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-body">
-
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container">
         <div id="quote"></div>
 
         @yield('content')
-
 
     </div>
     <footer>
