@@ -189,13 +189,16 @@ footer {
 
 /*game style per pagina */
 
+.game-icon {
+    max-width: 280px;
+}
+
 .game-info h4 {
 	float: left;
 }
 
 #maker-info {
-
-  float: right;
+    float: right;
 }
 
 /*slider*/

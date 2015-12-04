@@ -5,7 +5,7 @@
         .done( function(data) {
             var id = '3030-37491';
             var data = data.results;
-            $('#' + id + 'Icon').attr('src', data.image.icon_url);
+            $('#' + id + 'Icon').attr('src', data.image.medium_url);
             console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
@@ -17,7 +17,7 @@
         .done( function(data) {
             var id = '3030-39474';
             var data = data.results;
-            $('#' + id + 'Icon').attr('src', data.image.icon_url);
+            $('#' + id + 'Icon').attr('src', data.image.medium_url);
             $('#' + id + 'Title').html(data.name);
                 $('#' + id + 'Deck').html(data.deck);
             //console.log(data.name);
@@ -28,7 +28,7 @@
         .done( function(data) {
             var id = '3030-41999';
             var data = data.results;
-            $('#' + id + 'Icon').attr('src', data.image.icon_url);
+            $('#' + id + 'Icon').attr('src', data.image.medium_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             //console.log(data.name);
@@ -39,7 +39,7 @@
         .done( function(data) {
             var id = '3030-40158';
             var data = data.results;
-            $('#' + id + 'Icon').attr('src', data.image.icon_url);
+            $('#' + id + 'Icon').attr('src', data.image.medium_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             //console.log(data.name);
@@ -50,7 +50,7 @@
         .done( function(data) {
             var id = '3030-34402';
             var data = data.results;
-            $('#' + id + 'Icon').attr('src', data.image.icon_url);
+            $('#' + id + 'Icon').attr('src', data.image.medium_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             //console.log(data.name);
@@ -61,7 +61,7 @@
         .done( function(data) {
             var id = '3030-46090';
             var data = data.results;
-            $('#' + id + 'Icon').attr('src', data.image.icon_url);
+            $('#' + id + 'Icon').attr('src', data.image.medium_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             //console.log(data.name);
@@ -72,7 +72,7 @@
         .done( function(data) {
             var id = '3030-32945';
             var data = data.results;
-            $('#' + id + 'Icon').attr('src', data.image.icon_url);
+            $('#' + id + 'Icon').attr('src', data.image.medium_url);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             //console.log(data.name);
