@@ -21,6 +21,8 @@ Route::get('/contact', 'PagesController@contact');
 
 Route::get('/product', 'PagesController@product');
 
+Route::get('/shop/cart', 'PagesController@cart');
+
 Route::post('/auth/login', 'Auth\AuthController@postLogin');
 //Route::get('/auth/register', 'AuthController@postRegister');
 /*

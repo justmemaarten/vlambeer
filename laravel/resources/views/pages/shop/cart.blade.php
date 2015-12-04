@@ -1,7 +1,13 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Jeroen_Stamkot
- * Date: 23-11-15
- * Time: 11:03
- */
+@extends('base')
+
+@section('content')
+
+    
+
+    <h1>Shopping Cart</h1>
+    <div class="product col-md-4"></div>
+    <div class="product col-md-4"></div>
+    <div class="product col-md-4"></div>
+
+
+    @stop

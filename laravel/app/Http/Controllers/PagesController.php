@@ -31,5 +31,10 @@ class PagesController extends Controller
         return view('pages/game')->with($id);
 
     }
+
+    public function cart() {
+        return view('pages/shop/cart');
+    }
+
 }
 

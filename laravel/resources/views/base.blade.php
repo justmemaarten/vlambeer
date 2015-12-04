@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Vlambeer</title>
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../resources/assets/css/style.css">
-    <link rel="stylesheet" href="../resources/assets/css/animations.css">
-    <link href="../resources/assets/css/twitter-styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/animations.css')}}">
+    <link rel="stylesheet" href="{{asset('css/twitter-style.css')}}">
 
 
 </head>
