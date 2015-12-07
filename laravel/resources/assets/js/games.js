@@ -9,6 +9,8 @@
             console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'description').html(data.description);
+            $('#' + id + 'genres').html(data.game_rating);
 
             //console.log(data.name);
             //$('#game-title').html(data.description);

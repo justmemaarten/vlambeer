@@ -3,7 +3,7 @@ $(document).ready(function () {
  var phrases =
 [
  ['"KARATE is that scene where Bruce Lee fights like a thousand men in a row, ad infinitum."', ' - RPS','http://www.rockpapershotgun.com/2011/04/12/free-karate-game/'],
- ['"Super Crate Box is pure fun in a perfect little package"',' - GameTunnel','http://www.gametunnel.com/?game=super-crate-box'],
+ ['"Super Crate Box is pure fun in a perfect little package"',' - GameTunnel','http://www.gametunnel.com/?game=super-crfgate-box'],
  ['"Also, I freaking love Vlambeer"',' - Markus `Notch` Persson','https://twitter.com/#!/notch/status/127430936882192384'],
  ['"Any day with a new game from Super Crate Box weirdo-heads Vlambeer is a good day."',' - RPS', 'http://www.rockpapershotgun.com/2011/04/12/free-karate-game/'],
  ['"I think of them as crate terrorists, which makes Super Crate Box patriotic."',' - dig Boston','http://digboston.com/experience/2011/04/indie-game-of-the-week-super-crate-box/'],

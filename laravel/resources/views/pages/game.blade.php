@@ -1,14 +1,14 @@
 @extends('base')
 
 @section('content')
-    <?php $id = $_GET['id']; ?>
-    <div class="row game-<?=$id?>">
+    <div class="row game-{{ $id = $_GET['id'] }}">
         <div class="col-md-3 pull-left game-img-2">
-            <img class="game-icon" id="<?=$id?>Icon" alt="pixel">
+            <img class="game-icon" id="{{ $id }}Icon" alt="pixel">
         </div>
         <div class="col-md-9 game-info">
-            <h1 id="<?=$id?>Title"></h1>
-            <h4 id="<?=$id?>Deck"></h4>
+            <h1 id="{{ $id }}Title"></h1>
+            <h4 id="{{ $id }}Deck"></h4>
+            <h4 id="{{ $id }}platforms"></h4>
 
         </div>
         <div class="stores">
@@ -58,13 +58,8 @@
     <div class="row animatedParent">
         <div id="game-info" class="panels">
             <div class="col-md-6 animated fadeInLeftShort">
-                <h1>TEST</h1>
                 <div id="info-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus accusantium
-                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
-                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
-                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.
+                    <p id="{{ $id }}description">
                     </p>
                 </div>
                 <div id="info-read-more" style="display: none;height: 0;">
@@ -87,12 +82,7 @@
             <div id="maker-info" class="panels">
                 <h1>TEST</h1>
                 <div id="info-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus accusantium
-                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
-                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
-                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.
-                    </p>
+                    <p id="{{ $id }}genres"></p>
                 </div>
                 <div id="info-read-more2" style="display: none;height: 0;">
                     <p>
