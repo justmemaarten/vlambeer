@@ -478,36 +478,64 @@ body:after {
 /*===============*/
 
 body.game-3030-37491 {
-    background: url("../media/img/gun-godz-bg.png") no-repeat;
+    background: url("../media/img/gun-godz-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-39474 {
-    background: url("../media/img/luftrausers-bg.png") no-repeat;
+    background: url("../media/img/luftrausers-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-40158 {
-    background: url("../media/img/ridiculous-bg.png") no-repeat;
+    background: url("../media/img/ridiculous-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-41999 {
-    background: url("../media/img/nuclear-throne-bg.png");
+    background: url("../media/img/nuclear-throne-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-34402 {
-    background: url("../media/img/serious-sam-bg.png");
+    background: url("../media/img/serious-sam-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-32945 {
-    background: url("../media/img/super-crate-bg.png");
+    background: url("../media/img/super-crate-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-46090 {
-    background: url("../media/img/super-bread-bg.png");
+    background: url("../media/img/super-bread-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
