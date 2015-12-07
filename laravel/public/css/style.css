@@ -634,3 +634,27 @@ body.game-3030-46090 {
     -o-background-size: cover;
     background-size: cover;
 }
+
+#info-text {
+    max-height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+#info-text .read-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0; padding: 30px 0;
+
+    /* "transparent" only works here because == rgba(0,0,0,0) */
+    background-image: linear-gradient(to bottom, transparent, black);
+}
+.read-more a {
+    text-decoration: none;
+    color: white;
+}
+.read-more a:hover {
+    color: yellow;
+}

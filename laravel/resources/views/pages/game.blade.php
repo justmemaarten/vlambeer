@@ -61,22 +61,8 @@
         <div id="game-info" class="panels">
             <div class="col-md-6 animated fadeInLeftShort">
                 <div id="info-text">
-                    <p id="{{ $id }}description">
-                    </p>
-                </div>
-                <div id="info-read-more" style="display: none;height: 0;">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicingelit. Voluptatibus accusantium
-                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
-                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
-                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.asperiores laboriosam dolorem
-                        que labore, totam nobis quod maxime eius rem nulla provident ullam quia, odio repellendus libero.
-                    </p>
-                </div>
-                <div class="more-less">
-                    <span class="read-less hidden">Sluiten</span>
-                    <span class="read-more">Lees meer</span>
+                    <p id="{{ $id }}description"></p>
+                    <p class="read-more"><a href="#" class="button">Read More</a></p>
                 </div>
             </div>
         </div>
@@ -120,4 +106,5 @@
             </div>
         </div>
     </div>
+
 @stop
