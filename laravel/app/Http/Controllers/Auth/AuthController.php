@@ -22,6 +22,8 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+    protected $redirectTo = '/';
+
 
     /**
      * Create a new authentication controller instance.
@@ -42,9 +44,18 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+            'username' => 'required|max:255|unique:tbl_users',
+            'email' => 'required|email|max:255|unique:tbl_users',
+            'password' => 'required|min:6',
+            'firstname' => 'required|max:255',
+            'lastname' => 'required|max:255',
+            'insertion' => 'required|max:255',
+            'phone_nr' => 'required|max:255',
+            'birthdate' => 'required|max:255',
+            'city' => 'required|max:255',
+            'street' => 'required|max:255',
+            'house_nr' => 'required|max:255',
+            'postalcode' => 'required|max:255',
         ]);
     }
 
@@ -57,9 +68,18 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'insertion' => $data['insertion'],
+            'phone_nr' => $data['phone_nr'],
+            'birthdate' => $data['birthdate'],
+            'city' => $data['city'],
+            'street' => $data['street'],
+            'house_nr' => $data['house_nr'],
+            'postalcode' => $data['postalcode'],
         ]);
     }
 }

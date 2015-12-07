@@ -50,9 +50,13 @@ if(!isset($_GET['id'])){
                     </ul>
                     <a href="" class="btn btn-primary" role="button">Contact</a>
                     <a href="" class="btn btn-primary" role="button">About</a>
+                    @if (!Auth::check())
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-register">
                         Login / Register
                     </button>
+                    @else
+                        <a href="auth/logout" class="btn btn-primary">Logout</a>
+                    @endif
                 </div>
             </nav>
         </div>
@@ -70,6 +74,8 @@ if(!isset($_GET['id'])){
                 <div>
 
                     <!-- Nav tabs -->
+
+
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Log in</a></li>
                         <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
@@ -77,11 +83,13 @@ if(!isset($_GET['id'])){
 
                     <!-- Tab panes -->
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="login">
-                            @yield('pages/login')
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="register">
 
+                            <div role="tabpanel" class="tab-pane active" id="login">
+                                @include('auth/login')
+                            </div>
+
+                        <div role="tabpanel" class="tab-pane" id="register">
+                            @include('auth/register')
                         </div>
                     </div>
 
@@ -95,6 +103,9 @@ if(!isset($_GET['id'])){
         </div>
     </div>
     <div class="container">
+        @if (Session::has('authMessage'))
+            {{ Session::get('authMessage') }}
+        @endif
         <div id="quote"></div>
 
         @yield('content')

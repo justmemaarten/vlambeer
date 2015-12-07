@@ -13,6 +13,8 @@
 
 Route::get('/', 'PagesController@home');
 
+Route::get('/home', 'PagesController@home');
+
 Route::get('/products', 'PagesController@products');
 
 Route::get('/about', 'PagesController@about');
@@ -23,8 +25,15 @@ Route::get('/product', 'PagesController@product');
 
 Route::get('/shop/cart', 'PagesController@cart');
 
-Route::post('/auth/login', 'Auth\AuthController@postLogin');
-//Route::get('/auth/register', 'AuthController@postRegister');
+// Authentication routes...
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/login', 'PagesController@home');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+
+// Registration routes...
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::get('auth/register', 'PagesController@home');
 /*
  *
  * /

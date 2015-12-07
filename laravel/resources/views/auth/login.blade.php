@@ -1,8 +1,8 @@
 <form action="auth/login" method="post">
     {!! csrf_field() !!}
     <div class="form-group">
-        <label for="">Username</label>
-        <input class="form-control" type="text" name="username" id="password">
+        <label for="">Email</label>
+        <input class="form-control" type="text" name="email" id="email">
     </div>
 
     <div class="form-group">
