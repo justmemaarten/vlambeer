@@ -20,15 +20,76 @@ body {
 /*========*/
 /* Header */
 /*========*/
-
 header {
     z-index: 1000;
-    background: black;
+    background: #171717;
     width: 100%;
+    box-shadow: 2px 2px 5px #171717;
 }
 
-header nav li {
-    display: inline-block;
+    header #sub {
+        margin-top: 28px;
+        padding: 5px;
+        float: left;
+        color: #B8B8B8;
+        border: 1px solid #B8B8B8;
+    }
+
+    header nav {
+        float: right;
+        height: 90px;
+    }
+
+        header nav li {
+            display: inline-block;
+            color: #B8B8B8;
+            height: 90px;
+        }
+
+            header nav li a, header nav li button {
+                height: 90px;
+                background: none;
+                padding: 33px 20px;
+                font-size: 1.8rem;
+                color: #B8B8B8;
+                border: none;
+                border-color: inherit !important;
+
+            }
+
+            header nav li a:hover, header nav li button:hover {
+                background: #B8B8B8;
+                color: black;
+                text-decoration: none;
+            }
+
+            header nav li .dropdown-menu {
+                width: 90px;
+                padding-bottom: 20px;
+            }
+
+            header nav li .dropdown-menu li {
+                height: 20px;
+            }
+
+            header nav li .dropdown-menu li a {
+                font-size: 1.3rem;
+                padding: 10px 20px;
+                height: 30px;
+                text-align: center;
+            }
+
+            header nav li .dropdown-menu li:hover {
+                width: 100%;
+            }
+
+    header img {
+        float: right;
+    }
+
+
+.container #quote {
+    margin-top: 125px;
 }
 
 footer {
@@ -199,6 +260,7 @@ footer {
 
 #maker-info {
     float: right;
+    margin-right: 5%;
 }
 
 /*slider*/
@@ -442,9 +504,6 @@ body:after {
     float: right;
 }
 
-.game-3030-37491 .stores {
-    background: red;
-}
 
 
     /* Shopping cart style */
@@ -454,9 +513,59 @@ body:after {
 
 
 .product {
+    width: 333px;
+    height: 300px;
+    margin-right: 70px;
+    border: 2px solid black;
+    position: relative;
+
+}
+
+.product:first-of-type {
+    margin-left: 15px;
+}
+
+.product:last-of-type {
+    margin-right: 0px;
+}
+
+.product-price {
+    background: rgba(0, 0, 255, 0.8);
+    width: 329px;
+    height: 70px;
+    position: absolute;
+    left: 0px;
+    top: 226px;
+    border-top: 2px solid black;
+}
+
+.product-price h4 {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.cart-img {
+    position: absolute;
+    left: 0px;
+}
+
+.total-price {
     box-sizing: border-box;
     padding: 20px;
-    background: red;
+    width: 100%;
+    margin-top: 20px;
+    background: rgba(200, 100, 123, 0.6);
+}
+
+.price-info p {
+    text-align: right;
+
+}
+
+.pay-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*===============*/
@@ -464,36 +573,64 @@ body:after {
 /*===============*/
 
 body.game-3030-37491 {
-    background: url("../media/img/gun-godz-bg.png") no-repeat;
+    background: url("../media/img/gun-godz-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-39474 {
-    background: url("../media/img/luftrausers-bg.png") no-repeat;
+    background: url("../media/img/luftrausers-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-40158 {
-    background: url("../media/img/ridiculous-bg.png") no-repeat;
+    background: url("../media/img/ridiculous-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-41999 {
-    background: url("../media/img/nuclear-throne-bg.png");
+    background: url("../media/img/nuclear-throne-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-34402 {
-    background: url("../media/img/serious-sam-bg.png");
+    background: url("../media/img/serious-sam-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-32945 {
-    background: url("../media/img/super-crate-bg.png");
+    background: url("../media/img/super-crate-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body.game-3030-46090 {
-    background: url("../media/img/super-bread-bg.png");
+    background: url("../media/img/super-bread-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

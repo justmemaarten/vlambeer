@@ -9,6 +9,8 @@
             console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'description').html(data.description);
+            $('#' + id + 'name').html(data.name);
 
             //console.log(data.name);
             //$('#game-title').html(data.description);
@@ -18,8 +20,11 @@
             var id = '3030-39474';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
+            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
-                $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'description').html(data.description);
+            $('#' + id + 'name').html(data.name);
             //console.log(data.name);
             //$('#game-title').html(data.description);
         });
@@ -29,8 +34,11 @@
             var id = '3030-41999';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
+            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'description').html(data.description);
+            $('#' + id + 'name').html(data.name);
             //console.log(data.name);
             //$('#game-title').html(data.description);
         });
@@ -40,8 +48,11 @@
             var id = '3030-40158';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
+            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'description').html(data.description);
+            $('#' + id + 'name').html(data.name);
             //console.log(data.name);
             //$('#game-title').html(data.description);
         });
@@ -51,8 +62,11 @@
             var id = '3030-34402';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
+            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'description').html(data.description);
+            $('#' + id + 'name').html(data.name);
             //console.log(data.name);
             //$('#game-title').html(data.description);
         });
@@ -62,8 +76,11 @@
             var id = '3030-46090';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
+            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'description').html(data.description);
+            $('#' + id + 'name').html(data.name);
             //console.log(data.name);
             //$('#game-title').html(data.description);
         });
@@ -73,8 +90,11 @@
             var id = '3030-32945';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
+            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
+            $('#' + id + 'description').html(data.description);
+            $('#' + id + 'name').html(data.name);
             //console.log(data.name);
             //$('#game-title').html(data.description);
         });

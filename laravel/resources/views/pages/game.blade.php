@@ -1,14 +1,16 @@
 @extends('base')
 
 @section('content')
-    <?php $id = $_GET['id']; ?>
-    <div class="row game-<?=$id?>">
+    <div class="row game-{{ $id = $_GET['id'] }}">
         <div class="col-md-3 pull-left game-img-2">
-            <img class="game-icon" id="<?=$id?>Icon" alt="pixel">
+            <img class="game-icon" id="{{ $id }}Icon" alt="pixel">
         </div>
         <div class="col-md-9 game-info">
-            <h1 id="<?=$id?>Title"></h1>
-            <h4 id="<?=$id?>Deck"></h4>
+            <h1 id="{{ $id }}Title"></h1>
+            <h4 id="{{ $id }}Deck"></h4>
+            <h4 id="{{ $id }}platforms">-->check op beschikbare platforms en dan dan de beschikbare
+                links naar de stores weergeven met de icons<--</h4>
+            <h4>-->hier de game rating<--</h4>
 
         </div>
         <div class="stores">
@@ -58,13 +60,8 @@
     <div class="row animatedParent">
         <div id="game-info" class="panels">
             <div class="col-md-6 animated fadeInLeftShort">
-                <h1>TEST</h1>
                 <div id="info-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus accusantium
-                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
-                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
-                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.
+                    <p id="{{ $id }}description">
                     </p>
                 </div>
                 <div id="info-read-more" style="display: none;height: 0;">
@@ -85,28 +82,40 @@
         </div>
         <div class="col-md-6 animated fadeInRightShort">
             <div id="maker-info" class="panels">
-                <h1>TEST</h1>
-                <div id="info-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus accusantium
-                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
-                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
-                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.
-                    </p>
-                </div>
-                <div id="info-read-more2" style="display: none;height: 0;">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicingelit. Voluptatibus accusantium
-                        exercitationem nostrum, deserunt ipsum, odit repellat molestiae doloribus enim libero beatae sint
-                        quae fuga quidem vel, saepe ab porro similique! Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Accusantium adipisci assumenda dolorem, eius explicabo modi molestias mollitia natus nesciunt
-                        possimus quae quis, quos ullam. At illum laborum odio velit voluptatum.asperiores laboriosam dolorem
-                        que labore, totam nobis quod maxime eius rem nulla provident ullam quia, odio repellendus libero.
-                    </p>
-                </div>
-                <div class="more-less2">
-                    <span class="read-less2 hidden">Sluiten</span>
-                    <span class="read-more2">Lees meer</span>
+                <div class="game-details">
+                    <h3>Game details</h3>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <td class="bar" id="{{ $id }}name"></td>
+                            </tr>
+                            <tr>
+                                <th>First release date</th>
+                                <td class="bar">release date hier</td>
+                            </tr>
+                            <tr>
+                                <th>Platform</th>
+                                <td class="bar">beschikbare platforms</td>
+                            </tr>
+                            <tr>
+                                <th>Developer</th>
+                                <td class="bar">developers hier</td>
+                            </tr>
+                            <tr>
+                                <th>Publisher</th>
+                                <td class="bar">publisher hier</td>
+                            </tr>
+                            <tr>
+                                <th>Genre</th>
+                                <td class="bar">genre hier</td>
+                            </tr>
+                            <tr>
+                                <th>Theme</th>
+                                <td class="bar">theme hier</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
