@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
-    <link rel="stylesheet" href="{{asset('css/twitter-style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/twitter-styles.css')}}">
 
 </head>
 <?php
