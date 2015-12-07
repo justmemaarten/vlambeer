@@ -8,7 +8,9 @@
         <div class="col-md-9 game-info">
             <h1 id="{{ $id }}Title"></h1>
             <h4 id="{{ $id }}Deck"></h4>
-            <h4 id="{{ $id }}platforms"></h4>
+            <h4 id="{{ $id }}platforms">-->check op beschikbare platforms en dan dan de beschikbare
+                links naar de stores weergeven met de icons<--</h4>
+            <h4>-->hier de game rating<--</h4>
 
         </div>
         <div class="stores">
