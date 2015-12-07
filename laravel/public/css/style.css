@@ -455,9 +455,13 @@ body:after {
     width: 333px;
     height: 300px;
     margin-right: 70px;
-    background: red;
     border: 2px solid black;
     position: relative;
+
+}
+
+.product:first-of-type {
+    margin-left: 15px;
 }
 
 .product:last-of-type {
@@ -465,12 +469,42 @@ body:after {
 }
 
 .product-price {
-    background: blue;
+    background: rgba(0, 0, 255, 0.8);
     width: 329px;
     height: 70px;
     position: absolute;
     left: 0px;
     top: 226px;
+    border-top: 2px solid black;
+}
+
+.product-price h4 {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.cart-img {
+    position: absolute;
+    left: 0px;
+}
+
+.total-price {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    margin-top: 20px;
+    background: rgba(200, 100, 123, 0.6);
+}
+
+.price-info p {
+    text-align: right;
+
+}
+
+.pay-button {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*===============*/
