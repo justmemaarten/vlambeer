@@ -454,9 +454,25 @@ body:after {
 
 
 .product {
-    box-sizing: border-box;
-    padding: 20px;
+    width: 333px;
+    height: 300px;
+    margin-right: 70px;
     background: red;
+    border: 2px solid black;
+    position: relative;
+}
+
+.product:last-of-type {
+    margin-right: 0px;
+}
+
+.product-price {
+    background: blue;
+    width: 329px;
+    height: 70px;
+    position: absolute;
+    left: 0px;
+    top: 226px;
 }
 
 /*===============*/
