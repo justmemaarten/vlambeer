@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
     <link rel="stylesheet" href="{{asset('css/twitter-style.css')}}">
 
-
 </head>
 <?php
 if(!isset($_GET['id'])){
@@ -18,43 +17,57 @@ if(!isset($_GET['id'])){
     <header data-spy="affix">
         <div class="container">
             <div id="sub"></div>
+            <img src="{{ asset('media/img/logo.png') }}" alt="Logo" height="90px" width="100px">
             <nav>
-                <div class="dropdown">
-                    <a href="{{ action("PagesController@home") }}" class="btn btn-primary" role="button">Home</a>
-                    <button class="btn btn-primary" id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Games
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropGames">
-                        <li>
-                            <a href="{{ action("PagesController@product",'id=3030-39474') }}">Luftrausers</a>
-                        </li>
-                        <li>
-                            <a href="{{ action("PagesController@product",'id=3030-41999') }}">Nuclear Throne</a>
-                        </li>
-                        <li>
-                            <a href="{{ action("PagesController@product",'id=3030-40158') }}">Rediculous Fishing - A tale of Redemption</a>
-                        </li>
-                        <li>
-                            <a href="{{ action("PagesController@product",'id=3030-37491') }}">Gun Godz</a>
-                        </li>
-                        <li>
-                            <a href="{{ action("PagesController@product",'id=3030-34402') }}">Serious Sam: The Random Encounter</a>
-                        </li>
-                        <li>
-                            <a href="{{ action("PagesController@product",'id=3030-32945') }}">Super Crate Box</a>
-                        </li>
-                        <li>
-                            <a href="{{ action("PagesController@product",'id=3030-46090') }}">Super Bread Box</a>
-                        </li>
-                    </ul>
-                    <a href="" class="btn btn-primary" role="button">Contact</a>
-                    <a href="" class="btn btn-primary" role="button">About</a>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-register">
-                        Login / Register
-                    </button>
-                </div>
+                <ul>
+                    <li>
+                        <a href="{{ action("PagesController@home") }}" role="button">Home</a> |
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button id="dropGames" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Games
+                                <span class="caret"></span>
+                            </button> |
+                            <ul class="dropdown-menu" aria-labelledby="dropGames">
+                                <li>
+                                    <a href="{{ action("PagesController@product",'id=3030-37491') }}">Gun Godz</a>
+                                </li>
+                                <li>
+                                    <a href="{{ action("PagesController@product",'id=3030-39474') }}">Luftrausers</a>
+                                </li>
+                                <li>
+                                    <a href="{{ action("PagesController@product",'id=3030-41999') }}">Nuclear Throne</a>
+                                </li>
+                                <li>
+                                    <a href="{{ action("PagesController@product",'id=3030-40158') }}">Rediculous Fishing</a>
+                                </li>
+                                <li>
+                                    <a href="{{ action("PagesController@product",'id=3030-34402') }}">Serious Sam</a>
+                                </li>
+                                <li>
+                                    <a href="{{ action("PagesController@product",'id=3030-32945') }}">Super Crate Box</a>
+                                </li>
+                                <li>
+                                    <a href="{{ action("PagesController@product",'id=3030-46090') }}">Super Bread Box</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="" role="button">Contact</a> |
+                    </li>
+                    <li>
+                        <a href="" role="button">About</a> |
+                    </li>
+                    <li>
+                        <button type="button" data-toggle="modal" data-target="#login-register">
+                            Login / Register
+                        </button>
+                    </li>
+                </ul>
             </nav>
+
         </div>
 
 
@@ -84,12 +97,6 @@ if(!isset($_GET['id'])){
 
                         </div>
                     </div>
-
-                </div>
-                <div class="modal-body">
-
-                </div>
-                <div class="modal-footer">
                 </div>
             </div>
         </div>
