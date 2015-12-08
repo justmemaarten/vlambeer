@@ -15,8 +15,8 @@ if(!isset($_GET['id'])){
 }?>
 <body class="game-<?=$id?>">
     <header data-spy="affix">
-        <div class="container">
-            <div id="sub"></div>
+        <div class="container animatedParent">
+            <div id="sub" class="animated fadeInLeftShort"></div>
             <img src="{{ asset('media/img/logo.png') }}" alt="Logo" height="90px" width="100px">
             <nav>
                 <div class="dropdown">
