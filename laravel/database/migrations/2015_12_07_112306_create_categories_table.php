@@ -12,7 +12,6 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-
         $this->down();
         Schema::create('tbl_categories', function (Blueprint $table) {
             $table->increments('category_id');
