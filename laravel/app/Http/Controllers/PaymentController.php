@@ -26,19 +26,15 @@ class PaymentController extends Controller
      */
     public function create_price_product($product_id)
     {
-        $price = mysql_query(SELECT price FROM tbl_products WHERE product_id = $product_id);
-            //calculate sales tax
-        $btw = ($price * 0.21);
-        $pricebtw = ($price * 1.21);
 
     }
     public function create_total_price($product_id)
     {
-        $price = mysql_query(SELECT price FROM tbl_products WHERE product_id = $product_id);
-            //calculate sales tax.
-        $pricebtw = ($price * 1.21);
-
-        $totalprice = SUM($price);
+//        $price = mysql_query(SELECT price FROM tbl_products WHERE product_id = $product_id);
+//            //calculate sales tax.
+//        $pricebtw = ($price * 1.21);
+//
+//        $totalprice = SUM($price);
     }
 
     /**
@@ -50,6 +46,8 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
         //
+
+
     }
 
     /**
@@ -58,9 +56,14 @@ class PaymentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($product_id)
     {
-        //btw tonen
+        //retrieve data
+        $product = \App\Product::where('product_id', $product_id)->first();
+        $price = ($product->price);
+            //calculate sales tax
+        $tax = ($price * 0.21);
+        $pricetax = ($price * 1.21);
     }
 
     /**
