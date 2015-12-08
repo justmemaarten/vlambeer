@@ -120,10 +120,10 @@ $(document).ready(function () {
                 error = 'Ajax request aborted.';
             } else {
                 error = 'Uncaught Error.\n' + jqXHR.responseText;
-            }	
+            }
        		alert("error: " + error);
     });
-    
+
 
     //Function modified from Stack Overflow
     function addlinks(data) {

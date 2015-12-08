@@ -62,7 +62,7 @@
             <div class="col-md-6 animated fadeInLeftShort">
                 <div id="info-text">
                     <p id="{{ $id }}description"></p>
-                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                    <b><p class="read-more"><a href="#" class="button">Read More</a></p></b>
                 </div>
             </div>
         </div>

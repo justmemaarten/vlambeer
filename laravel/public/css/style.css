@@ -663,8 +663,8 @@ body.game-3030-46090 {
 }
 .read-more a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 .read-more a:hover {
-    color: yellow;
+    color: red;
 }
