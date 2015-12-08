@@ -11,8 +11,9 @@
             $('#' + id + 'Deck').html(data.deck);
             $('#' + id + 'description').html(data.description);
             $('#' + id + 'name').html(data.name);
+            $('#' + id + 'genre').html(data.genres);
 
-            //console.log(data.name);
+            console.log(data.genres);
             //$('#game-title').html(data.description);
         });
     var luftrausers = GB.getGameData('3030-39474')

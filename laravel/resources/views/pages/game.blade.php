@@ -78,7 +78,7 @@
                             </tr>
                             <tr>
                                 <th>First release date</th>
-                                <td class="bar">release date hier</td>
+                                <td class="bar" id="{{ $id }}genre"></td>
                             </tr>
                             <tr>
                                 <th>Platform</th>
