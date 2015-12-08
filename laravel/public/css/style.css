@@ -150,12 +150,22 @@ footer {
 }
 
 .panel-group #gunGodz {
-    background: #1E1E1E;
+    background: url("../media/img/gun-godz-bg.png") no-repeat center center fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     position: relative;
 }
 
 .panel-group #lufTrausers {
-    background: #B06459;
+    background: url("../media/img/luftrausers-bg.png") no-repeat center center fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .panel-group #lufTrausers:before {
