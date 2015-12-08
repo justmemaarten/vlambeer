@@ -63,7 +63,7 @@ class PaymentController extends Controller
         $price = ($product->price);
             //calculate sales tax
         $tax = ($price * 0.21);
-        $pricetax = ($price * 1.21);
+        $pricetax = ($price + $tax);
     }
 
     /**
