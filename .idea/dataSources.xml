@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="DataSourceManagerImpl" format="xml" hash="104200165">
     <data-source source="LOCAL" name="MySQL - vlambeer@localhost" uuid="44b3d165-6c24-4255-a9d0-4954121d3005">
+=======
+<<<<<<< Updated upstream
+  <component name="DataSourceManagerImpl" format="xml" hash="2724130188">
+    <data-source source="LOCAL" name="MySQL - vlambeer@localhost" uuid="49781b64-3407-4da3-8b68-d6842152c7b1">
+=======
+  <component name="DataSourceManagerImpl" format="xml" hash="297894122">
+    <data-source source="LOCAL" name="MySQL - vlambeer@localhost" uuid="433bbc29-2e2f-4542-a252-2658b5934e4e">
+>>>>>>> Stashed changes
+>>>>>>> origin/master
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
