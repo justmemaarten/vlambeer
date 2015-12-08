@@ -16,7 +16,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        // ophalen alle producten (met id's) waarbij paid null is
     }
 
     /**

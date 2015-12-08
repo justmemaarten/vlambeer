@@ -564,7 +564,7 @@ body:after {
     margin-right: 0px;
 }
 
-.product-price {
+.product-info {
     background: rgba(0, 0, 255, 0.8);
     width: 329px;
     height: 70px;
@@ -574,10 +574,43 @@ body:after {
     border-top: 2px solid black;
 }
 
-.product-price h4 {
+.product-info h4 {
     font-weight: bold;
     color: white;
     text-align: center;
+}
+
+.product-amount {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.delete-cart-item-button {
+    position: absolute;
+    bottom: 74px;
+    right: 4px;
+    padding: 0px;
+    height: 40px;
+    width: 70px;
+    border-radius: 7px;
+}
+
+.input-delete-number {
+    position: absolute;
+    bottom: 64px;
+    right: 90px;
+    width: 80px;
+}
+
+.product-price {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
 .cart-img {
