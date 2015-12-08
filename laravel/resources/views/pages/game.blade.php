@@ -30,17 +30,17 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="http://lorempixel.com/1180/400/" alt="slider-photo-0"></a>
+                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="{{ asset('media/img/slider-1-' . $id . '.png') }}" alt="slider-photo-0"></a>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="http://lorempixel.com/1180/400/" alt="slider-photo-1"></a>
+                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="{{ asset('media/img/slider-1-' . $id . '.png') }}" alt="slider-photo-1"></a>
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="http://lorempixel.com/1180/400/" alt="slider-photo-2"></a>
+                <a href="http://lorempixel.com/1180/400/" data-lightbox="slider"><img src="{{ asset('media/img/slider-1-' . $id . '.png') }}" alt="slider-photo-2"></a>
                 <div class="carousel">
                 </div>
             </div>
