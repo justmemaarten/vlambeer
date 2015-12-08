@@ -49,7 +49,7 @@ header {
             header nav li a, header nav li button {
                 height: 90px;
                 background: none;
-                padding: 33px 20px;
+                padding: 34px 20px;
                 font-size: 1.8rem;
                 color: #B8B8B8;
                 border: none;
@@ -174,7 +174,12 @@ footer {
 }
 
 .panel-group #nuclear-Throne {
-    background: #4ADA17;
+    background: url("../media/img/nuclear-throne-bg.png") no-repeat center center fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .panel-group #nuclear-Throne:before {
@@ -183,7 +188,12 @@ footer {
 }
 
 .panel-group #ridiculous-Fishing {
-    background: #6496A4;
+    background: url("../media/img/ridiculous-bg.png") no-repeat center center fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .panel-group #ridiculous-Fishing:before {
@@ -191,7 +201,12 @@ footer {
 }
 
 .panel-group #serious-Sam {
-    background: #FEEC2C;
+    background: url("../media/img/serious-sam-bg.png") no-repeat center center fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .panel-group #serious-Sam:before {
@@ -200,7 +215,12 @@ footer {
 }
 
 .panel-group #super-Crate-Box {
-    background: #E12434;
+    background: url("../media/img/super-crate-bg.png") no-repeat center center fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .panel-group #super-Crate-Box:before {
@@ -209,7 +229,12 @@ footer {
 }
 
 .panel-group #super-bread-box {
-    background: #727671;
+    background: url("../media/img/super-bread-bg.png") no-repeat center center fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .panel-group #super-bread-box:before {
