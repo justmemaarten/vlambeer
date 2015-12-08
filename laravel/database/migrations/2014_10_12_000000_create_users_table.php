@@ -12,8 +12,9 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        $this->down();
         Schema::create('tbl_users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('user_id');
             $table->string('username', 255)->unique();
             $table->string('firstname', 255);
             $table->string('lastname', 255);
@@ -28,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('postalcode', 255);
             $table->string('city2', 255);
             $table->string('street2', 255);
+            $table->string('house_nr2', 255);
             $table->string('postalcode2', 255);
             $table->string('email')->unique();
             $table->string('password', 255);
@@ -44,6 +46,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tbl_users');
+        Schema::dropIfExists('tbl_users');
     }
 }
