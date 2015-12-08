@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once("../twitteroauth-master/twitteroauth/twitteroauth.php"); //Path to twitteroauth library
- 
+
 $twitteruser = "vlambeer";
 $twitteruser2 = "tha_rami";
 $twitteruser3 = "jwaaaap";
@@ -17,9 +17,13 @@ function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oa
 }
  
 $connection = getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
- 
+//$tweets = $connection->get("https://api.twitter.com/1.1/search/tweets.json?q=from%3A" . $twitteruser ."+OR+from%3A" . $twitteruser2 . "+OR+from%3A " . $twitteruser3."&count=".$notweets);
 $tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser."&count=".$notweets);
-$tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser2."&count=".$notweets);
-$tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser3."&count=".$notweets);
+$tweets2 = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser2."&count=".$notweets);
+$tweets3 = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser3."&count=".$notweets);
+//$tweets =  $tweets1 + $tweets2 + $tweets3;
+//$tweets = array_merge($tweets1, $tweets2, $tweets3);
+
 echo json_encode($tweets);
+
 ?>
