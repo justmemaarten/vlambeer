@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class PaymentController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,21 +24,9 @@ class PaymentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create_price_product($product_id)
+    public function create($product_id)
     {
-        $price = mysql_query(SELECT price FROM tbl_products WHERE product_id = $product_id);
-            //calculate sales tax
-        $btw = ($price * 0.21);
-        $pricebtw = ($price * 1.21);
-
-    }
-    public function create_total_price($product_id)
-    {
-        $price = mysql_query(SELECT price FROM tbl_products WHERE product_id = $product_id);
-            //calculate sales tax.
-        $pricebtw = ($price * 1.21);
-
-        $totalprice = SUM($price);
+        //
     }
 
     /**
@@ -60,7 +48,7 @@ class PaymentController extends Controller
      */
     public function show($id)
     {
-        //btw tonen
+        //
     }
 
     /**
