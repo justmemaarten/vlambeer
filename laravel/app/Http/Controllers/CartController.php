@@ -49,12 +49,18 @@ class CartController extends Controller
     public function show($product_id)
     {
         //retrieve data
-        $product = \App\Product::where('product_id', $product_id)->all();
-        $price = ($product->price);
+        $products = \App\Product::where('product_id', $product_id)->all();
         //calculate sales tax
-        $tax = ($price * 0.21);
-        $pricetax = ($price * 1.21);
-        $totalprice = (SUM($pricetax));
+        foreach($products as $product) {
+            $price = ($products->price);
+            $tax = 0.21;
+            $pricetax = ($price * 1.21);
+            $products->pricetax = $pricetax;
+
+        }
+        $products->totalprice = \App\Product::find($product_id)->assets()->sum('price') * ($tax +1);
+
+        return view('shop/cart', compact('products'));
     }
     
 
