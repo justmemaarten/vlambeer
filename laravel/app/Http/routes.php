@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/products', 'PagesController@products');
 
 Route::get('/about', 'PagesController@about');

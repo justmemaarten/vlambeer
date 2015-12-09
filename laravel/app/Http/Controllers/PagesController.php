@@ -36,5 +36,6 @@ class PagesController extends Controller
         return view('pages/shop/cart');
     }
 
+
 }
 

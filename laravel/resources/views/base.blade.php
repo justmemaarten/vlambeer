@@ -124,69 +124,73 @@ if(!isset($_GET['id'])){
     </div>
     <footer>
         <div class="container">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div id="info">
                     <div class="about-us">
-                        <strong>VLAMBEER IS A DUTCH INDEPENDENT GAME STUDIO</strong> made up of Rami Ismail and Jan Willem Nijman, bringing back arcade games since 1978.
+                        <strong>VLAMBEER IS A DUTCH INDEPENDENT GAME STUDIO</strong><p> made up of Rami Ismail and Jan Willem Nijman, bringing back arcade games since 1978.</p>
                     </div>
 
                     <div class="team-rami">
                         <img src="{{asset('media/images/team_rami.png')}}">
-                        <strong>Rami Ismail</strong><br>
-                        <i>Business and Development</i><br>
-                        rami@vlambeer.com<br>
-                        <a href="http://twitter.com/tha_rami">@tha_rami</a><br>
+                        <div class="team-info">
+                            <strong>Rami Ismail</strong><br>
+                            <i>Business and Development</i><br>
+                            rami@vlambeer.com<br>
+                            <a href="http://twitter.com/tha_rami" target="_blank">@tha_rami</a><br>
+                        </div>
                     </div>
 
                     <div class="team-jw">
                         <img src="{{asset('media/images/team_jw.png')}}">
-                        <strong>Jan Willem Nijman</strong><br>
-                        <i>Game Design</i><br>
-                        jw@vlambeer.com<br>
-                        <a href="http://twitter.com/jwaaaap">@jwaaaap</a><br>
+                        <div class="team-info">
+                            <strong>Jan Willem Nijman</strong><br>
+                            <i>Game Design</i><br>
+                            jw@vlambeer.com<br>
+                            <a href="http://twitter.com/jwaaaap" target="_blank">@jwaaaap</a><br>
+                        </div>
                     </div>
 
                     <div class="contact">info@vlambeer.com | Neude 5, 3512 AD, Utrecht, the Netherlands | +31621206363</div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="friends">
-                    <strong>FRIENDS OF VLAMBEER</strong>
-                    <ul>
-                        <a href="http://www.pietepiet.net/"><li>Paul Veer</li></a>
-                        <a href="http://www2.hku.nl/~roy/"><li>Roy Nathan de Groot</li></a>
-                        <a href="http://kozilek.bandcamp.com/"><li>KOZILEK</li></a>
-                        <a href="http://www.stfj.net/"><li>Zach Gage</li></a>
-                        <a href="http://www.aeiowu.com/"><li>Greg Wohlwend</li></a>
-                        <a href="http://www.kertgartner.com/"><li>Kert Gartner</li></a>
-                        <a href="http://www.strotch.net/"><li>Phlogiston</li></a>
-                        <a href="http://www.devolverdigital.com/"><li>Devolver Digital</li></a>
-                        <a href="http://www.sparpweed.nl/"><li>Sparpweed</li></a>
-                        <a href="http://www.alexmauer.com/"><li>Alex Mauer</li></a>
-                        <a href="http://brotherandroid.110mb.com/"><li>Brother Android</li></a>
-                        <a href="http://www.thepoppenkast.com/"><li>The Poppenkast</li></a>
-                        <a href="http://www.venuspatrol.com/"><li>Venus Patrol</li></a>
-                        <a href="http://www.control-online.nl/"><li>Control Magazine</li></a>
-                        <a href="http://www.facebook.com/Vlambeer"><li style="color:#fff;">Become friends too?</li></a>
-                    </ul>
+            <div class="col-md-4">
+                <strong>FRIENDS OF VLAMBEER</strong>
+                <div class="col-md-6">
+                    <div class="friends">
+                        <ul>
+                            <a href="http://www.pietepiet.net/"><li>Paul Veer</li></a>
+                            <a href="http://www2.hku.nl/~roy/"><li>Roy Nathan de Groot</li></a>
+                            <a href="http://kozilek.bandcamp.com/"><li>KOZILEK</li></a>
+                            <a href="http://www.stfj.net/"><li>Zach Gage</li></a>
+                            <a href="http://www.aeiowu.com/"><li>Greg Wohlwend</li></a>
+                            <a href="http://www.kertgartner.com/"><li>Kert Gartner</li></a>
+                            <a href="http://www.strotch.net/"><li>Phlogiston</li></a>
+                            <a href="http://www.devolverdigital.com/"><li>Devolver Digital</li></a>
+                            <a href="http://www.sparpweed.nl/"><li>Sparpweed</li></a>
+                            <a href="http://www.alexmauer.com/"><li>Alex Mauer</li></a>
+                            <a href="http://brotherandroid.110mb.com/"><li>Brother Android</li></a>
+                            <a href="http://www.thepoppenkast.com/"><li>The Poppenkast</li></a>
+                            <a href="http://www.venuspatrol.com/"><li>Venus Patrol</li></a>
+                            <a href="http://www.control-online.nl/"><li>Control Magazine</li></a>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-2">
-                <div class="friends">
-                    <ul>
-                        <h1></h1>
-                        <a href="http://www.iimusic.net/"><li>Pause music</li></a>
-                        <a href="http://notch.tumblr.com/"><li>Notch</li></a>
-                        <a href="http://adamatomic.com/"><li>Adam Atomic</li></a>
-                        <a href="http://halfbot.com/"><li>Halfbot</li></a>
-                        <a href="http://www.dutchgamegarden.nl/"><li>Dutch Game Garden</li></a>
-                        <a href="http://brandonnn.tumblr.com/"><li>Brandon Boyer</li></a>
-                        <a href="http://www.bramruiter.nl/"><li>Bram Ruiter</li></a>
-                        <a href="http://www.bitcollective.ca/"><li>Bit Collective</li></a>
-                        <a href="http://www.glitchhiker.com/"><li>Aardbever</li></a>
-
-                    </ul>
+                <div class="col-md-6">
+                    <div class="friends">
+                        <ul>
+                            <a href="http://www.iimusic.net/"><li>Pause music</li></a>
+                            <a href="http://notch.tumblr.com/"><li>Notch</li></a>
+                            <a href="http://adamatomic.com/"><li>Adam Atomic</li></a>
+                            <a href="http://halfbot.com/"><li>Halfbot</li></a>
+                            <a href="http://www.dutchgamegarden.nl/"><li>Dutch Game Garden</li></a>
+                            <a href="http://brandonnn.tumblr.com/"><li>Brandon Boyer</li></a>
+                            <a href="http://www.bramruiter.nl/"><li>Bram Ruiter</li></a>
+                            <a href="http://www.bitcollective.ca/"><li>Bit Collective</li></a>
+                            <a href="http://www.glitchhiker.com/"><li>Aardbever</li></a>
+                        </ul>
+                    </div>
                 </div>
+                <a href="http://www.facebook.com/Vlambeer"><li style="color:#fff;">Become friends too?</li></a>
             </div>
             <div id="twitter-feed">
 

@@ -21,6 +21,7 @@ body {
 /* Header */
 /*========*/
 header {
+    padding: 5px 0px;
     z-index: 1000;
     background: #171717;
     width: 100%;
@@ -95,15 +96,44 @@ header {
     margin-top: 125px;
 }
 
+
+/*========*/
+/* Footer */
+/*========*/
 footer {
-    background: #dddddd;
+    background: #171717;
     padding-top: 20px;
     padding-bottom: 20px;
+    color: #B8B8B8;
 }
 
+    footer .col-md-5 img {
+        float: left !important;
+    }
 
+    footer .team-info {
+        float: left;
+        width: 80%;
+        margin-bottom:10px;
+    }
 
+    footer ul {
+        padding-top: 10px;
+    }
 
+    footer li {
+        text-decoration: none;
+        color: #B8B8B8;
+        list-style: none;
+    }
+    
+    footer a:hover {
+        color: #B8B8B8;
+    }
+
+    footer .col-md-6 .friends ul {
+        padding-left: 0px;
+    }
 
 
 /*===========*/
@@ -643,6 +673,12 @@ body:after {
 /* Game ID style */
 /*===============*/
 
+.game-content {
+    width: 98%;
+    margin: 0 auto;
+    height: 200px;
+}
+
 body.game-3030-37491 {
     background: url("../media/img/gun-godz-bg.png") no-repeat center center fixed;
     background-attachment: fixed;
@@ -650,6 +686,11 @@ body.game-3030-37491 {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: #FFFFFF;
+}
+
+body.game-3030-37491 .game-content {
+    background: url("../media/img/blabla.png")
 }
 
 body.game-3030-39474 {

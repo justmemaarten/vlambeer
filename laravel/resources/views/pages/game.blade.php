@@ -2,21 +2,23 @@
 
 @section('content')
     <div class="row game-{{ $id = $_GET['id'] }}">
-        <div class="col-md-3 pull-left game-img-2">
-            <img class="game-icon" id="{{ $id }}Icon" alt="pixel">
-        </div>
-        <div class="col-md-9 game-info">
-            <h1 id="{{ $id }}Title"></h1>
-            <h4 id="{{ $id }}Deck"></h4>
-            <h4 id="{{ $id }}platforms">-->check op beschikbare platforms en dan dan de beschikbare
-                links naar de stores weergeven met de icons<--</h4>
-            <h4>-->hier de game rating<--</h4>
+        <div class="game-content">
+            <div class="col-md-3 pull-left game-img-2">
+                <img class="game-icon" id="{{ $id }}Icon" alt="pixel">
+            </div>
+            <div class="col-md-9 game-info">
+                <h1 id="{{ $id }}Title"></h1>
+                <h4 id="{{ $id }}Deck"></h4>
+                <h4 id="{{ $id }}platforms">-->check op beschikbare platforms en dan dan de beschikbare
+                    links naar de stores weergeven met de icons<--</h4>
+                <h4>-->hier de game rating<--</h4>
 
-        </div>
-        <div class="stores">
-            <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
-                <img src="{{ asset('media/img/downloadIcon.png') }}" alt="download" height="40px" width="40px">
-            </a>
+            </div>
+            <div class="stores">
+                <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
+                    <img src="{{ asset('media/img/downloadIcon.png') }}" alt="download" height="40px" width="40px">
+                </a>
+            </div>
         </div>
     </div>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
