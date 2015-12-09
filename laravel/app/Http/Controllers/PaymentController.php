@@ -30,11 +30,7 @@ class PaymentController extends Controller
     }
     public function create_total_price($product_id)
     {
-//        $price = mysql_query(SELECT price FROM tbl_products WHERE product_id = $product_id);
-//            //calculate sales tax.
-//        $pricebtw = ($price * 1.21);
-//
-//        $totalprice = SUM($price);
+
     }
 
     /**
@@ -65,6 +61,8 @@ class PaymentController extends Controller
         $tax = ($price * 0.21);
         $pricetax = ($price + $tax);
     }
+
+
 
     /**
      * Show the form for editing the specified resource.

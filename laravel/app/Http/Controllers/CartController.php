@@ -46,9 +46,16 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($product_id)
     {
-        //
+        //retrieve data
+        $product = \App\Product::where('product_id', $product_id)->all();
+        $price = ($product->price);
+        //calculate sales tax
+        $tax = ($price * 0.21);
+        $pricetax = ($price * 1.21);
+        $totalprice = (SUM($pricetax));
+    }
     }
 
     /**
