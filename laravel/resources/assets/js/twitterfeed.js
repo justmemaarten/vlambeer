@@ -21,90 +21,103 @@ $(document).ready(function () {
 	$('#twitter-feed').html(headerHTML + loadingHTML);
 	 
     $.getJSON('../public/php/get-tweets.php',
-        function(feeds) {   
-		   //alert(feeds);
+        function(accounts) {
+            //alert(feeds);
             var feedHTML = '';
-            var displayCounter = 1;         
-            for (var i=0; i<feeds.length; i++) {
-				var tweetscreenname = feeds[i].user.name;
-                var tweetusername = feeds[i].user.screen_name;
-                var profileimage = feeds[i].user.profile_image_url_https;
-                var status = feeds[i].text; 
-				var isaretweet = false;
-				var isdirect = false;
-				var tweetid = feeds[i].id_str;
-				
-				//If the tweet has been retweeted, get the profile pic of the tweeter
-				if(typeof feeds[i].retweeted_status != 'undefined'){
-				   profileimage = feeds[i].retweeted_status.user.profile_image_url_https;
-				   tweetscreenname = feeds[i].retweeted_status.user.name;
-				   tweetusername = feeds[i].retweeted_status.user.screen_name;
-				   tweetid = feeds[i].retweeted_status.id_str;
-				   status = feeds[i].retweeted_status.text; 
-				   isaretweet = true;
-				 };
-				 
-				 
-				 //Check to see if the tweet is a direct message
-				 if (feeds[i].text.substr(0,1) == "@") {
-					 isdirect = true;
-				 }
-				 
-				//console.log(feeds[i]);
-				 
-				 //Generate twitter feed HTML based on selected options
-				 if (((showretweets == true) || ((isaretweet == false) && (showretweets == false))) && ((showdirecttweets == true) || ((showdirecttweets == false) && (isdirect == false)))) { 
-					if ((feeds[i].text.length > 1) && (displayCounter <= displaylimit)) {             
-						if (showtweetlinks == true) {
-							status = addlinks(status);
-						}
-						 
-						if (displayCounter == 1) {
-							feedHTML += headerHTML;
-						}
-									 
-						feedHTML += '<div class="twitter-article" id="tw'+displayCounter+'">'; 										                 
-						feedHTML += '<div class="twitter-pic"><a href="https://twitter.com/'+tweetusername+'" target="_blank"><img src="'+profileimage+'"images/twitter-feed-icon.png" width="42" height="42" alt="twitter icon" /></a></div>';
-						feedHTML += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/'+tweetusername+'" target="_blank">'+tweetscreenname+'</a></strong> <a href="https://twitter.com/'+tweetusername+'" target="_blank">@'+tweetusername+'</a></span><span class="tweet-time"><a href="https://twitter.com/'+tweetusername+'/status/'+tweetid+'" target="_blank">'+relative_time(feeds[i].created_at)+'</a></span><br/>'+status+'</p>';
-						
-						if ((isaretweet == true) && (showretweetindicator == true)) {
-							feedHTML += '<div id="retweet-indicator"></div>';
-						}						
-						if (showtweetactions == true) {
-							feedHTML += '<div id="twitter-actions"><div class="intent" id="intent-reply"><a href="https://twitter.com/intent/tweet?in_reply_to='+tweetid+'" title="Reply"></a></div><div class="intent" id="intent-retweet"><a href="https://twitter.com/intent/retweet?tweet_id='+tweetid+'" title="Retweet"></a></div><div class="intent" id="intent-fave"><a href="https://twitter.com/intent/favorite?tweet_id='+tweetid+'" title="Favourite"></a></div></div>';
-						}
-						
-						feedHTML += '</div>';
-						feedHTML += '</div>';
-						displayCounter++;
-					}   
-				 }
-            }
-             
-            $('#twitter-feed').html(feedHTML);
-			
-			//Add twitter action animation and rollovers
-			if (showtweetactions == true) {				
-				$('.twitter-article').hover(function(){
-					$(this).find('#twitter-actions').css({'display':'block', 'opacity':0, 'margin-top':-20});
-					$(this).find('#twitter-actions').animate({'opacity':1, 'margin-top':0},200);
-				}, function() {
-					$(this).find('#twitter-actions').animate({'opacity':0, 'margin-top':-20},120, function(){
-						$(this).css('display', 'none');
-					});
-				});			
-			
-				//Add new window for action clicks
-			
-				$('#twitter-actions a').click(function(){
-					var url = $(this).attr('href');
-				  window.open(url, 'tweet action window', 'width=580,height=500');
-				  return false;
-				});
-			}
-			
-			
-    }).error(function(jqXHR, textStatus, errorThrown) {
+            var displayCounter = 1;
+
+            $.each(accounts, function (key, account) {
+
+                for (var i = 0; i < account.length; i++)
+                {
+
+                    var tweetscreenname = account[i].user.name;
+                    var tweetusername = account[i].user.screen_name;
+                    var profileimage = account[i].user.profile_image_url_https;
+                    var status = account[i].text;
+                    var isaretweet = false;
+                    var isdirect = false;
+                    var tweetid = account[i].id_str;
+
+                    //If the tweet has been retweeted, get the profile pic of the tweeter
+                    if(typeof account[i].retweeted_status != 'undefined'){
+                        profileimage = account[i].retweeted_status.user.profile_image_url_https;
+                        tweetscreenname = account[i].retweeted_status.user.name;
+                        tweetusername = account[i].retweeted_status.user.screen_name;
+                        tweetid = account[i].retweeted_status.id_str;
+                        status = account[i].retweeted_status.text;
+                        isaretweet = true;
+                    };
+
+
+                    //Check to see if the tweet is a direct message
+                    if (account[i].text.substr(0,1) == "@") {
+                        isdirect = true;
+                    }
+
+                    console.log(key[i]);
+
+                    //Generate twitter feed HTML based on selected options
+                    if (((showretweets == true) || ((isaretweet == false) && (showretweets == false))) && ((showdirecttweets == true) || ((showdirecttweets == false) && (isdirect == false)))) {
+                        if ((account[i].text.length > 1) && (displayCounter <= displaylimit)) {
+                            if (showtweetlinks == true) {
+                                status = addlinks(status);
+                            }
+
+                            if (displayCounter == 1) {
+                                feedHTML += headerHTML;
+                            }
+
+                            feedHTML += '<div class="twitter-article" id="tw'+displayCounter+'">';
+                            feedHTML += '<div class="twitter-pic"><a href="https:twitter.com/'+tweetusername+'" target="_blank"><img src="'+profileimage+'"images/twitter-feed-icon.png" width="42" height="42" alt="twitter icon" /></a></div>';
+                            feedHTML += '<div class="twitter-text"><p><span class="tweetprofilelink"><strong><a href="https:twitter.com/'+tweetusername+'" target="_blank">'+tweetscreenname+'</a></strong> <a href="https:twitter.com/'+tweetusername+'" target="_blank">@'+tweetusername+'</a></span><span class="tweet-time"><a href="https:twitter.com/'+tweetusername+'/status/'+tweetid+'" target="_blank">'+relative_time(account[i].created_at)+'</a></span><br/>'+status+'</p>';
+
+                            if ((isaretweet == true) && (showretweetindicator == true)) {
+                                feedHTML += '<div id="retweet-indicator"></div>';
+                            }
+                            if (showtweetactions == true) {
+                                feedHTML += '<div id="twitter-actions"><div class="intent" id="intent-reply"><a href="https:twitter.com/intent/tweet?in_reply_to='+tweetid+'" title="Reply"></a></div><div class="intent" id="intent-retweet"><a href="https:twitter.com/intent/retweet?tweet_id='+tweetid+'" title="Retweet"></a></div><div class="intent" id="intent-fave"><a href="https:twitter.com/intent/favorite?tweet_id='+tweetid+'" title="Favourite"></a></div></div>';
+                            }
+
+                            feedHTML += '</div>';
+                            feedHTML += '</div>';
+                            displayCounter++;
+                        }
+
+
+                        $('#twitter-feed').html(feedHTML);
+
+                        //Add twitter action animation and rollovers
+                        if (showtweetactions == true) {
+                            $('.twitter-article').hover(function(){
+                                $(this).find('#twitter-actions').css({'display':'block', 'opacity':0, 'margin-top':-20});
+                                $(this).find('#twitter-actions').animate({'opacity':1, 'margin-top':0},200);
+                            }, function() {
+                                $(this).find('#twitter-actions').animate({'opacity':0, 'margin-top':-20},120, function(){
+                                    $(this).css('display', 'none');
+                                });
+                            });
+
+                            //Add new window for action clicks
+
+                            $('#twitter-actions a').click(function(){
+                                var url = $(this).attr('href');
+                                window.open(url, 'tweet action window', 'width=580,height=500');
+                                return false;
+                            });
+                        }
+
+                        break;
+
+                    }
+                }
+
+            });
+
+
+
+
+            }).error(function(jqXHR, textStatus, errorThrown) {
 		var error = "";
 			 if (jqXHR.status === 0) {
                error = 'Connection problem. Check file path and www vs non-www in getJSON request';
