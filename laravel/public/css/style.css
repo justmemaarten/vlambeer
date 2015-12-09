@@ -44,6 +44,8 @@ header {
             display: inline-block;
             color: #B8B8B8;
             height: 90px;
+            select:focus;
+            outline: none;
         }
 
             header nav li a, header nav li button {
@@ -54,7 +56,8 @@ header {
                 color: #B8B8B8;
                 border: none;
                 border-color: inherit !important;
-
+                select:focus;
+                outline: none;
             }
 
             header nav li a:hover, header nav li button:hover {
