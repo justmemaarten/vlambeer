@@ -123,7 +123,7 @@ if(!isset($_GET['id'])){
 
     </div>
     <footer>
-        <div class="container">
+        <div class="container animatedParent">
             <div class="col-md-5">
                 <div id="info">
                     <div class="about-us">
@@ -131,7 +131,7 @@ if(!isset($_GET['id'])){
                     </div>
 
                     <div class="team-rami">
-                        <img src="{{asset('media/images/team_rami.png')}}">
+                        <img class="animated tada" src="{{asset('media/images/team_rami.png')}}">
                         <div class="team-info">
                             <strong>Rami Ismail</strong><br>
                             <i>Business and Development</i><br>
@@ -140,8 +140,8 @@ if(!isset($_GET['id'])){
                         </div>
                     </div>
 
-                    <div class="team-jw">
-                        <img src="{{asset('media/images/team_jw.png')}}">
+                    <div class="team-jw animatedParent">
+                        <img class="animated tada" src="{{asset('media/images/team_jw.png')}}">
                         <div class="team-info">
                             <strong>Jan Willem Nijman</strong><br>
                             <i>Game Design</i><br>
@@ -192,7 +192,7 @@ if(!isset($_GET['id'])){
                 </div>
                 <a href="http://www.facebook.com/Vlambeer"><li style="color:#fff;">Become friends too?</li></a>
             </div>
-            <div id="twitter-feed">
+            <div class="animated fadeIn" id="twitter-feed">
 
             </div>
         </div>
