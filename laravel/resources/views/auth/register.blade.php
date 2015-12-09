@@ -21,13 +21,13 @@
     </div>
 
     <div class="form-group">
-        <label for="">Lastname</label>
-        <input type="text" name="lastname" id="lastname" class="form-control">
+        <label for="">Insertion</label>
+        <input class="form-control" type="text" name="insertion" id="insertion">
     </div>
 
     <div class="form-group">
-        <label for="">Insertion</label>
-        <input class="form-control" type="text" name="insertion" id="insertion">
+        <label for="">Lastname</label>
+        <input type="text" name="lastname" id="lastname" class="form-control">
     </div>
 
     <div class="form-group">

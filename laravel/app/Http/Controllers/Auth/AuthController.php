@@ -49,7 +49,7 @@ class AuthController extends Controller
             'password' => 'required|min:6',
             'firstname' => 'required|max:255',
             'lastname' => 'required|max:255',
-            'insertion' => 'required|max:255',
+            'insertion' => 'max:255',
             'phone_nr' => 'required|max:255',
             'birthdate' => 'required|max:255',
             'city' => 'required|max:255',
