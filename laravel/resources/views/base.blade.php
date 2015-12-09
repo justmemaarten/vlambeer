@@ -17,7 +17,7 @@ if(!isset($_GET['id'])){
     <header data-spy="affix">
         <div class="container animatedParent">
             <div id="sub" class="animated fadeInLeftShort"></div>
-            <img src="{{ asset('media/img/logo.png') }}" alt="Logo" height="90px" width="100px">
+            <a href="{{ action("PagesController@home") }}"><img src="{{ asset('media/img/logo.png') }}" alt="Logo" height="90px" width="100px" class="animatedClick animated clickExample pulse" data-target='clickExample'></a>
             <nav>
                 <div class="dropdown">
                     <ul>
@@ -197,10 +197,11 @@ if(!isset($_GET['id'])){
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../resources/assets/js/custom.js"></script>
+    <script src="../resources/assets/js/css3-animate-it.js"></script>
+    <script src="../resources/assets/js/twitterfeed.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="../resources/assets/js/giantbomb.js"></script>
     <script src="../resources/assets/js/games.js"></script>
-    <script src="../resources/assets/js/css3-animate-it.js"></script>
-    <script src="../resources/assets/js/twitterfeed.js"></script>
+
 </body>
 </html>
