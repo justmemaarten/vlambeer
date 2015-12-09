@@ -26,7 +26,9 @@ class CartController extends Controller
      */
     public function create($product_id)
     {
-        //
+        //user_id ophalen
+        //$product_id ophalen die geen paid heeft
+        //die tonen
     }
 
     /**
@@ -62,7 +64,7 @@ class CartController extends Controller
 
         return view('shop/cart', compact('products'));
     }
-    
+
 
     /**
      * Show the form for editing the specified resource.
