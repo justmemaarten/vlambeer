@@ -56,7 +56,7 @@ class CartController extends Controller
         $pricetax = ($price * 1.21);
         $totalprice = (SUM($pricetax));
     }
-    }
+    
 
     /**
      * Show the form for editing the specified resource.
