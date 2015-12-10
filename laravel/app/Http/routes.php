@@ -13,15 +13,16 @@
 
 
 
-Route::get('/products', 'PagesController@products');
 
 Route::get('/about', 'PagesController@about');
 
 Route::get('/contact', 'PagesController@contact');
 
-Route::get('/product', 'PagesController@product');
+Route::get('/game', 'PagesController@product');
 
 Route::get('/shop/cart', 'PagesController@cart');
+
+Route::resource('/products', "ProductsController");
 
 // Authentication routes...
 Route::post('auth/login', 'Auth\AuthController@postLogin');

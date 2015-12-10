@@ -14,7 +14,9 @@ if(!isset($_GET['id'])){
     $id = 0;
 }?>
 <body class="game-<?=$id?>">
-    <header data-spy="affix">
+<div class="animatedParent animateOnce">
+    <header data-spy="affix" class="animated fadeInDownShort slowest">
+
         <div class="container animatedParent">
             <div id="sub" class="animated fadeInLeftShort"></div>
             <a href="{{ action("PagesController@home") }}"><img src="{{ asset('media/img/logo.png') }}" alt="Logo" height="90px" width="100px" class="animatedClick animated clickExample pulse" data-target='clickExample'></a>
@@ -79,6 +81,7 @@ if(!isset($_GET['id'])){
 
 
     </header>
+</div>
 
     <!-- Modal -->
     <div class="modal fade" id="login-register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -112,11 +115,11 @@ if(!isset($_GET['id'])){
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container animatedParent animateOnce">
         @if (Session::has('authMessage'))
             {{ Session::get('authMessage') }}
         @endif
-        <div id="quote"></div>
+        <div class="animated fadeInDownShort" id="quote"></div>
 
         @yield('content')
 
