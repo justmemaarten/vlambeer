@@ -24,11 +24,18 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($product_id)
+    public function create($product_id, $id)
     {
         //user_id ophalen
         //$product_id ophalen die geen paid heeft
         //die tonen
+        $product = \App\Product::where('product_id', $product_id)->all();
+        $user = \App\Cart::where('id', $id)->first();//user_id ophalen vanuit session
+
+//        @foreach($products as $product)
+//            <h2>{{$product->name}} </h2>
+//            <p>{{$product->price}}</p>
+//        @endforeach
     }
 
     /**
