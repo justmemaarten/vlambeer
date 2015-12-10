@@ -13,6 +13,10 @@ body {
 
 }
 
+label {
+    color: black;
+}
+
 .container {
 
 
@@ -674,10 +678,17 @@ body:after {
 /* Game ID style */
 /*===============*/
 
+body.game-3030-37491 .container, body.game-3030-39474 .container, body.game-3030-40158 .container, body.game-3030-41999 .container, body.game-3030-34402 .container, body.game-3030-32945 .container, body.game-3030-46090 .container{
+    background:rgba(0,0,0,0.4);
+    color: white;
+}
+
 .game-content {
-    width: 98%;
-    margin: 0 auto;
-    height: 200px;
+
+}
+
+.game-content h1 {
+    margin-top: 0px;
 }
 
 body.game-3030-37491 {

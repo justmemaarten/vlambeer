@@ -12,7 +12,6 @@
                 <h4 id="{{ $id }}platforms">-->check op beschikbare platforms en dan dan de beschikbare
                     links naar de stores weergeven met de icons<--</h4>
                 <h4>-->hier de game rating<--</h4>
-
             </div>
             <div class="stores">
                 <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
