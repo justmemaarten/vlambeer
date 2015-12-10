@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = \App\Product::all();
-        return view('pages/shop/store',compact($products));
+        return view('pages/products/index',compact($products));
     }
 
     /**
@@ -49,7 +49,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $products = \App\Product::where('id', $id)->first();
+        return view('pages/products/index',compact($products));
     }
 
     /**
@@ -72,6 +73,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        var_dump($request);
+        die();
         $this->validate($request, [
             'name'          =>  'required|max:255|string',
             'description'   =>  'required|string',
@@ -79,9 +82,9 @@ class ProductController extends Controller
             'stock'         =>  'required|numeric'
         ]);
 
-        \App\Product::create($request->except('_token'));
+        //\App\Product::create($request->except('_token'));
 
-        return redirect('products')->with('message', 'payment succesfully');
+       // return redirect('products')->with('message', 'payment succesfully');
     }
 
     /**

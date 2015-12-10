@@ -22,7 +22,7 @@ Route::get('/game', 'PagesController@product');
 
 Route::get('/shop/cart', 'PagesController@cart');
 
-Route::resource('/products', "ProductsController");
+Route::resource('/products', "ProductController");
 
 // Authentication routes...
 Route::post('auth/login', 'Auth\AuthController@postLogin');

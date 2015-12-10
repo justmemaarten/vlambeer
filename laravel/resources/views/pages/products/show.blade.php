@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="{{ action('ProductsController@update') }}" method="POST" >
+<form action="{{ action('ProductController@update') }}" method="POST" >
     {{ csrf_field() }}
 
 </form>
