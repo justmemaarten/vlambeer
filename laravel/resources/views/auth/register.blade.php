@@ -1,4 +1,4 @@
-<form action="auth/register" method="post">
+<form class="auth-form" action="auth/register" method="post">
     {!! csrf_field() !!}
     <div class="form-group">
         <label for="">Username</label>
@@ -64,5 +64,5 @@
         <label for="">Email</label>
         <input type="text" name="email" id="email" class="form-control">
     </div>
-    <input type="submit" value="register" class="btn btn-primary">
+    <input type="submit" value="register" class="auth-btn">
 </form>
