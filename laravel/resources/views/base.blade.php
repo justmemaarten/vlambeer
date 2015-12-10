@@ -112,11 +112,11 @@ if(!isset($_GET['id'])){
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container animatedParent animateOnce">
         @if (Session::has('authMessage'))
             {{ Session::get('authMessage') }}
         @endif
-        <div id="quote"></div>
+        <div class="animated fadeInDownShort" id="quote"></div>
 
         @yield('content')
 
