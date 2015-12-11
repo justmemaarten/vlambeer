@@ -49,7 +49,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $products = \App\Product::where('id', $id)->first();
+        $products = \App\Product::where('product_id', $id)->first();
         return view('pages/products/index',compact($products));
     }
 
