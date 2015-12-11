@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">

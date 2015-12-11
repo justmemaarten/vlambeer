@@ -33,6 +33,8 @@ $(document).ready(function () {
 $(document).ready(function () {
  var randYear = Math.floor(Math.random()*(2000-1700+1)+1700);
  document.getElementById("sub").innerHTML = 'Bringing back arcade since ' + randYear;
+    var slogan = 'Bringing back arcade since ' + randYear;
+    document.title = "Vlambeer -" + slogan;
 });
 //<<<<<<< HEAD
 /* end phrase */
