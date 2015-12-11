@@ -201,14 +201,28 @@ if(!isset($_GET['id'])){
         </div>
     </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+{{--<script src="https://raw.githubusercontent.com/jedfoster/Readmore.js/master/readmore.js"></script>--}}
+<script src="{{ asset('js/readmore.js') }}"></script>
+
+<script>
+    $('#info').readmore({
+        moreLink: '<a href="#">Usage, examples, and options</a>',
+        collapsedHeight: 384,
+        afterToggle: function(trigger, element, expanded) {
+            if(! expanded) { // The "Close" link was clicked
+                $('html, body').animate({scrollTop: element.offset().top}, {duration: 100});
+            }
+        }
+    });
+    $('#info-text').readmore({speed: 500});
+</script>
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="{{ asset('js/css3-animate-it.js') }}"></script>
     <script src="{{ asset('js/twitterfeed.js') }}"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="{{ asset('js/giantbomb.js') }}"></script>
     <script src="{{ asset('js/games.js') }}"></script>
-
 </body>
 </html>

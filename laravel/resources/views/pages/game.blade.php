@@ -63,7 +63,7 @@
             <div class="col-md-6 animated fadeInLeftShort">
                 <div id="info-text">
                     <p id="{{ $id }}description"></p>
-                    <b><p class="read-more"><a href="#" class="button">Read More</a></p></b>
+                    <p style="color: transparent"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at corporis cupiditate dolorem ea earum, eligendi eveniet fuga illo laudantium, molestias nemo optio placeat quos reprehenderit repudiandae sit sunt voluptates.</span><span>Accusantium aperiam at aut ex maxime necessitatibus non quam quisquam quo tempore! Ab accusantium at aut corporis distinctio doloremque doloribus iure laboriosam laborum nisi numquam omnis praesentium quia reprehenderit, totam!</span><span>Assumenda iste obcaecati odit. Ab amet animi aspernatur assumenda dolorem doloremque ducimus eaque eligendi, error eum facere fuga fugiat hic in molestiae nam nobis repudiandae sint unde velit? Ipsum, voluptates!</span><span>Accusamus atque cum dicta dignissimos dolor dolore eaque eligendi enim expedita explicabo facere fugiat illo incidunt minus neque nulla numquam quaerat repudiandae sed sequi veritatis voluptas, voluptate voluptatem voluptates voluptatibus!</span><span>A adipisci assumenda corporis illum, laboriosam neque reiciendis repudiandae similique unde voluptas! Adipisci autem dicta error inventore quis saepe sint? Aliquid aperiam delectus dolores iusto omnis sint tenetur ut voluptatem?</span></p>
                 </div>
             </div>
         </div>
