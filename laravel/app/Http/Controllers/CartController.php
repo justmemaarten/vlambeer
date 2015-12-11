@@ -26,16 +26,7 @@ class CartController extends Controller
      */
     public function create($product_id, $id)
     {
-        //user_id ophalen
-        //$product_id ophalen die geen paid heeft
-        //die tonen
-        $product = \App\Product::where('product_id', $product_id)->all();
-        $user = \App\Cart::where('id', $id)->first();//user_id ophalen vanuit session
 
-//        @foreach($products as $product)
-//            <h2>{{$product->name}} </h2>
-//            <p>{{$product->price}}</p>
-//        @endforeach
     }
 
     /**
@@ -48,7 +39,33 @@ class CartController extends Controller
     {
         //
     }
+    public function showCart(Request $request, $product_id, $paid, $id)
+    {
+        // blade
+//        @foreach($products as $product)
+//            <h2>{{$product->name}} </h2>
+//            <p>{{$product->price}}</p>
+//        @endforeach
 
+        //user_id ophalen
+        $user = $request->session()->get('id');
+
+        //$product_id ophalen die geen paid heeft
+        //die tonen
+        $products = \App\Product::where('product_id', $product_id)->all();
+        $product_paid = \App\Cart::where('paid', $paid)->all();
+        $user = \App\Cart::where('id', $id)->first();//user_id ophalen vanuit session
+
+
+        if ($user::find(1) || $product_paid::find(1) )//als user bestaat
+            return view('shop/cart');//met iets erin
+        else
+        return view();
+       endif
+
+
+        //
+    }
     /**
      * Display the specified resource.
      *
