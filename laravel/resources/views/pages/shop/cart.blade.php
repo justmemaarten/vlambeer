@@ -16,6 +16,7 @@
             <div class="product-info">
                 <h4>Product info</h4>
                 <p class="product-price">
+                    <!-- product->price in blade -->
                 </p>
             </div>
         </div>
@@ -28,7 +29,7 @@
             <input class="btn btn-primary delete-cart-item-button" type="submit" value="Delete">
             <div class="product-info">
                 <h4>Product info</h4>
-                <p class="product-price"> {{$products->price}} </p>
+                <p class="product-price"> <!-- product->price in blade --> </p>
             </div>
         </div>
         <div class="product col-md-3">
@@ -40,7 +41,7 @@
             <input class="btn btn-primary delete-cart-item-button" type="submit" value="Delete">
             <div class="product-info">
                 <h4>Product info</h4>
-                <p class="product-price"> $ 200 </p>
+                <p class="product-price"> $ 200 <!-- product->price in blade --> </p>
             </div>
         </div>
     </div>

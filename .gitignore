@@ -5,3 +5,5 @@ Homestead.json
 .env
 .idea
 .idea/blade.xml
+
+laravel/resources/views/base.blade.php
