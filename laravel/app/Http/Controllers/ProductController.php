@@ -49,8 +49,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $products = \App\Product::where('product_id', $id)->first();
-        return view('pages/products/index',compact($products));
+        $product = \App\Product::where('product_id', $id)->first();
+        return view('pages/products/show',compact('product'));
     }
 
     /**
@@ -73,17 +73,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        var_dump($request);
-        die();
-        $this->validate($request, [
-            'name'          =>  'required|max:255|string',
-            'description'   =>  'required|string',
-            'price'         =>  'required|numeric|max:5,2',
-            'stock'         =>  'required|numeric'
-        ]);
-
-        //\App\Product::create($request->except('_token'));
-
+        $products = \App\Cart::where('product_id', $id);
+        for ($i=0; $i <= count($products); $i++) {
+            $product = \App\Product::where('product_id', $products[$i]['product_id'])->first();
+            $newstock = $product['stock'] - $products[$i]['amount'];
+            DB::update('update tbl_products set stock = ? where product_id = ?', array($newstock , $product['product_id']));
+        }
        // return redirect('products')->with('message', 'payment succesfully');
     }
 
