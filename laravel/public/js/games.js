@@ -6,12 +6,21 @@
             var id = '3030-37491';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
-            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             $('#' + id + 'description').html(data.description);
             $('#' + id + 'name').html(data.name);
             $('#' + id + 'genre').html(data.genres);
+            $('#' + id + 'rating').html(data.original_game_rating);
+            $('#' + id + 'platforms').html(data.platforms);
+
+            console.log(data.developers[0].name);
+
+            $platforms = data.platforms;
+
+            forEach($platforms as $platform) {
+                console.log($platform)
+            }
 
             console.log(data.genres);
             //$('#game-title').html(data.description);
@@ -21,7 +30,6 @@
             var id = '3030-39474';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
-            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             $('#' + id + 'description').html(data.description);
@@ -35,7 +43,6 @@
             var id = '3030-41999';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
-            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             $('#' + id + 'description').html(data.description);
@@ -49,7 +56,6 @@
             var id = '3030-40158';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
-            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             $('#' + id + 'description').html(data.description);
@@ -63,7 +69,6 @@
             var id = '3030-34402';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
-            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             $('#' + id + 'description').html(data.description);
@@ -77,7 +82,6 @@
             var id = '3030-46090';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
-            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             $('#' + id + 'description').html(data.description);
@@ -91,7 +95,6 @@
             var id = '3030-32945';
             var data = data.results;
             $('#' + id + 'Icon').attr('src', data.image.medium_url);
-            console.log(data.image);
             $('#' + id + 'Title').html(data.name);
             $('#' + id + 'Deck').html(data.deck);
             $('#' + id + 'description').html(data.description);

@@ -679,7 +679,7 @@ body:after {
 /* Game ID style */
 /*===============*/
 
-body.game-3030-37491 .container, body.game-3030-39474 .container, body.game-3030-40158 .container, body.game-3030-41999 .container, body.game-3030-34402 .container, body.game-3030-32945 .container, body.game-3030-46090 .container{
+body.game-3030-37491 .games-container, body.game-3030-39474 .games-container, body.game-3030-40158 .games-container, body.game-3030-41999 .games-container, body.game-3030-34402 .games-container, body.game-3030-32945 .games-container, body.game-3030-46090 .games-container{
     background:rgba(0,0,0,0.4);
     color: white;
 }

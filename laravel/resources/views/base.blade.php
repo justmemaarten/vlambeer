@@ -116,7 +116,7 @@ if(!isset($_GET['id'])){
             </div>
         </div>
     </div>
-    <div class="container animatedParent animateOnce">
+    <div class="container games-container animatedParent animateOnce">
         @if (Session::has('authMessage'))
             {{ Session::get('authMessage') }}
         @endif
