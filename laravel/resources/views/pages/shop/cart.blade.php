@@ -1,4 +1,4 @@
-@extends('base')
+b@extends('base')
 
 @section('content')
 
@@ -15,7 +15,8 @@
             <input class="btn btn-primary delete-cart-item-button" type="submit" value="Delete">
             <div class="product-info">
                 <h4>Product info</h4>
-                <p class="product-price"> $ 200 </p>
+                <p class="product-price">
+                </p>
             </div>
         </div>
         <div class="product col-md-3">
