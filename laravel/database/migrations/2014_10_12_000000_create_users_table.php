@@ -16,6 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('tbl_users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username', 255)->unique();
+            $table->string('email')->unique();
             $table->string('firstname', 255);
             $table->string('lastname', 255);
             $table->string('insertion', 255);
@@ -31,7 +32,6 @@ class CreateUsersTable extends Migration
             $table->string('street2', 255);
             $table->string('house_nr2', 255);
             $table->string('postalcode2', 255);
-            $table->string('email')->unique();
             $table->string('password', 255);
 
             $table->rememberToken();

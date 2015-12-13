@@ -33,7 +33,9 @@ class PagesController extends Controller
     }
 
     public function cart() {
-        return view('pages/shop/cart');
+        $id = $_GET['id'];
+        dd(view('pages/shop/cart')->with($id));
+        return view('pages/shop/cart')->with($id);
     }
 
 

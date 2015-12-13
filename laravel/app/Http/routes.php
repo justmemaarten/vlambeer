@@ -20,9 +20,13 @@ Route::get('/contact', 'PagesController@contact');
 
 Route::get('/game', 'PagesController@product');
 
-Route::get('/shop/cart', 'PagesController@cart');
+Route::resource('/shop/cart', 'CartController');
+if (\Auth::check())
+{
+    Route::resource('/products', "ProductController");
+}
 
-Route::resource('/products', "ProductController");
+
 
 // Authentication routes...
 Route::post('auth/login', 'Auth\AuthController@postLogin');

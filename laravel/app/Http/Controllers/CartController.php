@@ -39,54 +39,67 @@ class CartController extends Controller
     {
         //
     }
-    public function showCart(Request $request, $product_id, $paid, $id)
-    {
-        // blade
-//        @foreach($products as $product)
-//            <h2>{{$product->name}} </h2>
-//            <p>{{$product->price}}</p>
-//        @endforeach
 
-        //user_id ophalen
-        $user = $request->session()->get('id');
-
-        //$product_id ophalen die geen paid heeft
-        //die tonen
-        $products = \App\Product::where('product_id', $product_id)->all();
-        $product_paid = \App\Cart::where('paid', $paid)->all();
-        $user = \App\Cart::where('id', $id)->first();//user_id ophalen vanuit session
-
-
-        if ($user::find(1) || $product_paid::find(1) )//als user bestaat
-            return view('shop/cart');//met iets erin
-        else
-        return view();
-       endif
-
-
-        //
-    }
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($product_id)
+    public function show()
     {
-        //retrieve data
-        $products = \App\Product::where('product_id', $product_id)->all();
+
+        $user_id = \Auth::user()->id;
+
+        $products = \App\Cart::where('id' , '=',  $user_id)
+            ->where('paid', '=', NULL)
+            ->get();
+
         //calculate sales tax
+        $products->totalprice = 0;
+        $products->total = 0;
+        $products->btw = 0.21;
+        $products->categories = [];
+        $suggestions = [];
+        $matchingSuggestions = [];
+        $matchingSuggestionsTotal = 0;
         foreach($products as $product) {
-            $price = ($products->price);
-            $tax = 0.21;
-            $pricetax = ($price * 1.21);
-            $products->pricetax = $pricetax;
+            $product->productInfo = \App\Product::where('product_id', '=', $product['product_id'])->first();
+            $price = ($product->productInfo['price']);
+            $products->total += $product->amount;
+            $products->totalprice += $price * $product->amount;
 
+            $product->category = \App\Category::where('category_id', '=', $product->productInfo->category_id)->first();
+
+            if (!in_array($product->category->category_id, $products->categories)) {
+                array_push($products->categories, $product->category->category_id);
+            }
         }
-        $products->totalprice = \App\Product::find($product_id)->assets()->sum('price') * ($tax +1);
 
-        return view('shop/cart', compact('products'));
+        foreach ($products->categories as $category){
+            array_push($matchingSuggestions, \App\Product::where('category_id', '=', $category)->get());
+            $matchingSuggestionsTotal += count(\App\Product::where('category_id', '=', $category)->get());
+        }
+
+
+        $max = 5;
+
+        if ($matchingSuggestionsTotal <= 5) {
+            $max = $matchingSuggestionsTotal;
+        }
+
+        for ($i = 0; $i < $max; $i++){
+
+            do {
+                $randomindex = rand(0, count($matchingSuggestions)-1);
+                $randomvalue = rand(0, count($matchingSuggestions[$randomindex])-1);
+            } while (in_array($matchingSuggestions[$randomindex][$randomvalue], $suggestions));
+            array_push($suggestions, $matchingSuggestions[$randomindex][$randomvalue]);
+        }
+
+        unset($max);
+
+        return view('pages/shop/cart', compact('products', 'suggestions'));
     }
 
 

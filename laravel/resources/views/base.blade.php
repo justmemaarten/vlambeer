@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Vlambeer</title>
 
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -58,6 +58,11 @@ if(!isset($_GET['id'])){
                                 </ul>
                             </div>
                         </li>
+                        @if (Auth::check())
+                        <li>
+                                <a href="{{action('CartController@show')}}" >Cart</a> |
+                        </li>
+                        @endif
                         <li>
                             <a href="" role="button">Contact</a> |
                         </li>
@@ -65,17 +70,17 @@ if(!isset($_GET['id'])){
                             <a href="" role="button">About</a> |
                         </li>
                         <li>
-                    @if (!Auth::check())
-                    <button type="button" class="dropdown" data-toggle="modal" data-target="#login-register">
-                        Login / Register
-                    </button>
-                    @else
-                        <a href="auth/logout" class="dropdown">Logout</a>
-                    @endif
+                            @if (Auth::check())
+                                <a href="auth/logout" class="dropdown">Logout</a>
+                            @else
+                                <button type="button" class="dropdown" data-toggle="modal" data-target="#login-register">
+                                    Login / Register
+                                </button>
+                            @endif
                         </li>
-                </div>
 
-                </ul>
+                    </ul>
+                </div>
             </nav>
 
         </div>
