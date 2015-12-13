@@ -1,5 +1,4 @@
 (function(GB){
-
     var gunGodz = GB.getGameData('3030-37491')
 
         .done( function(data) {
@@ -12,17 +11,21 @@
             $('#' + id + 'name').html(data.name);
             $('#' + id + 'genre').html(data.genres);
             $('#' + id + 'rating').html(data.original_game_rating);
-            $('#' + id + 'platforms').html(data.platforms);
+            //console.log(data.developers[0].name);
 
-            console.log(data.developers[0].name);
+            console.log(data.platforms)
 
-            $platforms = data.platforms;
+            //console.log(data.platforms[0].name);
 
-            forEach($platforms as $platform) {
-                console.log($platform)
+            var platforms = '';
+            $('#' + id + 'platforms').html(platforms);
+            for(i in data.platforms) {
+                platforms += (data.platforms[i].name + ' ');
             }
+            console.log(platforms);
+            $('#' + id + 'platforms').html(platforms);
 
-            console.log(data.genres);
+            //console.log(data.genres);
             //$('#game-title').html(data.description);
         });
     var luftrausers = GB.getGameData('3030-39474')
