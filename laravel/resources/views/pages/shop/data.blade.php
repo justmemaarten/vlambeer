@@ -30,7 +30,9 @@
         </form>
             <a id="nextB" class="btn btn-primary pull-right" href="{{ action("PagesController@pay") }}">Next</a>
         <div class="other" hidden>
-            <form action="" method="POST" >
+            <form action="{{ action("UserController@update") }}" method="POST" >
+                <input type="hidden" name="_method" value="PUT">
+                <input type="hidden" name="id" value="{{ $user['id'] }}">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="street"> Street </label>
