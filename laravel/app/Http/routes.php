@@ -33,6 +33,8 @@ if (\Auth::check())
     Route::resource('/products', "ProductController");
 }
 
+Route::get('/admin', "PagesController@admin");
+
 
 
 // Authentication routes...

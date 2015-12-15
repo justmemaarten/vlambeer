@@ -87,5 +87,16 @@ class PagesController extends Controller
     }
 
 
+
+
+
+
+    public function admin() {
+        return view('pages/admin/dashboard');
+    }
+
+
+
+
 }
 

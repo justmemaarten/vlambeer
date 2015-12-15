@@ -1,0 +1,9 @@
+aside {
+    float: left;
+    background: red;
+}
+
+.content {
+    float: right;
+    background: blue;
+}

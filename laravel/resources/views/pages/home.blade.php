@@ -3,10 +3,7 @@
 @section('content')
     <div class="panel-group animatedParent animateOnce" id="accordion">
         <div class="panel panel-default animated fadeIn">
-
-
             <div class="row row-game-item">
-
                 <div class="game-item col-md-4 panel-heading">
                     <div class="content panel-title">
                         <a class="btn btn-primary game-img" data-toggle="collapse" data-parent="#accordion" href="#gunGodz">
@@ -134,14 +131,6 @@
                     </a>
                 </div>
             </div>
-
-
-
-
-
         </div>
-
     </div>
-
-
 @stop
