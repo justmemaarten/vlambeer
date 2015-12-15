@@ -1,7 +1,8 @@
-@extends('base')
+@extends('dashboard')
 
 @section('content')
 
+<<<<<<< HEAD
 <div class="main-content">
     <ul>
         <li><img src="" alt=""></li>
@@ -27,6 +28,9 @@
         </ul>
     @endforeach
 </div>
+=======
+<h1>test</h1>
+>>>>>>> origin/master
 
 
 @stop

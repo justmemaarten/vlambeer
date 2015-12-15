@@ -5,7 +5,7 @@
 <h2>Total price: &euro;  {{ $products->totalprice }}</h2>
 <h4>Paying methods:</h4>
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<form id="element-to-hide" action="https://www.paypal.com/cgi-bin/webscr" method="post">
     <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="jorrit-meeuwissen@hotmail.com">
     <input type="hidden" name="item_name" value="Merchandise Payment">

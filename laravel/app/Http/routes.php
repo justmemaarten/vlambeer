@@ -28,6 +28,8 @@ Route::get('/invoice', 'PagesController@invoice');
 
 Route::resource('/shop/cart', 'CartController');
 
+Route::resource('/user', "UserController");
+
 if (\Auth::check())
 {
     Route::resource('/products', "ProductController");
