@@ -50,7 +50,15 @@ class CartController extends Controller
     public function show()
     {
 
+        //        $products = \App\Product::find(7)->users()->get();
+
+
+
         $user_id = \Auth::user()->id;
+
+        $user = \App\User::find(6);
+
+//        dd($user->getProducts() );
 
         $products = \App\Cart::where('id' , '=',  $user_id)
             ->where('paid', '=', NULL)
