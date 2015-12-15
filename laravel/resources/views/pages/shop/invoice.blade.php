@@ -15,6 +15,7 @@
     </head>
 <body>
     <div class="container">
+        <img src="{{ asset('media/img/logo.png') }}" alt="Logo" height="90px" width="100px" class="pull-left">
             <div class="row">
             <div class="col-xs-6 text-right">
                 <h1><small>Invoice for {{ $user['firstname'] }} {{ $user['lastname'] }} </small></h1>
@@ -24,7 +25,7 @@
             <div class="col-xs-5">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4>From: Barroc-IT</h4>
+                        <h4>From: Vlambeer</h4>
                     </div>
                     <div class="panel-body">
                         <p>
@@ -137,7 +138,6 @@
                 </div>
                 <div class="buttons">
                     <a id="printbtn" class="btn btn-primary no-print" href="javascript:window.print()">Print</a>
-                    <button id="printbtn" class="btn btn-primary no-print" onclick="window.history.back()">Go back</button>
                 </div>
             </div>
         </div>

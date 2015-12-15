@@ -16,6 +16,6 @@
     <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-<a href="{{ action("PagesController@invoice") }}" class="btn btn-primary pull-right">Show Invoice</a>
+<a target="_blank" href="{{ action("PagesController@invoice") }}" class="btn btn-primary pull-right">Show Invoice</a>
 
 @stop
