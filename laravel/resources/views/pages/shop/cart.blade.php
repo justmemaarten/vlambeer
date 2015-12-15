@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <input class="btn btn-primary pull-right pay-button" type="submit">
+   <a href="{{ action("PagesController@data") }}" class="btn btn-primary pull-right pay-button" type="submit">Next</a>
 
     @if($products->count())
         <div class="suggestions">

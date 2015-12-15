@@ -38,7 +38,21 @@ $(document).ready(function () {
 });
 //<<<<<<< HEAD
 /* end phrase */
+$(document).ready(function() {
+    $('input[type="radio"]').click(function() {
+        if($(this).attr('id') == 'other') {
+            $('.other').show();
+            $('#nextB').hide();
+        }
 
+        else {
+            $('.other').hide();
+            $('#nextB').show();
+        }
+    });
+});
+
+/* end phrase */
 
 /*------------------------------------------  Lightbox  ----------------------------------------------------------*/
 

@@ -20,7 +20,14 @@ Route::get('/contact', 'PagesController@contact');
 
 Route::get('/game', 'PagesController@product');
 
+Route::get('/cart/data', 'PagesController@data');
+
+Route::get('/cart/pay', 'PagesController@pay');
+
+Route::get('/invoice', 'PagesController@invoice');
+
 Route::resource('/shop/cart', 'CartController');
+
 if (\Auth::check())
 {
     Route::resource('/products', "ProductController");

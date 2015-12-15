@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
     <link rel="stylesheet" href="{{asset('css/twitter-styles.css')}}">
-
+    <script> var link = "{{ asset('') }}" </script>
 </head>
 <?php
 if(!isset($_GET['id'])){

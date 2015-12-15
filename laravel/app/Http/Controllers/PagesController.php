@@ -38,6 +38,54 @@ class PagesController extends Controller
         return view('pages/shop/cart')->with($id);
     }
 
+    public function data() {
+        $user_id = \Auth::user()->id;
+        $user = \App\User::where('id', $user_id)->first();
+
+        return view('pages/shop/data', compact('user'));
+    }
+    public function pay() {
+        $user_id = \Auth::user()->id;
+
+        $products = \App\Cart::where('id' , '=',  $user_id)
+            ->where('paid', '=', NULL)
+            ->get();
+
+        $products->totalprice = 0;
+        $products->total = 0;
+
+        foreach($products as $product) {
+            $product->productInfo = \App\Product::where('product_id', '=', $product['product_id'])->first();
+            $price = ($product->productInfo['price']);
+            $products->total += $product->amount;
+            $products->totalprice += $price * $product->amount;
+        }
+
+        $products->totalprice = $products->totalprice * 1.21;
+
+        return view('pages/shop/pay', compact('products'));
+
+    }
+    public function invoice() {
+        $user_id = \Auth::user()->id;
+        $products = \App\Cart::where('id' , '=',  $user_id)
+            ->where('paid', '=', NULL)
+            ->get();
+        $user = \App\User::where('id', $user_id)->first();
+
+        $products->totalprice = 0;
+        $products->total = 0;
+        $products->btw = 0.21;
+
+        foreach($products as $product) {
+            $product->productInfo = \App\Product::where('product_id', '=', $product['product_id'])->first();
+            $price = ($product->productInfo['price']);
+            $products->total += $product->amount;
+            $products->totalprice += $price * $product->amount;
+        }
+        return view('pages/shop/invoice', compact('products', 'user'));
+    }
+
 
 }
 
