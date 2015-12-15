@@ -1,40 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Vlambeer - Admin</title>
-    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
-    <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
-</head>
-<body>
-    <header>
-        <h4>{{Auth::user()->email}}</h4>
-        <form action="" method="">
-            <input type="text" placeholder="Search...">
-            <input type="submit" value="Search">
-        </form>
-    </header>
-    <main>
-        <aside class="col-md-3">
-            <nav>
-                <ul>
-                    <li><a href="">Dashboard</a></li>
-                    <li></li>
-                    <li><a href="">Customers</a></li>
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="">Dashboard</a></li>
-                </ul>
-            </nav>    
-        </aside>
-        <div class="content col-md-9">
-            @yield('content')
-        </div>
+@extends('adminBase')
 
-    </main>
-    <footer>
+@section('admin')
 
-    </footer>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-</body>
-</html>
+<h1>test</h1>
+
+
+@stop
