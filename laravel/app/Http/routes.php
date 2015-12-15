@@ -38,7 +38,6 @@ if (\Auth::check())
 Route::get('/admin', "PagesController@admin");
 
 
-
 // Authentication routes...
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/login', 'PagesController@home');
