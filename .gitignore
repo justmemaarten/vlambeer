@@ -7,3 +7,4 @@ Homestead.json
 .idea/blade.xml
 
 laravel/resources/views/base.blade.php
+*.xml
