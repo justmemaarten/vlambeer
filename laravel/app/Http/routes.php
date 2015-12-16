@@ -33,7 +33,8 @@ Route::resource('/user', "UserController");
 Route::resource('/products', "ProductController");
 
 Route::get('/admin', "PagesController@admin");
-Route::get('/admin/eCommerce/orders', 'PagesController@eCommerce');
+Route::resource('/admin/eCommerce/orders', 'CmsController');
+
 
 
 // Authentication routes...

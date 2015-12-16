@@ -13,6 +13,8 @@
         <input type="text" placeholder="Search...">
         <input type="submit" value="Search">
     </form>
+
+<h1>Header</h1> 
 </header>
 <main>
     <aside class="col-md-3">

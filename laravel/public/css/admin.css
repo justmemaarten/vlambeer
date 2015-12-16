@@ -29,6 +29,6 @@ aside {
 
 
 .order-overview .order-information {
-    width: 20px;
+    max-width: 20px;
 }
 

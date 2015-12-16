@@ -96,7 +96,7 @@ class PagesController extends Controller
     }
 
     public function eCommerce() {
-        return view('pages/admin/eCommerce/orders');
+        return redirect('CmsController@index');
     }
 
 
