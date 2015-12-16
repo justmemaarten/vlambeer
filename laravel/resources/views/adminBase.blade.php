@@ -17,15 +17,8 @@
         <a href="auth/logout" class="dropdown"><i class="fa fa-sign-out fa-2x"></i></a>
     </div>
 
-<<<<<<< HEAD
-=======
-    <form action="" method="">
-        <input type="text" placeholder="Search...">
-        <input type="submit" value="Search">
-    </form>
-
 <h1>Header</h1> 
->>>>>>> origin/master
+
 </header>
 <main>
     <aside class="col-md-2">
