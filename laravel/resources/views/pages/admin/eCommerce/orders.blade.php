@@ -3,8 +3,8 @@
 @section('admin')
 
 <div class="main-content">
-    <table class="top-information">
-        <thead>
+    <table class="top-information table table-striped table-hover">
+        <thead >
             <tr>
                 <td>ID</td>
                 <td>Catergory</td>

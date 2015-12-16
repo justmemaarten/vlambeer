@@ -33,7 +33,7 @@
                 <button style="display: none" id="btnClose1" type="button" onclick="close()">eCommerce / Close</button>
                 <div style="display: none;" id="eCommerce">
                     <ul>
-                        <li><a href="{{ action("CmsController@index") }}">Orders</a></li>
+                        <li><a href="{{ action("OrdersController@index") }}">Orders</a></li>
                         <li><a href="">Products</a></li>
                     </ul>
                 </div>
