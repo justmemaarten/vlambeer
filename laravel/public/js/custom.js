@@ -43,11 +43,13 @@ $(document).ready(function() {
         if($(this).attr('id') == 'other') {
             $('.other').show();
             $('#nextB').hide();
+            $('.this').hide();
         }
 
         else {
             $('.other').hide();
             $('#nextB').show();
+            $('.this').show();
         }
     });
 });
@@ -563,4 +565,6 @@ $(function () {
 
 
 //end read more
+
+
 //>>>>>>> origin/master

@@ -9,3 +9,4 @@ Homestead.json
 laravel/resources/views/base.blade.php
 *.xml
 *.xml
+*.xml

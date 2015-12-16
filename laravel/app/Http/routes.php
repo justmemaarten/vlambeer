@@ -30,10 +30,17 @@ Route::resource('/shop/cart', 'CartController');
 
 Route::resource('/user', "UserController");
 
+
+//if (\Auth::check())
+//{
+    Route::resource('/store', "ProductController");
+//}
+
 Route::resource('/products', "ProductController");
 
+
 Route::get('/admin', "PagesController@admin");
-Route::resource('/admin/eCommerce/orders', 'CmsController');
+Route::resource('/admin/eCommerce/orders', 'OrdersController');
 
 
 

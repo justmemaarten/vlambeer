@@ -823,6 +823,13 @@ body.game-3030-46090 {
     padding-left: 20px;
 }
 
+<<<<<<< HEAD
+/* address for sending  */
+
+.addressData {
+    height: 500px;
+}
+=======
 /* merchandise store */
 
 .product-link {
@@ -894,3 +901,4 @@ body.game-3030-46090 {
     overflow: hidden;
 }
 
+>>>>>>> origin/master
