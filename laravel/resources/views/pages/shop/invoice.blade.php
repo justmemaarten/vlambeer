@@ -58,7 +58,7 @@
             <thead>
             <tr>
                 <th>
-                    <h4>Service</h4>
+                    <h4>Product</h4>
                 </th>
                 <th>
                     <h4>Description</h4>

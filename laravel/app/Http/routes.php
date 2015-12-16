@@ -30,10 +30,10 @@ Route::resource('/shop/cart', 'CartController');
 
 Route::resource('/user', "UserController");
 
-if (\Auth::check())
-{
-    Route::resource('/products', "ProductController");
-}
+//if (\Auth::check())
+//{
+    Route::resource('/store', "ProductController");
+//}
 
 Route::get('/admin', "PagesController@admin");
 

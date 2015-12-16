@@ -46,13 +46,14 @@ class PagesController extends Controller
     }
     public function pay() {
         $user_id = \Auth::user()->id;
-
         $products = \App\Cart::where('id' , '=',  $user_id)
             ->where('paid', '=', NULL)
             ->get();
+        $user = \App\User::where('id', $user_id)->first();
 
         $products->totalprice = 0;
         $products->total = 0;
+        $products->btw = 0.21;
 
         foreach($products as $product) {
             $product->productInfo = \App\Product::where('product_id', '=', $product['product_id'])->first();
@@ -60,8 +61,6 @@ class PagesController extends Controller
             $products->total += $product->amount;
             $products->totalprice += $price * $product->amount;
         }
-
-        $products->totalprice = $products->totalprice * 1.21;
 
         return view('pages/shop/pay', compact('products'));
 
