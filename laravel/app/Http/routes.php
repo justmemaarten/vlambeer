@@ -30,12 +30,10 @@ Route::resource('/shop/cart', 'CartController');
 
 Route::resource('/user', "UserController");
 
-if (\Auth::check())
-{
-    Route::resource('/products', "ProductController");
-}
+Route::resource('/products', "ProductController");
 
 Route::get('/admin', "PagesController@admin");
+Route::get('/admin/eCommerce/orders', 'PagesController@eCommerce');
 
 
 // Authentication routes...
