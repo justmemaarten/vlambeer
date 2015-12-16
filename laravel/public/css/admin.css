@@ -1,9 +1,109 @@
-aside {
-    float: left;
-    background: red;
+html {
+
 }
 
-.content {
-    float: right;
-    background: blue;
+body {
+
 }
+
+
+
+
+header {
+    background: #2B3643;
+    height: 70px;
+    padding: 10px;
+    color: #C6CFDB;
+}
+
+.user {
+    float: right;
+    height: 50px;
+    margin-top: 5px;
+}
+
+    .user img {
+        float: left;
+        border-radius: 100%;
+        margin-right: 10px;
+        margin-top: 2px;
+    }
+
+    .user h4 {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .user a {
+        float: right;
+        margin-top: 7px;
+        color: #C6CFDB;
+    }
+
+
+main {
+    background: #F6F6F6;
+}
+
+    aside {
+        float: left;
+        background: #364150;
+        height: 100%;
+        color: #C6CFDB;
+        padding-top: 40px;
+    }
+
+    aside nav ul {
+        padding-left: 0px;
+    }
+
+    aside nav ul li {
+        list-style: none;
+    }
+
+#filtersubmit {
+    position: relative;
+    z-index: 1;
+    left: -25px;
+    top: 1px;
+    color: #7B7B7B;
+    cursor:pointer;
+    width: 0;
+}
+
+    .content {
+        float: right;
+    }
+
+
+
+/* ADMIN/ORDERS */
+
+.main-content .top-information {
+    background: yellow;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+
+
+.order-overview {
+    background: green;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+
+.order-overview .order-information {
+<<<<<<< HEAD
+    max-width: 20px;
+=======
+    width: 20px;
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
+>>>>>>> origin/master
+}
+

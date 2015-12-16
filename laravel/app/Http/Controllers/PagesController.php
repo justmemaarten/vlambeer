@@ -94,6 +94,10 @@ class PagesController extends Controller
         return view('pages/admin/dashboard');
     }
 
+    public function eCommerce() {
+        return redirect('CmsController@index');
+    }
+
 
 
 

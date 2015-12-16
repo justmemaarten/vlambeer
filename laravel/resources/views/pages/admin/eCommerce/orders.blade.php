@@ -1,36 +1,34 @@
-@extends('dashboard')
+@extends('adminBase')
 
-@section('content')
+@section('admin')
 
-<<<<<<< HEAD
 <div class="main-content">
-    <ul>
-        <li><img src="" alt=""></li>
-        <li>ID</li>
-        <li>Catergory</li>
-        <li>Date created</li>
-        <li>Price</li>
-        <li>Status</li>
-        <li>edit/delete</li>
-    </ul>
-    @foreach ($customer as $customers)
-        <ul>
-            <li>{{Auth::user()->id}}</li>
-            <li></li>
-            <li>{{Auth::user()->created_at}}</li>
-            <li></li>
-            <li></li>
-            <li>{{Auth::user()->status}}</li>
-            <li>
-                <input type="submit" value="edit">
-                <input type="submit" value="delete">
-            </li>
-        </ul>
+    <table class="top-information">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Catergory</td>
+                <td>Date created</td>
+                <td>Price</td>
+                <td>Status</td>
+                <td>Edit/Delete</td>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach($users as $user)
+            <tr>
+                <td class="order-information">{{$user->id}}</td>
+                <td class="order-information">test</td>
+                <td class="order-information">{{$user->created_at}}</td>
+                <td class="order-information">test</td>
+                <td class="order-information">test</td>
+                <td class="order-information"><!--{Auth::user()->status--> test</td>
+            </tr>
     @endforeach
+        </tbody>
+    </table>
 </div>
-=======
 <h1>test</h1>
->>>>>>> origin/master
 
 
 @stop
