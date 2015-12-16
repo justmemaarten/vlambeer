@@ -58,6 +58,9 @@ if(!isset($_GET['id'])){
                                 </ul>
                             </div>
                         </li>
+                            <li>
+                                <a href="{{action('ProductController@index')}}" >Store</a> |
+                            </li>
                         @if (Auth::check())
                         <li>
                                 <a href="{{action('CartController@show')}}" >Cart</a> |
