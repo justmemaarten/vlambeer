@@ -95,6 +95,10 @@ class PagesController extends Controller
         return view('pages/admin/dashboard');
     }
 
+    public function eCommerce() {
+        return view('pages/admin/eCommerce/orders');
+    }
+
 
 
 

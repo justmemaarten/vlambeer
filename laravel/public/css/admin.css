@@ -7,3 +7,28 @@ aside {
     float: right;
     background: blue;
 }
+
+
+
+
+/* ADMIN/ORDERS */
+
+.main-content .top-information {
+    background: yellow;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+
+
+.order-overview {
+    background: green;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+
+.order-overview .order-information {
+    width: 20px;
+}
+
