@@ -28,9 +28,9 @@
         </form>
         <nav>
             <ul>
-                <li><i class="fa fa-home fa-fw"></i>&nbsp; Dashboard</li>
-                <button id="btnOpen1" type="button" onclick="show('eCommerce');">eCommerce / Open</button>
-                <button style="display: none" id="btnClose1" type="button" onclick="close()">eCommerce / Close</button>
+                <li><a href="{{ action("PagesController@admin") }}"><i class="fa fa-home fa-fw"></i>&nbsp;Dashboard</a></li>
+                <button id="btnOpen1" type="button" onclick="show('eCommerce');"><i class="fa fa-shopping-cart"></i>&nbsp; eCommerce / Open</button>
+                <button style="display: none" id="btnClose1" type="button" onclick="close()"><i class="fa fa-shopping-cart"></i>&nbsp;eCommerce / Close</button>
                 <div style="display: none;" id="eCommerce">
                     <ul>
                         <li><a href="{{ action("CmsController@index") }}">Orders</a></li>
@@ -40,8 +40,7 @@
                 {{--<div id="id2">text 2</div>--}}
                 {{--<div id="id3">text 3</div>--}}
                 <li><a href="">Dashboard</a></li>
-                <li><a href="">Dashboard</a></li>
-                <li><a href="">Dashboard</a></li>
+
             </ul>
         </nav>
     </aside>

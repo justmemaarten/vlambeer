@@ -61,6 +61,16 @@ main {
         list-style: none;
     }
 
+    aside nav ul li a {
+        color: #C6CFDB;
+    }
+
+    aside nav button {
+        background: none;
+        border: none;
+        padding: 0px;
+    }
+
 #filtersubmit {
     position: relative;
     z-index: 1;
@@ -95,15 +105,8 @@ main {
 
 
 .order-overview .order-information {
-<<<<<<< HEAD
     max-width: 20px;
-=======
     width: 20px;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
 }
 
