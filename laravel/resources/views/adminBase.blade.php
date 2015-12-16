@@ -9,22 +9,24 @@
 </head>
 <body>
 <header>
+    <img src="{{asset('media/img/logo.png')}}" alt="logo" width="55px" height="50px">
+    
     <div class="user">
         <img src="http://www.lorempixel.com/40/40" alt="">
         <h4>{{Auth::user()->email}}</h4>
         <a href="auth/logout" class="dropdown"><i class="fa fa-sign-out fa-2x"></i></a>
     </div>
 
-    <form action="" method="">
-        <input type="text" placeholder="Search...">
-        <input type="submit" value="Search">
-    </form>
 </header>
 <main>
     <aside class="col-md-2">
+        <form action="" method="">
+            <input id="filter" type="text" placeholder="Search" />
+            <i id="filtersubmit" class="fa fa-search"></i>
+        </form>
         <nav>
             <ul>
-                <li><a href="">Dashboard</a></li>
+                <li><i class="fa fa-home fa-fw"></i>&nbsp; Dashboard</li>
                 <button id="btnOpen1" type="button" onclick="show('eCommerce');">eCommerce / Open</button>
                 <button style="display: none" id="btnClose1" type="button" onclick="close()">eCommerce / Close</button>
                 <div style="display: none;" id="eCommerce">
@@ -64,6 +66,10 @@
         document.getElementById("btnClose1").style.display="none";
 //        document.getElementById(elementId).style.display="block";
     }
+
+    $('#filtersubmit').click(function() {
+        alert('Searching for '+$('#filter').val());
+    });
 </script>
 </body>
 </html>

@@ -6,20 +6,12 @@ body {
 
 }
 
-aside {
-    float: left;
-    background: #364150;
-    height: 100%;
-}
 
-.content {
-    float: right;
-<<<<<<< HEAD
-}
+
 
 header {
     background: #2B3643;
-    height: 65px;
+    height: 70px;
     padding: 10px;
     color: #C6CFDB;
 }
@@ -27,7 +19,7 @@ header {
 .user {
     float: right;
     height: 50px;
-
+    margin-top: 5px;
 }
 
     .user img {
@@ -51,10 +43,37 @@ header {
 
 main {
     background: #F6F6F6;
-=======
-    background: blue;
 }
 
+    aside {
+        float: left;
+        background: #364150;
+        height: 100%;
+        color: #C6CFDB;
+        padding-top: 40px;
+    }
+
+    aside nav ul {
+        padding-left: 0px;
+    }
+
+    aside nav ul li {
+        list-style: none;
+    }
+
+#filtersubmit {
+    position: relative;
+    z-index: 1;
+    left: -25px;
+    top: 1px;
+    color: #7B7B7B;
+    cursor:pointer;
+    width: 0;
+}
+
+    .content {
+        float: right;
+    }
 
 
 
@@ -77,6 +96,6 @@ main {
 
 .order-overview .order-information {
     width: 20px;
->>>>>>> origin/master
+
 }
 
