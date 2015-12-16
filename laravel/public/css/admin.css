@@ -1,10 +1,57 @@
+html {
+
+}
+
+body {
+
+}
+
 aside {
     float: left;
-    background: red;
+    background: #364150;
+    height: 100%;
 }
 
 .content {
     float: right;
+<<<<<<< HEAD
+}
+
+header {
+    background: #2B3643;
+    height: 65px;
+    padding: 10px;
+    color: #C6CFDB;
+}
+
+.user {
+    float: right;
+    height: 50px;
+
+}
+
+    .user img {
+        float: left;
+        border-radius: 100%;
+        margin-right: 10px;
+        margin-top: 2px;
+    }
+
+    .user h4 {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .user a {
+        float: right;
+        margin-top: 7px;
+        color: #C6CFDB;
+    }
+
+
+main {
+    background: #F6F6F6;
+=======
     background: blue;
 }
 
@@ -29,6 +76,11 @@ aside {
 
 
 .order-overview .order-information {
+<<<<<<< HEAD
     max-width: 20px;
+=======
+    width: 20px;
+>>>>>>> origin/master
+>>>>>>> origin/master
 }
 
