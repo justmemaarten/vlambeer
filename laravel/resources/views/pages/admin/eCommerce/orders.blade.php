@@ -3,7 +3,7 @@
 @section('admin')
 
 <div class="main-content">
-    <table class="top-information table table-striped table-hover">
+    <table class="top-information table table-striped table-hover sortable">
         <thead >
             <tr>
                 <td>ID</td>
