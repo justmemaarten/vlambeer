@@ -16,7 +16,7 @@ if(!isset($_GET['id'])){
 }?>
 <body class="game-<?=$id?>">
 <div class="loader">
-    <div class="col-md-4 col-md-push-5">
+    <div class="col-md-5 col-md-push-5">
         <p>Please wait<span id="wait">.</span></p>
     </div>
 </div>
