@@ -28,21 +28,21 @@
         </form>
         <nav>
             <ul>
-                <li><a href="{{ action("PagesController@admin") }}"><i class="fa fa-home fa-fw"></i>&nbsp;Dashboard</a></li>
-                <button id="btnOpen1" type="button" onclick="show('eCommerce');"><i class="fa fa-shopping-cart"></i>&nbsp; eCommerce / Open</button>
-                <button style="display: none" id="btnClose1" type="button" onclick="close()"><i class="fa fa-shopping-cart"></i>&nbsp;eCommerce / Close</button>
-                <div style="display: none;" id="eCommerce">
-                    <ul>
-                        <li><a href="{{ action("OrdersController@index") }}">Orders</a></li>
-                        <li><a href="">Products</a></li>
-                    </ul>
-                </div>
-                {{--<div id="id2">text 2</div>--}}
-                {{--<div id="id3">text 3</div>--}}
-                <li><a href="">Dashboard</a></li>
-
+                <li><a href="{{ action("PagesController@admin") }}"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
+                <li><button id="eCommerce"><i class="fa fa-shopping-cart fa-fw"></i>eCommerce</button></li>
+                <ul id="eCommerceNav">
+                    <li><a href="{{ action("OrdersController@index") }}"><i class="fa fa-tags fa-fw"></i>Orders</a></li>
+                    <li><a href=""><i class="fa fa-line-chart fa-fw"></i>Products</a></li>
+                </ul>
+                <li><button id="customer"><i class="fa fa-user fa-fw"></i>Customers</button></li>
+                <ul id="customersNav">
+                    <li><a href=""><i class="fa fa-users fa-fw"></i>Customer view</a></li>
+                    <li><a href=""><i class="fa fa-user-plus fa-fw"></i>Customer add</a></li>
+                </ul>
             </ul>
         </nav>
+
+
     </aside>
     <div class="content col-md-10">
         @yield('admin')
@@ -53,23 +53,15 @@
 
 </footer>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript">
-    function show(elementId) {
-        document.getElementById("eCommerce").style.display="block";
-        document.getElementById("btnOpen1").style.display="none";
-        document.getElementById("btnClose1").style.display="block";
-        document.getElementById(elementId).style.display="block";
-    }
+<script>
+    $(document).ready(function(){
+        $("#eCommerce").click(function(){
+            $("#eCommerceNav").toggle();
+        });
 
-    function close() {
-        document.getElementById("eCommerce").style.display="none";
-        document.getElementById("btonOpen1").style.display="block";
-        document.getElementById("btnClose1").style.display="none";
-//        document.getElementById(elementId).style.display="block";
-    }
-
-    $('#filtersubmit').click(function() {
-        alert('Searching for '+$('#filter').val());
+        $("#customer").click(function(){
+            $("#customersNav").toggle();
+        });
     });
 </script>
 </body>
