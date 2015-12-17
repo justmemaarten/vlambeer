@@ -3,6 +3,13 @@
 $(window).load(function() {
     $(".loader").fadeOut("slow");
 })
+var dots = window.setInterval( function() {
+    var wait = document.getElementById("wait");
+    if ( wait.innerHTML.length > 3 )
+        wait.innerHTML = "";
+    else
+        wait.innerHTML += ".";
+}, 650);
 
 $(document).ready(function () {
  var phrases =
