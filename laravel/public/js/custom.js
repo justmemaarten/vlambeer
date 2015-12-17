@@ -1,4 +1,9 @@
 /* phrases */
+
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+})
+
 $(document).ready(function () {
  var phrases =
 [

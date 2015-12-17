@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+<div class="animated pulse">
 @foreach($products as $product)
 
         <div class="col-lg-3-store merchandise-product">
@@ -16,6 +16,7 @@
         </div>
 
 @endforeach
+</div>
 <div class="space"></div>
 @endsection
 

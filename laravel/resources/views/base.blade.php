@@ -15,6 +15,7 @@ if(!isset($_GET['id'])){
     $id = 0;
 }?>
 <body class="game-<?=$id?>">
+<div class="loader"></div>
 <div class="animatedParent animateOnce">
     <header data-spy="affix" class="animated fadeInDownShort slowest">
 
@@ -209,7 +210,6 @@ if(!isset($_GET['id'])){
             </div>
         </div>
     </footer>
-
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 {{--<script src="https://raw.githubusercontent.com/jedfoster/Readmore.js/master/readmore.js"></script>--}}
