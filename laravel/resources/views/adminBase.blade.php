@@ -53,6 +53,7 @@
 
 </footer>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 <script type="text/javascript">
     function show(elementId) {
         document.getElementById("eCommerce").style.display="block";
