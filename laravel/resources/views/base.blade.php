@@ -233,15 +233,5 @@ if(!isset($_GET['id'])){
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="{{ asset('js/giantbomb.js') }}"></script>
     <script src="{{ asset('js/games.js') }}"></script>
-    <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.8/dojo/dojo.js"></script>
-    <script type="text/javascript" src="{{ asset('js/dojos.js') }}"></script>
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-        // Still including jQuery to support http://downloads.mailchimp.com/js/jquery.mailcheck.min.js which is included in forms.
-        google.load("jquery", "1.7.1");
-    </script>
-    <script type="text/javascript" src="http://downloads.mailchimp.com/js/mailcheck.min.js"></script>
-    <script type="text/javascript" src="{{ asset('js/mail.js') }}"></script>
 </body>
 </html>
