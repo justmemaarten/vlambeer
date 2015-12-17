@@ -832,8 +832,9 @@ body.game-3030-46090 {
 =======
 /* merchandise store */
 
-.product-link {
-    text-decoration: none;
+.product-link:hover {
+    text-decoration-color: #8a8a8a;!important
+    text-decoration: underline;!important
 }
 
 .col-lg-3-store {
@@ -843,10 +844,10 @@ body.game-3030-46090 {
 
 .merchandise-product {
     background-color: #171717;
-    width: 24.625%;!important;
+    width: 23.6666666%;!important;
     float: left;
-    margin-right: 0.5%;
-    margin-bottom: 5px;
+    margin-right: 1.779%;
+    margin-bottom: 23px;
     border-radius: 15px;
     color: white;
     max-height: 435px;
@@ -866,6 +867,7 @@ body.game-3030-46090 {
     font-size: 30px;
     padding-left: 10px;
     color: white;
+    text-transform: capitalize;
 }
 
 .merchandise-price, .merchandise-description {
@@ -879,13 +881,14 @@ body.game-3030-46090 {
 .merchandise-description {
     padding-left: 15px;
     padding-right: 15px;
+    text-transform: capitalize;
 }
 
 
 .order-btn {
-    background-color: #B8B8B8;
+    background-color: #171717;
     border: #5a5a5a 2px solid!important;
-    color: black;
+    color: white;
     margin-top: 5px;
     margin-left: 15px;
     padding-right: 10px;
