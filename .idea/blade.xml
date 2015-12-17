@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< Updated upstream
   <component name="BladeInjectionConfiguration" escapedTextEnd="!!}" escapedTextStart="{!!">
     <customDirectives>
       <data directive="@endif" />
@@ -32,4 +33,7 @@
       <data directive="@include" injection="true" prefix="&lt;?php echo $__env-&gt;make(" suffix=")-&gt;render(); ?&gt;" />
     </customDirectives>
   </component>
+=======
+  <component name="BladeInjectionConfiguration" escapedTextEnd="!!}" escapedTextStart="{!!" />
+>>>>>>> Stashed changes
 </project>

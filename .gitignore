@@ -7,6 +7,10 @@ Homestead.json
 .idea/blade.xml
 
 laravel/resources/views/base.blade.php
+<<<<<<< Updated upstream
 *.xml
 *.xml
+=======
+
+>>>>>>> Stashed changes
 *.xml
