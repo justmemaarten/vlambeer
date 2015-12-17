@@ -53,11 +53,29 @@
 
 </footer>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<<<<<<< HEAD
 <script>
     $(document).ready(function(){
         $("#eCommerce").click(function(){
             $("#eCommerceNav").toggle();
         });
+=======
+<script src="http://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+<script type="text/javascript">
+    function show(elementId) {
+        document.getElementById("eCommerce").style.display="block";
+        document.getElementById("btnOpen1").style.display="none";
+        document.getElementById("btnClose1").style.display="block";
+        document.getElementById(elementId).style.display="block";
+    }
+
+    function close() {
+        document.getElementById("eCommerce").style.display="none";
+        document.getElementById("btonOpen1").style.display="block";
+        document.getElementById("btnClose1").style.display="none";
+//        document.getElementById(elementId).style.display="block";
+    }
+>>>>>>> origin/master
 
         $("#customer").click(function(){
             $("#customersNav").toggle();
