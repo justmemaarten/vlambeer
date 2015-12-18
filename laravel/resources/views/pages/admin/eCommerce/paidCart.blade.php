@@ -1,3 +1,6 @@
+
+
+
 @extends('adminBase')
 
 @section('admin')
@@ -5,14 +8,14 @@
     <div class="main-content">
         <table class="top-information table table-striped table-hover sortable">
             <thead >
-            <tr>
-                <td>ID</td>
-                <td>Catergory</td>
-                <td>Date created</td>
-                <td>Price</td>
-                <td>Paid</td>
-                <td>Edit/Delete</td>
-            </tr>
+                <tr>
+                    <td>ID</td>
+                    <td>Catergory</td>
+                    <td>Date created</td>
+                    <td>Price</td>
+                    <td>Paid</td>
+                    <td>Edit/Delete</td>
+                </tr>
             </thead>
             <tbody>
             @foreach($users as $user)
