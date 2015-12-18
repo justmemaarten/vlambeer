@@ -93,6 +93,10 @@ main {
         display: none;
     }
 
+    aside nav #eCommerceNav, aside nav #customerNav {
+        transition: 1s;
+    }
+
 #filtersubmit {
     position: relative;
     z-index: 1;

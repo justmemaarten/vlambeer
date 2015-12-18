@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Vlambeer - Admin</title>
@@ -53,34 +53,17 @@
 
 </footer>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<<<<<<< HEAD
-<script>
-    $(document).ready(function(){
-        $("#eCommerce").click(function(){
-            $("#eCommerceNav").toggle();
-        });
-=======
-<script src="http://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
-<script type="text/javascript">
-    function show(elementId) {
-        document.getElementById("eCommerce").style.display="block";
-        document.getElementById("btnOpen1").style.display="none";
-        document.getElementById("btnClose1").style.display="block";
-        document.getElementById(elementId).style.display="block";
-    }
+<script>$(document).ready(function(){
+            $("#eCommerce").click(function(){
+                $("#eCommerceNav").toggle();
+            });
 
-    function close() {
-        document.getElementById("eCommerce").style.display="none";
-        document.getElementById("btonOpen1").style.display="block";
-        document.getElementById("btnClose1").style.display="none";
-//        document.getElementById(elementId).style.display="block";
-    }
->>>>>>> origin/master
-
-        $("#customer").click(function(){
-            $("#customersNav").toggle();
+            $("#customer").click(function(){
+                $("#customersNav").toggle();
+            });
         });
-    });
 </script>
+<script src="http://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+<script type="text/javascript"></script>
 </body>
 </html>
