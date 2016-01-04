@@ -12,6 +12,7 @@ class CreateCartsTable extends Migration
      */
     public function up()
     {
+
         $this->down();
         Schema::create('tbl_cart', function(Blueprint $table){
             $table->integer('id', false, true);

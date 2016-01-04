@@ -18,4 +18,8 @@ class Product extends Model
     public function getPriceInclusive() {
         return $this->price *= 1.21;
     }
+
+    public function getNonPaidCart() {
+        return $this::where('price', '>', '60')->get();
+    }
 }
