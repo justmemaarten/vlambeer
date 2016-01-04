@@ -15,30 +15,8 @@
                 <br>
                 <input id="other" type="radio" name="address" value="other">Other
             </form>
-            <form action="{{ action("PagesController@pay") }}" method="POST">
-                {{ csrf_field() }}
-                <input type="hidden" name="u" value="13ed99cfb38ac0b07e3913c01">
-                <input type="hidden" name="id" value="5862ff0f83">
 
 
-                <div id="mergeTable" class="mergeTable">
-
-
-                    <div class="mergeRow dojoDndItem mergeRow-email" id="mergeRow-0">
-                        <div class="field-group">
-                            <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="{{ $user['email'] }}" hidden>
-                            <input type="checkbox" name="email" value="true">Subscribe to newsletter<br>
-                        </div>
-                    </div>
-                </div>
-                <!-- real people should not fill this in and expect good things -->
-                <div hidden class="hidden-from-view" aria-hidden="true"><input type="text" name="b_13ed99cfb38ac0b07e3913c01_5862ff0f83" tabindex="-1" value=""></div>
-
-                <div class="submit_container clear">
-                    <input type="submit" class="button btn btn-primary pull-right" name="submit" value="next">
-                </div>
-            </form>
-        </div>
             <div class="other" hidden>
                 <form action="{{ action("UserController@update") }}" method="POST" >
                     <input type="hidden" name="_method" value="PUT">
@@ -64,17 +42,5 @@
                 </form>
             </div>
         </div>
-
-    <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-        try {
-            var _gaq = _gaq || [];
-            _gaq.push(["_setAccount", "UA-329148-88"]);
-            _gaq.push(["_setDomainName", ".list-manage.com"]);
-            _gaq.push(["_trackPageview"]);
-            _gaq.push(["_setAllowLinker", true]);
-        } catch(err) {console.log(err);}</script>
+    </div>
 @stop
