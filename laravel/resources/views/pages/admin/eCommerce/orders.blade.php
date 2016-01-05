@@ -15,11 +15,11 @@
             </tr>
         </thead>
         <tbody>
-    @foreach($users as $user)
+    @foreach($orders as $order)
             <tr>
-                <td class="order-information">{{$user->id}}</td>
+                <td class="order-information">{{$order->id}}</td>
                 <td class="order-information">test</td>
-                <td class="order-information">{{$user->created_at}}</td>
+                <td class="order-information">{{$order->created_at}}</td>
                 <td class="order-information">test</td>
                 <td class="order-information">test</td>
                 <td class="order-information"><!--{Auth::user()->status--> test</td>
@@ -28,7 +28,6 @@
         </tbody>
     </table>
 </div>
-<h1>test</h1>
 
 
 @stop
