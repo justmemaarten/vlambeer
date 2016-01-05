@@ -37,8 +37,8 @@
                 </ul>
                 <li><button id="customer"><i class="fa fa-user fa-fw"></i>Customers</button></li>
                 <ul id="customersNav">
-                    <li><a href=""><i class="fa fa-users fa-fw"></i>Customer view</a></li>
-                    <li><a href=""><i class="fa fa-user-plus fa-fw"></i>Customer add</a></li>
+                    <li><a href="{{ action("CustomersController@index") }}"><i class="fa fa-users fa-fw"></i>Customers view</a></li>
+                    <li><a href="{{ action("CustomersController@create") }}"><i class="fa fa-user-plus fa-fw"></i>Customer add</a></li>
                 </ul>
             </ul>
         </nav>

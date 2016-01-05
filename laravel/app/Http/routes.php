@@ -42,7 +42,11 @@ Route::resource('/products', "ProductController");
 Route::get('/admin', "PagesController@admin");
 Route::resource('/admin/eCommerce/orders', 'OrdersController');
 Route::resource('/admin/eCommerce/paidCart', 'CmsCartController');
+<<<<<<< HEAD
 Route::get('/admin/eCommerce/unPayedCart', 'CmsCartController@unPayedCart');
+=======
+Route::resource('/admin/Customers/customers', 'CustomersController');
+>>>>>>> origin/master
 
 
 
