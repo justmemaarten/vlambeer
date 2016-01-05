@@ -7,11 +7,11 @@
             <thead >
             <tr>
                 <td>ID</td>
-                <td>Catergory</td>
-                <td>Date created</td>
-                <td>Price</td>
-                <td>Status</td>
-                <td>Edit/Delete</td>
+                <td>Username</td>
+                <td>Firstname</td>
+                <td>Insertion</td>
+                <td>Lastname</td>
+                <td>Edit</td>
             </tr>
             </thead>
             <tbody>
@@ -22,7 +22,7 @@
                     <td class="order-information">{{$customer->firstname}}</td>
                     <td class="order-information">{{$customer->insertion}}</td>
                     <td class="order-information">{{$customer->lastname}}</td>
-                    <td class="order-information"><!--{Auth::user()->status--> test</td>
+                    <td class="order-information"><a href="{{ action("CustomersController@edit", $customer->id) }}">Edit</a></td>
                 </tr>
             @endforeach
             </tbody>

@@ -60,7 +60,8 @@ class CustomersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $customer = \App\Product::where('id', $id)->first();
+        return view('pages/admin/Customers/edit', compact('customer'));
     }
 
     /**
