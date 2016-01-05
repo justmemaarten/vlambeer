@@ -42,6 +42,7 @@ Route::resource('/products', "ProductController");
 Route::get('/admin', "PagesController@admin");
 Route::resource('/admin/eCommerce/orders', 'OrdersController');
 Route::resource('/admin/eCommerce/paidCart', 'CmsCartController');
+Route::get('/admin/eCommerce/unPayedCart', 'CmsCartController@unPayedCart');
 
 
 
