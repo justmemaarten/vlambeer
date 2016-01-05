@@ -853,7 +853,7 @@ body.game-3030-46090 {
     max-height: 435px;
 }
 
-.merchandise-product:nth-child(4n+1) {
+.merchandise-product:nth-child(4n) {
     margin-right: 0px;
 }
 
