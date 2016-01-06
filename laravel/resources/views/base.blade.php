@@ -79,7 +79,7 @@ if(!isset($_GET['id'])){
                         </li>
                         <li>
                             @if (Auth::check())
-                                <a href="auth/logout" class="dropdown">Logout</a>
+                                <a href="auth/logout" class="dropdown">Logout</a><!--auth/logout-->
                             @else
                                 <button type="button" class="dropdown" data-toggle="modal" data-target="#login-register">
                                     Login / Register

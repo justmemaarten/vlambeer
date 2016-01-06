@@ -45,12 +45,11 @@ Route::get('/admin/eCommerce/unPayedCart', 'CmsCartController@unPayedCart');
 
 Route::resource('/admin/Customers/customers', 'CustomersController');
 
-
 // Authentication routes...
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/login', 'PagesController@home');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
-Route::get('shop/cart/auth/logout', 'Auth\AuthController@getLogout');
+ Route::post('/auth/login', 'Auth\AuthController@postLogin');
+ Route::get('/auth/login', 'PagesController@home');
+ Route::get('/auth/logout', 'Auth\AuthController@getLogout');
+ Route::get('/shop/cart/auth/logout', 'Auth\AuthController@getLogout');
 
 
 // Registration routes...
