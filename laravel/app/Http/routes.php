@@ -38,6 +38,8 @@ Route::resource('/user', "UserController");
 
 Route::resource('/products', "ProductController");
 
+Route::get('/products/sale', "ProductController@showSale");
+
 
 Route::get('/admin', "PagesController@admin");
 Route::resource('/admin/eCommerce/orders', 'OrdersController');

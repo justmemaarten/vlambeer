@@ -26,7 +26,8 @@ class ProductsTableSeeder extends Seeder
                 'img' => $faker->imageUrl($width = 500, $height = 500, 'abstract'),
                 'description' => $faker->paragraph($nbSentences = 3),
                 'stock' => mt_rand(1, 150),
-                'category_id' => $ids[mt_rand(0, count($ids)-1)]['category_id']
+                'category_id' => $ids[mt_rand(0, count($ids)-1)]['category_id'],
+                'is_sale' => $faker->boolean(40)
 
             ]);
         }

@@ -47,6 +47,19 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function showSale($is_sale)
+    {
+        $product = \App\Product::where('is_sale', true)->first();
+        return view('pages/products/show',compact('product'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param $id
+     * @return \Illuminate\Http\Response
+     * @internal bool $is_sale
+     */
     public function show($id)
     {
         $product = \App\Product::where('product_id', $id)->first();
