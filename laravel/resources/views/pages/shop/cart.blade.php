@@ -5,15 +5,16 @@
     <h1>Shopping Cart</h1>
     <div class="row row-shopping-cart">
 
-        @foreach ($products as $product)
+        @foreach ($products as $product => $data)
+            @if(isset($products[$product]['product_id']))
             <div class="product col-md-3">
-                <img class="cart-img" src="{{$product['productInfo']['img']}}" alt="">
-                <p class="product-amount">{{$product['amount']}} x</p>
+                <img class="cart-img" src="{{$data['img']}}" alt="">
+                <p class="product-amount">{{$data['amount']}} x</p>
 
 
                 <div class="form-group delete-cart-item">
                     <div class="input-group">
-                        <input class="form-control" type="number" min="0" max="{{$product['amount']}}">
+                        <input class="form-control" type="number" min="0" max="{{$data['amount']}}">
                         <span class="input-group-btn">
                           <input class="btn btn-primary" type="submit" value="Delete">
                         </span>
@@ -23,11 +24,12 @@
                 <div class="product-info">
                     <h4>Product info</h4>
                     <p class="product-price">
-                        &#8364; {{$product['productInfo']['price']}}
+                        &#8364; {{$data['price']}}
                     </p>
                 </div>
             </div>
 
+            @endif
         @endforeach
 
     </div>
@@ -35,29 +37,29 @@
 
     <div class="total-price">
         <div class="price-info">
-            <p>Totaal prijs excl.({{$products->total}} artikelen)</p>
-            <p>&#8364; {{$products->totalprice}}</p>
+            <p>Totaal prijs excl.({{$products['total']}} artikelen)</p>
+            <p>&#8364; {{$products['totalprice']}}</p>
             <br>
-            <p>BTW({{round((float)$products->btw * 100 )}}%)</p>
-            <p>&#8364; {{$products->totalprice * $products->btw}}</p>
+            <p>BTW({{round((float)$products['btw'] * 100 )}}%)</p>
+            <p>&#8364; {{$products['totalprice'] * $products['btw']}}</p>
             <br>
             <p>Totaal prijs incl.</p>
-            <p>&#8364; {{$products->totalprice * (1+$products->btw)}}</p>
+            <p>&#8364; {{$products['totalprice'] * (1+$products['btw'])}}</p>
         </div>
     </div>
 
    <a href="{{ action("PagesController@data") }}" class="btn btn-primary pull-right pay-button" type="submit">Next</a>
 
-    @if($products->count())
+    @if(count($products))
         <div class="suggestions">
             <h2>Maybe you'd like:</h2>
             <div class="row">
                 @foreach($suggestions as $suggestion)
                     <div class="col-md-2 suggestion">
-                        <img src="{{$suggestion->img}}" alt="">
+                        <img src="{{$suggestion['img']}}" alt="">
 
                         <div class="suggestion-info">
-                            <h4>{{$suggestion->name}}</h4>
+                            <h4>{{$suggestion['name']}}</h4>
                         </div>
                     </div>
                 @endforeach

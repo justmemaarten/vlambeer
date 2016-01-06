@@ -9,6 +9,98 @@ use App\Http\Controllers\Controller;
 
 class CartController extends Controller
 {
+
+    private $contents = array();
+
+    #   Important! Change this value for redistribution!
+    const PASSWORD_KEY              = 'yhXNtihx4vflNZgbvwfwLTEku';
+
+    #   Important! Change this value for redistribution! Can only contain a-f, 0-9 and must be this exact length!
+    const SESSION_KEY               = 'bc204c7a10324cd8b5276051cef08bc2f2ade029fdebfe5f1d317e2ffb2a05a3';
+
+
+
+    public function __construct() {
+
+        session_start();
+
+        if ( empty( $_SESSION['cart'] ) )
+        {
+            $_SESSION['cart'] = null;
+        }
+
+        $this->contents = $this->getCartSession();
+    }
+
+    public function __destruct() {
+
+        $this->setCartSession($this->contents);
+    }
+
+    /**
+     *
+     *      Public setter for the user session.
+     *      The encryption used below is RIJNDAEL MANAGED with a 256-bit block-cipher,
+     *      more commonly known as AES ( Advanced Encryption Standerd ), as adopted by NIST.
+     *
+     *      Explaining the encryption below is not necessary,
+     *      its safe and this example may be adapted and copy pasted as you like.
+     *
+     *  @return bool|User
+     */
+//    public final function setCartSession( User $oUser )
+    public final function setCartSession( $input )
+    {
+        $sPlain                 = serialize( $input );
+
+        $sKey                   = pack( 'H*', static::SESSION_KEY );
+        $sInitVector            = mcrypt_create_iv( 32, MCRYPT_RAND );
+        $sEncrypted             = mcrypt_encrypt(
+            MCRYPT_RIJNDAEL_256,
+            $sKey,
+            $sPlain,
+            MCRYPT_MODE_CBC,
+            $sInitVector
+        );
+
+
+        $_SESSION['cart'] = base64_encode( $sInitVector . $sEncrypted );
+    }
+
+
+    /**
+     *
+     *      Public getter for the user session.
+     *      The encryption used below is RIJNDAEL MANAGED with a 256-bit block-cipher,
+     *      more commonly known as AES ( Advanced Encryption Standerd ), as adopted by NIST.
+     *
+     *      Explaining the encryption below is not necessary,
+     *      its safe and this example may be adapted and copy pasted as you like.
+     *
+     *  @return bool|User
+     */
+    public final function getCartSession()
+    {
+        $cart = $_SESSION['cart'];
+        if ( !empty ($cart) )
+        {
+            $sKey                   = pack( 'H*', static::SESSION_KEY );
+            $sEncrypted             = base64_decode( $cart );
+
+            $sPlain                 = mcrypt_decrypt(
+                MCRYPT_RIJNDAEL_256,
+                $sKey,
+                substr( $sEncrypted, 32 ),
+                MCRYPT_MODE_CBC,
+                substr(  $sEncrypted, 0, 32 )
+            );
+
+            return unserialize( $sPlain );
+        }
+
+        return false;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -50,52 +142,65 @@ class CartController extends Controller
     public function show()
     {
 
-        //        $products = \App\Product::find(7)->users()->get();
-
-
-
         $user_id = \Auth::user()->id;
 
-        $user = \App\User::find(6);
+        $this->contents[5] = [ 'amount' => 9 ];
+        $this->contents[7] = [ 'amount' => 11 ];
 
-//        dd($user->getProducts() );
-
-        $products = \App\Cart::where('id' , '=',  $user_id)
-            ->where('paid', '=', NULL)
-            ->get();
-
-        //calculate sales tax
-        $products->totalprice = 0;
-        $products->total = 0;
-        $products->btw = 0.21;
-        $products->categories = [];
         $suggestions = [];
         $matchingSuggestions = [];
-        $matchingSuggestionsTotal = 0;
-        foreach($products as $product) {
-            $product->productInfo = \App\Product::where('product_id', '=', $product['product_id'])->first();
-            $price = ($product->productInfo['price']);
-            $products->total += $product->amount;
-            $products->totalprice += $price * $product->amount;
 
-            $product->category = \App\Category::where('category_id', '=', $product->productInfo->category_id)->first();
+        //retrieving product data based on session product id's
+        foreach($this->contents as $product => $data) {
 
-            if (!in_array($product->category->category_id, $products->categories)) {
-                array_push($products->categories, $product->category->category_id);
+            $products[$product] = \App\Product::where('product_id', $product)->first();
+
+            $products[$product]['amount'] = $this->contents[$product]['amount'];
+
+        }
+
+        if(isset($products)) {
+            //defining array items
+            $products['total'] = 0;
+            $products['totalprice'] = 0;
+            $products['categories'] = [];
+            $products['btw'] = 0.21;
+
+
+            //filling array items
+            foreach ($products as $product=>$data) {
+                if (isset($data['category_id']))  {
+                    $products['total'] += $products[$product]['amount'];
+                    $products['totalprice'] += $products[$product]['amount'] * $products[$product]['price'];
+
+
+                    $category = \App\Category::where('category_id', '=', $data['category_id'])->pluck('category_id');
+
+                    if (!in_array($category, $products['categories'])) {
+                        array_push($products['categories'], $category);
+                    }
+
+                }
+
+            }
+
+//        dump($products);
+            foreach($products['categories'] as $category){
+//                dump(\App\Product::where('category', '=', $category)->first());
+//                die();
+                $data = \App\Product::where('category_id', '=', $category)->get();
+                array_push($matchingSuggestions, $data);
+//                $matchingSuggestionsTotal += count($data);
             }
         }
 
-        foreach ($products->categories as $category){
-            array_push($matchingSuggestions, \App\Product::where('category_id', '=', $category)->get());
-            $matchingSuggestionsTotal += count(\App\Product::where('category_id', '=', $category)->get());
-        }
-
-
         $max = 5;
 
-        if ($matchingSuggestionsTotal <= 5) {
-            $max = $matchingSuggestionsTotal;
+        if (count($matchingSuggestions) <= 5) {
+            $max = count($matchingSuggestions);
         }
+
+//        dd($matchingSuggestions);
 
         for ($i = 0; $i < $max; $i++){
 
@@ -104,9 +209,14 @@ class CartController extends Controller
                 $randomvalue = rand(0, count($matchingSuggestions[$randomindex])-1);
             } while (in_array($matchingSuggestions[$randomindex][$randomvalue], $suggestions));
             array_push($suggestions, $matchingSuggestions[$randomindex][$randomvalue]);
+
         }
 
         unset($max);
+
+//        dump($products);
+//        dump($suggestions);
+//        die();
 
         return view('pages/shop/cart', compact('products', 'suggestions'));
     }

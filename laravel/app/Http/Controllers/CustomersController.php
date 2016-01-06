@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class OrdersController extends Controller
+class CustomersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        $orders = \App\User::orderBy('id')->get();
-        return view('pages/admin/eCommerce/orders', compact('orders'));
+        $customers = \App\User::orderBy('lastname')->get();
+        return view('pages/admin/Customers/customers', compact('customers'));
     }
 
     /**
@@ -27,7 +27,7 @@ class OrdersController extends Controller
      */
     public function create()
     {
-        dd('halooo');
+        return view('pages/admin/Customers/add');
     }
 
     /**
@@ -38,7 +38,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        dd('halooo');
+        //
     }
 
     /**
@@ -49,7 +49,7 @@ class OrdersController extends Controller
      */
     public function show($id)
     {
-        dd('halooo');
+        //
     }
 
     /**
@@ -60,7 +60,8 @@ class OrdersController extends Controller
      */
     public function edit($id)
     {
-        dd('halooo');
+        $customer = \App\Product::where('id', $id)->first();
+        return view('pages/admin/Customers/edit', compact('customer'));
     }
 
     /**
@@ -72,7 +73,7 @@ class OrdersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd('halooo');
+        //
     }
 
     /**
@@ -83,6 +84,6 @@ class OrdersController extends Controller
      */
     public function destroy($id)
     {
-        dd('halooo');
+        //
     }
 }

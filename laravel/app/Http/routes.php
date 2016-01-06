@@ -44,6 +44,11 @@ Route::get('/products/sale', "ProductController@showSale");
 Route::get('/admin', "PagesController@admin");
 Route::resource('/admin/eCommerce/orders', 'OrdersController');
 Route::resource('/admin/eCommerce/paidCart', 'CmsCartController');
+<<<<<<< HEAD
+Route::get('/admin/eCommerce/unPayedCart', 'CmsCartController@unPayedCart');
+=======
+Route::resource('/admin/Customers/customers', 'CustomersController');
+>>>>>>> origin/master
 
 
 
@@ -51,6 +56,7 @@ Route::resource('/admin/eCommerce/paidCart', 'CmsCartController');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/login', 'PagesController@home');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::get('shop/cart/auth/logout', 'Auth\AuthController@getLogout');
 
 
 // Registration routes...

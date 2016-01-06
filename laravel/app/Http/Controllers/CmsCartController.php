@@ -20,6 +20,12 @@ class CmsCartController extends Controller
         return view('pages/admin/eCommerce/paidCart', compact('users'));
     }
 
+    public function unPayedCart()
+    {
+        $users = \App\User::orderBy('id')->get();
+        return view('pages/admin/eCommerce/unPayedCart', compact('users'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
