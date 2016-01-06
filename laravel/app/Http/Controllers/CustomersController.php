@@ -16,7 +16,7 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        $customers = \App\User::orderBy('lastname')->get();
+        $customers = \App\User::orderBy('id')->get();
         return view('pages/admin/Customers/customers', compact('customers'));
     }
 
@@ -49,7 +49,8 @@ class CustomersController extends Controller
      */
     public function show($id)
     {
-        //
+        $customers = \App\User::orderBy('id')->get();
+        return view('pages/admin/Customers/customers', compact('customers'));
     }
 
     /**
