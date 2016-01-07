@@ -53,6 +53,7 @@ class CustomersController extends Controller
         return view('pages/admin/Customers/customers', compact('customers'));
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -77,9 +78,24 @@ class CustomersController extends Controller
         $this->validate($request, [
             'username'          => 'required|max:32|string',
             'firstname'         => 'required|string',
-            'lastname'          => 'required|numeric',
-            'insertion'         => 'required|exists:categories,id'
-            ''
+            'lastname'          => 'required|string',
+            'insertion'         => 'string',
+            'phone_nr'          => 'string',
+            'birhdate'          => '',
+            'isadmin'           => '',
+            'hasnewsletter'     => '',
+            'city'              => '',
+            'street'            => '',
+            'house_nr'          => '',
+            'postalcode'        => '',
+            'city2'             => '',
+            'street2'           => '',
+            'house_nr2'         => '',
+            'postalcode2'       => '',
+            'email'             => '',
+            'password'          => '',
+
+
 
         ]);
 
