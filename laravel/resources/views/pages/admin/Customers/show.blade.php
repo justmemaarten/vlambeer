@@ -15,7 +15,6 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($customers as $customer)
                 <tr>
                     <td class="order-information">test</td>
                     <td class="order-information"><a href="{{ action("CustomersController@show", $customer->id) }}">{{$customer->username}}</a></td>
@@ -25,7 +24,6 @@
                     <td class="order-information">{{$customer->lastname}}</td>
                     <td class="order-information"><a href="{{ action("CustomersController@edit", $customer->id) }}">Edit</a></td>
                 </tr>
-            @endforeach
             </tbody>
         </table>
     </div>
