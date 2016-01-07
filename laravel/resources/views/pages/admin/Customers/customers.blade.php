@@ -4,7 +4,7 @@
 
     <div class="main-content">
         <table class="top-information table table-striped table-hover sortable">
-            <thead >
+            <thead style="font-weight: bold">
             <tr>
                 <td>ID</td>
                 <td>Username</td>

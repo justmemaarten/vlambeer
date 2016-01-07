@@ -61,7 +61,7 @@ class CustomersController extends Controller
      */
     public function edit($id)
     {
-        $customer = \App\Product::where('id', $id)->first();
+        $customer = \App\User::where('id', $id)->first();
         return view('pages/admin/Customers/edit', compact('customer'));
     }
 
@@ -74,7 +74,26 @@ class CustomersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'username'          => 'required|max:32|string',
+            'firstname'         => 'required|string',
+            'lastname'          => 'required|numeric',
+            'insertion'         => 'required|exists:categories,id'
+            ''
+
+        ]);
+
+        $product = \App\Product::find($id);
+
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->category_id = $request->category_id;
+
+        $product->save();
+
+
+        return Redirect('products')->with('message', 'Product changed succesfully');
     }
 
     /**
