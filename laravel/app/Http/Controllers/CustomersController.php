@@ -36,6 +36,20 @@ class CustomersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function showCustomerOrder() {
+        return 'test';
+    //  $customers = \App\User::orderBy('id')->get();
+    //  return view('pages/admin/Customers/customer', compact('customers'));
+    }
+
+    /**
+     * Show the orders a custome r placed
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
     public function store(Request $request)
     {
         //
