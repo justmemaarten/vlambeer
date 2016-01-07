@@ -144,3 +144,11 @@ main {
     width: 30px;
 }
 
+footer {
+    background: #364150;
+    clear: both;
+    padding: 20px 0px 10px 0px;
+    text-align: center;
+    color: #C6CFDB;
+}
+

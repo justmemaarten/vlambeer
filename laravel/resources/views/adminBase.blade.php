@@ -51,7 +51,7 @@
 
 </main>
 <footer>
-
+    <p>2016 &copy; Admin Panel for Vlambeer</p>
 </footer>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>$(document).ready(function(){
