@@ -50,8 +50,9 @@ class CustomersController extends Controller
      */
     public function show($id)
     {
+        //haal orders hier binnen
         $customers = \App\User::orderBy('id')->get();
-        return view('pages/admin/Customers/customers', compact('customers'));
+        return view('pages/admin/Customers/show', compact('customers'));
     }
 
 

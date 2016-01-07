@@ -17,7 +17,7 @@
             <tbody>
             @foreach($customers as $customer)
                 <tr>
-                    <td class="order-information">{{$customer->id}}</td>
+                    <td class="order-information">test</td>
                     <td class="order-information"><a href="{{ action("CustomersController@show", $customer->id) }}">{{$customer->username}}</a></td>
                     <td class="order-information"><a href="{{action("CustomersController@show")}}">{{$customer->username}}</a></td>
                     <td class="order-information">{{$customer->firstname}}</td>
