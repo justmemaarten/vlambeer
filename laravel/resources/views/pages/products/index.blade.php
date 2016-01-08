@@ -7,7 +7,7 @@
 <div class="animated pulse">
 
 @foreach($products as $product)
-    @if($product->is_sale == 1)
+    @if($product->is_sale)
     <div class="col-lg-3-store merchandise-product">
         <a class="product-link" href={{ action("ProductController@show", ['id' => $product->product_id]) }}>
             <h1 class="merchandise-name">{{ $product['name']  }}</h1>
