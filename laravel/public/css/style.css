@@ -857,21 +857,6 @@ body.game-3030-46090 {
     margin-right: 0px;
 }
 
-.sale-product {
-    background-color: #171717;
-    width: 23.6666666%;!important;
-    float: left;
-    margin-right: 1.779%;
-    margin-bottom: 23px;
-    border-radius: 15px;
-    color: white;
-    max-height: 435px;
-}
-
-.sale-product:nth-child(4n) {
-    margin-right: 0px;
-}
-
 .merchandise-img {
     width: 100%;
     padding-left: 5px;

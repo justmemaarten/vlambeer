@@ -14,7 +14,7 @@ class PagesController extends Controller
     }
 
     public function products() {
-        return view('pages/shop/store');
+        return view('pages/products');
     }
 
     public function contact() {
@@ -22,7 +22,6 @@ class PagesController extends Controller
     }
 
     public function about() {
-
         return view('pages/about');
     }
 

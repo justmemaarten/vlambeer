@@ -9,7 +9,6 @@ class Product extends Model
     protected $table = 'tbl_products';
     protected $fillable = ['product_id', 'price', 'is_sale'];
     protected $primaryKey = 'product_id';
-    protected $secondaryKey = 'is_sale';
 
 
     public function users() {

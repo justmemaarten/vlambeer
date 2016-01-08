@@ -1,11 +1,13 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+
 
 class ProductController extends Controller
 {
@@ -14,11 +16,21 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         $products = \App\Product::all();
         return view('pages/products/index',compact('products'));
     }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+//    public function sale() {
+//        $sale_products  = \App\Product::where('is_sale', 1)->first();
+//        echo $sale_products; die;
+//        return view('pages/products/index',compact('sale_products'));
+//    }
 
     /**
      * Show the form for creating a new resource.
@@ -46,19 +58,6 @@ class ProductController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
-    public function showSale($is_sale)
-    {
-        $product = \App\Product::where('is_sale', true)->first();
-        return view('pages/products/show',compact('product'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param $id
-     * @return \Illuminate\Http\Response
-     * @internal bool $is_sale
      */
     public function show($id)
     {

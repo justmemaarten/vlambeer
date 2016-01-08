@@ -40,7 +40,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function products() {
 
-        return $this->belongsToMany('App\Product', 'tbl_cart', 'id', 'product_id');
+        return $this->belongsToMany('App\Product', 'tbl_cart', 'id', 'product_id', 'is_sale');
 
     }
 

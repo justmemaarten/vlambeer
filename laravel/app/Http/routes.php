@@ -30,11 +30,8 @@ Route::resource('/shop/cart', 'CartController');
 
 Route::resource('/user', "UserController");
 
-Route::resource('/store', "ProductController");
-
 Route::resource('/products', "ProductController");
 
-Route::get('/products/sale', "ProductController@showSale");
 
 
 Route::get('/admin', "PagesController@admin");
