@@ -17,35 +17,35 @@
         <a href="auth/logout" class="dropdown"><i class="fa fa-sign-out fa-2x"></i></a>
     </div>
 
-<h1>Header</h1> 
-
 </header>
 <main>
-    <aside class="col-md-2">
-        <form action="" method="">
-            <input id="filter" type="text" placeholder="Search" />
-            <i id="filtersubmit" class="fa fa-search"></i>
-        </form>
-        <nav>
-            <ul>
-                <li><a href="{{ action("PagesController@admin") }}"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
-                <li><button id="eCommerce"><i class="fa fa-shopping-cart fa-fw"></i>eCommerce</button></li>
-                <ul id="eCommerceNav">
-                    <li><a href="{{ action("OrdersController@index") }}"><i class="fa fa-tags fa-fw"></i>Orders</a></li>
-                    <li><a href=""><i class="fa fa-line-chart fa-fw"></i>Products</a></li>
-                    <li><a href="{{ action("CmsCartController@unPayedCart") }}"><i class="fa fa-exclamation-circle fa-fw"></i>Unpayed Carts</a></li>
+    <div class="inside">
+        <aside class="col-md-12">
+            <form action="" method="">
+                <input id="filter" type="text" placeholder="Search" />
+                <i id="filtersubmit" class="fa fa-search"></i>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="{{ action("PagesController@admin") }}"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
+                    <li><button id="eCommerce"><i class="fa fa-shopping-cart fa-fw"></i>eCommerce</button></li>
+                    <ul id="eCommerceNav">
+                        <li><a href="{{ action("OrdersController@index") }}"><i class="fa fa-tags fa-fw"></i>Orders</a></li>
+                        <li><a href=""><i class="fa fa-line-chart fa-fw"></i>Products</a></li>
+                        <li><a href="{{ action("CmsCartController@unPayedCart") }}"><i class="fa fa-exclamation-circle fa-fw"></i>Unpayed Carts</a></li>
+                    </ul>
+                    <li><button id="customer"><i class="fa fa-user fa-fw"></i>Customers</button></li>
+                    <ul id="customersNav">
+                        <li><a href="{{ action("CustomersController@index") }}"><i class="fa fa-users fa-fw"></i>Customers view</a></li>
+                        <li><a href="{{ action("CustomersController@create") }}"><i class="fa fa-user-plus fa-fw"></i>Customer add</a></li>
+                    </ul>
                 </ul>
-                <li><button id="customer"><i class="fa fa-user fa-fw"></i>Customers</button></li>
-                <ul id="customersNav">
-                    <li><a href="{{ action("CustomersController@index") }}"><i class="fa fa-users fa-fw"></i>Customers view</a></li>
-                    <li><a href="{{ action("CustomersController@create") }}"><i class="fa fa-user-plus fa-fw"></i>Customer add</a></li>
-                </ul>
-            </ul>
-        </nav>
+            </nav>
 
 
-    </aside>
-    <div class="content col-md-10">
+        </aside>
+    </div>
+    <div class="content col-md-11">
         @yield('admin')
     </div>
 

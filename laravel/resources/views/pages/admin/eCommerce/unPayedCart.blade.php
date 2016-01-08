@@ -1,11 +1,10 @@
-
-
-
 @extends('adminBase')
+
 
 @section('admin')
 
     <div class="main-content">
+        <h1>Unpayed Carts</h1>
         <table class="top-information table table-striped table-hover sortable">
             <thead >
             <tr>

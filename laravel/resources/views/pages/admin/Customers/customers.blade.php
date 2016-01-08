@@ -3,6 +3,7 @@
 @section('admin')
 
     <div class="main-content">
+        <h1>Customers</h1>
         <table class="top-information table table-striped table-hover sortable">
             <thead style="font-weight: bold">
             <tr>

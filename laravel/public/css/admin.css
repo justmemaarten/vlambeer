@@ -1,21 +1,72 @@
-html {
 
+/*Inside scrolling Admin Panel*/
+/*Maarten & Jeroen*/
+html {
+    height: 100%;
 }
 
 body {
-
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #F6F6F6 !important;
 }
 
-
-
+header, footer {
+    position:fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    background: #2B3643;
+    color: #C6CFDB;
+    padding: 10px;
+}
 
 header {
-    background: #2B3643;
     height: 70px;
-    padding: 10px;
-    color: #C6CFDB;
 }
 
+footer {
+    top: auto;
+    bottom: 0;
+}
+
+main {
+    width: auto;
+    margin: 60px 0px 0px 202px;
+    overflow: hidden;
+}
+
+.content {
+    /*background: #F6F6F6;*/
+    margin-bottom: 100px;
+}
+
+.inside {
+    position: fixed;
+    top: 60px;
+    bottom: 60px;
+    left: 0px;
+    width: 300px;
+    background: lightgreen;
+    overflow: scroll-y;
+}
+
+.inside > aside {
+    height: 1000px;
+}
+
+.content.col-md-11 {
+    float: right;
+    margin-right: 35px;
+}
+
+/*End inside scrolling*/
+
+header img {
+    float: left;
+}
 .user {
     float: right;
     height: 50px;
@@ -42,13 +93,13 @@ header {
 
 
 main {
-    background: #F6F6F6;
+
 }
 
     aside {
         float: left;
         background: #364150;
-        height: 100vh;
+        /*height: 100vh;*/
         color: #C6CFDB;
         padding-top: 40px;
     }
@@ -146,7 +197,6 @@ main {
 
 footer {
     background: #364150;
-    clear: both;
     padding: 20px 0px 10px 0px;
     text-align: center;
     color: #C6CFDB;

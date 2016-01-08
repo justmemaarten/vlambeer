@@ -3,6 +3,7 @@
 @section('admin')
 
 <div class="main-content">
+    <h1>Orders</h1>
     <table class="top-information table table-striped table-hover sortable">
         <thead >
             <tr>
