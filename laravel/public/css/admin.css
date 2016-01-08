@@ -1,68 +1,70 @@
 
 /*Inside scrolling Admin Panel*/
 /*Maarten & Jeroen*/
-html {
-    height: 100%;
-}
+    html {
+        height: 100%;
+    }
 
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: #F6F6F6 !important;
-}
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: #F6F6F6 !important;
+    }
 
-header, footer {
-    position:fixed;
-    top: 0;
-    z-index: 3;
-    width: 100%;
-    text-align: center;
-    background: #2B3643;
-    color: #C6CFDB;
-    padding: 10px;
-}
+    header, footer {
+        position:fixed;
+        top: 0;
+        z-index: 3;
+        width: 100%;
+        text-align: center;
+        background: #2B3643;
+        color: #C6CFDB;
+        padding: 10px;
+    }
 
-header {
-    height: 70px;
-}
+    header {
+        height: 70px;
+    }
 
-footer {
-    top: auto;
-    bottom: 0;
-}
+    footer {
+        top: auto;
+        bottom: 0;
+    }
 
-main {
-    width: auto;
-    margin: 60px 0px 0px 202px;
-    overflow: hidden;
-}
+    main {
+        width: auto;
+        margin: 60px 0px 0px 202px;
+        overflow: hidden;
+    }
 
-.content {
-    /*background: #F6F6F6;*/
-    margin-bottom: 100px;
-}
+    .content {
+        /*background: #F6F6F6;*/
+        margin-bottom: 100px;
+    }
 
-.inside {
-    position: fixed;
-    top: 60px;
-    bottom: 60px;
-    left: 0px;
-    width: 300px;
-    background: lightgreen;
-    overflow: scroll-y;
-}
+    .inside {
+        position: fixed;
+        top: 60px;
+        bottom: 60px;
+        left: 0px;
+        width: 300px;
+        background: lightgreen;
+        overflow: scroll-y;
+    }
 
-.inside > aside {
-    height: 1000px;
-}
+    .inside > aside {
+        height: 1000px;
+    }
 
-.content.col-md-12 {
-    margin: 0 auto;
-    padding: 0px 80px 0px 110px;
-}
-
+    .content.col-md-12 {
+        margin: 0 auto;
+        padding: 0px 80px 100px 110px;
+    }
 /*End inside scrolling*/
+
+
+
 
 header img {
     float: left;
@@ -132,6 +134,11 @@ main {
 
     aside nav ul li a {
         color: #C6CFDB;
+    }
+
+    aside nav ul li a:hover {
+        color: #C6CFDB;
+        text-decoration: none;
     }
 
     aside nav button {

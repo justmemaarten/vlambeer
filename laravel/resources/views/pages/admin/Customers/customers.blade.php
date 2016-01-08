@@ -20,7 +20,6 @@
                 <tr>
                     <td class="order-information">{{$customer->id}}</td>
                     <td class="order-information"><a href="{{ action("CustomersController@show", $customer->id) }}">{{$customer->username}}</a></td>
-                    <td class="order-information"><a href="{{action("CustomersController@show")}}">{{$customer->username}}</a></td>
                     <td class="order-information">{{$customer->firstname}}</td>
                     <td class="order-information">{{$customer->insertion}}</td>
                     <td class="order-information">{{$customer->lastname}}</td>
