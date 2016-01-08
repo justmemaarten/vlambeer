@@ -50,11 +50,33 @@ class PagesController extends Controller
             ->where('paid', '=', NULL)
             ->get();
         $user = \App\User::where('id', $user_id)->first();
+        if(!empty($_GET)) {
+        if($_GET['address'] == 1) {
+            $address = array(
+                'street'        => $user['street'],
+                'city'          => $user['city'],
+                'house_nr'      => $user['house_nr'],
+                'postalcode'    => $user['postalcode']
+            );
+        } else if($_GET['address'] == 2) {
+            $address = array(
+                'street'        => $user['street2'],
+                'city'          => $user['city2'],
+                'house_nr'      => $user['house_nr2'],
+                'postalcode'    => $user['postalcode2']
+            );
+        }} else {
+            $address = array(
+                'street'        => $user['street2'],
+                'city'          => $user['city2'],
+                'house_nr'      => $user['house_nr2'],
+                'postalcode'    => $user['postalcode2']
+            );
+        }
 
         $products->totalprice = 0;
         $products->total = 0;
         $products->btw = 0.21;
-
         foreach($products as $product) {
             $product->productInfo = \App\Product::where('product_id', '=', $product['product_id'])->first();
             $price = ($product->productInfo['price']);
@@ -62,7 +84,7 @@ class PagesController extends Controller
             $products->totalprice += $price * $product->amount;
         }
 
-        return view('pages/shop/pay', compact('products'));
+        return view('pages/shop/pay', compact('products'), compact('address'));
 
     }
     public function invoice() {

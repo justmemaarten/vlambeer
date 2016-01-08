@@ -2,6 +2,8 @@
 
 @section('content')
 
+    <h1>Shipping address:</h1>
+    <h3>{{ $address['street'] }} {{ $address['house_nr'] }}, {{ $address['postalcode'] }}, {{ $address['city'] }}</h3>
 <table class="table table-bordered">
     <thead>
     <tr>

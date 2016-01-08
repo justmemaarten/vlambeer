@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -71,24 +72,25 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $user_id = \Auth::user()->id;
         $this->validate($request, [
-            'street'            =>  'required|max:255|string',
-            'house_nr'          =>  'required|max:255|string',
-            'postalcode'        =>  'required|max:255|string',
-            'city'              =>  'required|max:255|string'
+            'street2'            =>  'required|max:255|string',
+            'house_nr2'          =>  'required|max:255|string',
+            'postalcode2'        =>  'required|max:255|string',
+            'city2'              =>  'required|max:255|string'
         ]);
 
         \App\User::query()
             ->where('id', $user_id)
             ->update(array(
-                'street'            => $request['street'],
-                'house_nr'          => $request['house_nr'],
-                'postalcode'        => $request['postalcode'],
-                'city'              => $request['city']
+                'street2'            => $request['street2'],
+                'house_nr2'          => $request['house_nr2'],
+                'postalcode2'        => $request['postalcode2'],
+                'city2'              => $request['city2']
             ));
 
-        return redirect('shop/pay');
+        return Redirect::action('PagesController@pay');
     }
 
     /**
