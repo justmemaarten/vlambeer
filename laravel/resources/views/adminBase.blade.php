@@ -45,7 +45,7 @@
 
         </aside>
     </div>
-    <div class="content col-md-11">
+    <div class="content col-md-10">
         @yield('admin')
     </div>
 

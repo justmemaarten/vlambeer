@@ -57,9 +57,9 @@ main {
     height: 1000px;
 }
 
-.content.col-md-11 {
+.content.col-md-10 {
     float: right;
-    margin-right: 35px;
+    margin-right: 10%;
 }
 
 /*End inside scrolling*/
