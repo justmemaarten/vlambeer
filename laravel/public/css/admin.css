@@ -57,9 +57,9 @@ main {
     height: 1000px;
 }
 
-.content.col-md-10 {
-    float: right;
-    margin-right: 10%;
+.content.col-md-12 {
+    margin: 0 auto;
+    padding: 0px 200px;
 }
 
 /*End inside scrolling*/
