@@ -18,7 +18,7 @@
                 <td class="order-information">{{$order->id}}</td>
                 <td class="order-information">test</td>
                 <td class="order-information">{{$order->created_at}}</td>
-                <td class="order-information">price here</td>
+                <td class="order-information">{{ $totalprice }}</td>
                 <td class="order-information">{{ $order->status }}</td>
                 <td class="order-information"><a href="">cancel</a></td>
             </tr>
