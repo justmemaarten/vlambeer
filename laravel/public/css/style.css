@@ -908,6 +908,16 @@ body.game-3030-46090 {
     overflow: hidden;
 }
 
+
+/* contact page map */
+#map
+{
+    width: 74%;
+    height: 750px;
+    margin-left: 0;
+    float: right;
+}
+
 /* loading screen */
 
 .loader {

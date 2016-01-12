@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
     <link rel="stylesheet" href="{{asset('css/twitter-styles.css')}}">
+    <script src="http://maps.google.com/maps/api/js?sensor=false"
+            type="text/javascript"></script>
+    <script Src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=weather&sensor=false"></script>
     <script> var link = "{{ asset('') }}" </script>
 </head>
 <?php

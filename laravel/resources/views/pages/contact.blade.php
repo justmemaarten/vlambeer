@@ -19,6 +19,55 @@
                 delectus deleniti ex fugiat hic mollitia nam quaerat quasi quis reprehenderit
                 sed sint vel! Ab amet doloribus ipsam nam quae!</p>
         </div>
+        <div id="map">
+            <script type="text/javascript">
+                var locations = [
+                    ['Huis moeder', 51.51533, 4.73285, 4],
+                    ['Huis vader', 51.57400, 4.63665, 5],
+                    ['Vriendin', 51.56597, 4.63486, 3],
+                    ['School', 51.60677, 4.77753, 2],
+                    ['Tennisclub', 51.52095, 4.69295, 1]
+                ];
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: new google.maps.LatLng(51.55989, 4.71176),
+                    zoom: 12,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+
+                var infowindow = new google.maps.InfoWindow();
+
+                var marker, i;
+
+                var weatherLayer = new google.maps.weather.WeatherLayer({
+                    temperatureUnits: google.maps.weather.TemperatureUnit.CELCIUS
+                });
+                weatherLayer.setMap(map);
+
+                var cloudLayer = new google.maps.weather.CloudLayer();
+                cloudLayer.setMap(map);
+
+                var trafficLayer = new google.maps.TrafficLayer();
+                trafficLayer.setMap(map);
+
+                var transitLayer = new google.maps.TransitLayer();
+                transitLayer.setMap(map);
+
+                for (i = 0; i < locations.length; i++) {
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                        map: map
+                    });
+
+                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                        return function() {
+                            infowindow.setContent(locations[i][0]);
+                            nfowindow.open(map, marker);
+                        }
+                    })(marker, i));
+                }
+            </script>
+        </div>
     </div>
 
 @stop
