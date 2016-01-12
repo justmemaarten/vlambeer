@@ -1,4 +1,4 @@
-<form class="auth-form" action="auth/login" method="post">
+<form class="auth-form" action="{{action('Auth\AuthController@postLogin')}}" method="post">
     {!! csrf_field() !!}
     <div class="form-group">
         <label for="">Email</label>

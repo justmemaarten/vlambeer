@@ -1,4 +1,4 @@
-<form class="auth-form" action="auth/register" method="post">
+<form class="auth-form" action="{{action('Auth\AuthController@postRegister')}}" method="post">
     {!! csrf_field() !!}
     <div class="form-group">
         <label for="">Username</label>
