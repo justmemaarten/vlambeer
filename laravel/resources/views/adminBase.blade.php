@@ -9,6 +9,7 @@
 </head>
 <body>
 <header>
+
     <img src="{{asset('media/img/logo.png')}}" alt="logo" width="55px" height="50px">
     
     <div class="user">

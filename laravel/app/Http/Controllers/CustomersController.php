@@ -39,7 +39,30 @@ class CustomersController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'username'          => 'required|max:32|string',
+            'firstname'         => 'required|string',
+            'lastname'          => 'required|string',
+            'insertion'         => 'string',
+            'phone_nr'          => 'string',
+            'birhdate'          => 'date',
+            'isadmin'           => 'required|boolean',
+            'hasnewsletter'     => 'required|boolean',
+            'city'              => 'required|string',
+            'street'            => 'required|string',
+            'house_nr'          => 'required|string',
+            'postalcode'        => 'required|string',
+            'city2'             => 'string',
+            'street2'           => 'string',
+            'house_nr2'         => 'string',
+            'postalcode2'       => 'string',
+            'email'             => 'required|email',
+            'password'          => 'required|password'
+        ]);
+
+        $user = \App\User::create($request->except('_token'));
+
+        return Redirect('user')->with('message', 'Customer created succesfully!');
     }
 
     /**
@@ -95,7 +118,7 @@ class CustomersController extends Controller
             'house_nr2'         => '',
             'postalcode2'       => '',
             'email'             => '',
-            'password'          => '',
+            'password'          => ''
 
 
 
