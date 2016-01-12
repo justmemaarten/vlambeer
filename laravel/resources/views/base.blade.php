@@ -66,14 +66,12 @@ if(!isset($_GET['id'])){
                                 </ul>
                             </div>
                         </li>
-                            <li>
-                                <a href="{{action('ProductController@index')}}" >Store</a> |
-                            </li>
-                        @if (Auth::check())
                         <li>
-                                <a href="{{action('CartController@show')}}" >Cart</a> |
+                            <a href="{{action('ProductController@index')}}" >Store</a> |
                         </li>
-                        @endif
+                        <li>
+                            <a href="{{action('CartController@index')}}" >Cart</a> |
+                        </li>
                         <li>
                             <a href="" role="button">Contact</a> |
                         </li>
@@ -82,7 +80,7 @@ if(!isset($_GET['id'])){
                         </li>
                         <li>
                             @if (Auth::check())
-                                <a href="auth/logout" class="dropdown">Logout</a><!--auth/logout-->
+                                <a href="auth/logout" class="dropdown">Logout</a>
                             @else
                                 <button type="button" class="dropdown" data-toggle="modal" data-target="#login-register">
                                     Login / Register
@@ -100,123 +98,123 @@ if(!isset($_GET['id'])){
     </header>
 </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="login-register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<!-- Modal -->
+<div class="modal fade" id="login-register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div>
+
+                <!-- Nav tabs -->
+
+
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Log in</a></li>
+                    <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+                    <div role="tabpanel" class="tab-pane active" id="login">
+                        @include('auth/login')
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="register">
+                        @include('auth/register')
+                    </div>
                 </div>
-                <div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container games-container animatedParent animateOnce">
+    @if (Session::has('authMessage'))
+        {{ Session::get('authMessage') }}
+    @endif
+    <div class="animated fadeInDownShort" id="quote"></div>
 
-                    <!-- Nav tabs -->
+    @yield('content')
 
 
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Log in</a></li>
-                        <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Register</a></li>
+</div>
+<footer>
+    <div class="container animatedParent">
+        <div class="col-md-5">
+            <div id="info">
+                <div class="about-us">
+                    <strong>VLAMBEER IS A DUTCH INDEPENDENT GAME STUDIO</strong><p> made up of Rami Ismail and Jan Willem Nijman, bringing back arcade games since 1978.</p>
+                </div>
+
+                <div class="team-rami">
+                    <img class="animated tada" src="{{asset('media/images/team_rami.png')}}">
+                    <div class="team-info">
+                        <strong>Rami Ismail</strong><br>
+                        <i>Business and Development</i><br>
+                        rami@vlambeer.com<br>
+                        <a href="http://twitter.com/tha_rami" target="_blank">@tha_rami</a><br>
+                    </div>
+                </div>
+
+                <div class="team-jw animatedParent">
+                    <img class="animated tada" src="{{asset('media/images/team_jw.png')}}">
+                    <div class="team-info">
+                        <strong>Jan Willem Nijman</strong><br>
+                        <i>Game Design</i><br>
+                        jw@vlambeer.com<br>
+                        <a href="http://twitter.com/jwaaaap" target="_blank">@jwaaaap</a><br>
+                    </div>
+                </div>
+
+                <div class="contact">info@vlambeer.com | Neude 5, 3512 AD, Utrecht, the Netherlands | +31621206363</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <strong>FRIENDS OF VLAMBEER</strong>
+            <div class="col-md-6">
+                <div class="friends">
+                    <ul>
+                        <a href="http://www.pietepiet.net/"><li>Paul Veer</li></a>
+                        <a href="http://www2.hku.nl/~roy/"><li>Roy Nathan de Groot</li></a>
+                        <a href="http://kozilek.bandcamp.com/"><li>KOZILEK</li></a>
+                        <a href="http://www.stfj.net/"><li>Zach Gage</li></a>
+                        <a href="http://www.aeiowu.com/"><li>Greg Wohlwend</li></a>
+                        <a href="http://www.kertgartner.com/"><li>Kert Gartner</li></a>
+                        <a href="http://www.strotch.net/"><li>Phlogiston</li></a>
+                        <a href="http://www.devolverdigital.com/"><li>Devolver Digital</li></a>
+                        <a href="http://www.sparpweed.nl/"><li>Sparpweed</li></a>
+                        <a href="http://www.alexmauer.com/"><li>Alex Mauer</li></a>
+                        <a href="http://brotherandroid.110mb.com/"><li>Brother Android</li></a>
+                        <a href="http://www.thepoppenkast.com/"><li>The Poppenkast</li></a>
+                        <a href="http://www.venuspatrol.com/"><li>Venus Patrol</li></a>
+                        <a href="http://www.control-online.nl/"><li>Control Magazine</li></a>
                     </ul>
-
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-
-                            <div role="tabpanel" class="tab-pane active" id="login">
-                                @include('auth/login')
-                            </div>
-
-                        <div role="tabpanel" class="tab-pane" id="register">
-                            @include('auth/register')
-                        </div>
-                    </div>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="friends">
+                    <ul>
+                        <a href="http://www.iimusic.net/"><li>Pause music</li></a>
+                        <a href="http://notch.tumblr.com/"><li>Notch</li></a>
+                        <a href="http://adamatomic.com/"><li>Adam Atomic</li></a>
+                        <a href="http://halfbot.com/"><li>Halfbot</li></a>
+                        <a href="http://www.dutchgamegarden.nl/"><li>Dutch Game Garden</li></a>
+                        <a href="http://brandonnn.tumblr.com/"><li>Brandon Boyer</li></a>
+                        <a href="http://www.bramruiter.nl/"><li>Bram Ruiter</li></a>
+                        <a href="http://www.bitcollective.ca/"><li>Bit Collective</li></a>
+                        <a href="http://www.glitchhiker.com/"><li>Aardbever</li></a>
+                    </ul>
+                </div>
+            </div>
+            <a href="http://www.facebook.com/Vlambeer"><li style="color:#fff;">Become friends too?</li></a>
+        </div>
+        <div class="animated fadeIn" id="twitter-feed">
+
         </div>
     </div>
-    <div class="container games-container animatedParent animateOnce">
-        @if (Session::has('authMessage'))
-            {{ Session::get('authMessage') }}
-        @endif
-        <div class="animated fadeInDownShort" id="quote"></div>
-
-        @yield('content')
-
-
-    </div>
-    <footer>
-        <div class="container animatedParent">
-            <div class="col-md-5">
-                <div id="info">
-                    <div class="about-us">
-                        <strong>VLAMBEER IS A DUTCH INDEPENDENT GAME STUDIO</strong><p> made up of Rami Ismail and Jan Willem Nijman, bringing back arcade games since 1978.</p>
-                    </div>
-
-                    <div class="team-rami">
-                        <img class="animated tada" src="{{asset('media/images/team_rami.png')}}">
-                        <div class="team-info">
-                            <strong>Rami Ismail</strong><br>
-                            <i>Business and Development</i><br>
-                            rami@vlambeer.com<br>
-                            <a href="http://twitter.com/tha_rami" target="_blank">@tha_rami</a><br>
-                        </div>
-                    </div>
-
-                    <div class="team-jw animatedParent">
-                        <img class="animated tada" src="{{asset('media/images/team_jw.png')}}">
-                        <div class="team-info">
-                            <strong>Jan Willem Nijman</strong><br>
-                            <i>Game Design</i><br>
-                            jw@vlambeer.com<br>
-                            <a href="http://twitter.com/jwaaaap" target="_blank">@jwaaaap</a><br>
-                        </div>
-                    </div>
-
-                    <div class="contact">info@vlambeer.com | Neude 5, 3512 AD, Utrecht, the Netherlands | +31621206363</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <strong>FRIENDS OF VLAMBEER</strong>
-                <div class="col-md-6">
-                    <div class="friends">
-                        <ul>
-                            <a href="http://www.pietepiet.net/"><li>Paul Veer</li></a>
-                            <a href="http://www2.hku.nl/~roy/"><li>Roy Nathan de Groot</li></a>
-                            <a href="http://kozilek.bandcamp.com/"><li>KOZILEK</li></a>
-                            <a href="http://www.stfj.net/"><li>Zach Gage</li></a>
-                            <a href="http://www.aeiowu.com/"><li>Greg Wohlwend</li></a>
-                            <a href="http://www.kertgartner.com/"><li>Kert Gartner</li></a>
-                            <a href="http://www.strotch.net/"><li>Phlogiston</li></a>
-                            <a href="http://www.devolverdigital.com/"><li>Devolver Digital</li></a>
-                            <a href="http://www.sparpweed.nl/"><li>Sparpweed</li></a>
-                            <a href="http://www.alexmauer.com/"><li>Alex Mauer</li></a>
-                            <a href="http://brotherandroid.110mb.com/"><li>Brother Android</li></a>
-                            <a href="http://www.thepoppenkast.com/"><li>The Poppenkast</li></a>
-                            <a href="http://www.venuspatrol.com/"><li>Venus Patrol</li></a>
-                            <a href="http://www.control-online.nl/"><li>Control Magazine</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="friends">
-                        <ul>
-                            <a href="http://www.iimusic.net/"><li>Pause music</li></a>
-                            <a href="http://notch.tumblr.com/"><li>Notch</li></a>
-                            <a href="http://adamatomic.com/"><li>Adam Atomic</li></a>
-                            <a href="http://halfbot.com/"><li>Halfbot</li></a>
-                            <a href="http://www.dutchgamegarden.nl/"><li>Dutch Game Garden</li></a>
-                            <a href="http://brandonnn.tumblr.com/"><li>Brandon Boyer</li></a>
-                            <a href="http://www.bramruiter.nl/"><li>Bram Ruiter</li></a>
-                            <a href="http://www.bitcollective.ca/"><li>Bit Collective</li></a>
-                            <a href="http://www.glitchhiker.com/"><li>Aardbever</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <a href="http://www.facebook.com/Vlambeer"><li style="color:#fff;">Become friends too?</li></a>
-            </div>
-            <div class="animated fadeIn" id="twitter-feed">
-
-            </div>
-        </div>
-    </footer>
+</footer>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
 {{--<script src="https://raw.githubusercontent.com/jedfoster/Readmore.js/master/readmore.js"></script>--}}
@@ -234,11 +232,11 @@ if(!isset($_GET['id'])){
     });
     $('#info-text').readmore({speed: 500});
 </script>
-    <script src="{{ asset('js/custom.js') }}"></script>
-    <script src="{{ asset('js/css3-animate-it.js') }}"></script>
-    <script src="{{ asset('js/twitterfeed.js') }}"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="{{ asset('js/giantbomb.js') }}"></script>
-    <script src="{{ asset('js/games.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+<script src="{{ asset('js/css3-animate-it.js') }}"></script>
+<script src="{{ asset('js/twitterfeed.js') }}"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="{{ asset('js/giantbomb.js') }}"></script>
+<script src="{{ asset('js/games.js') }}"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -108,50 +109,17 @@ class CartController extends Controller
      */
     public function index()
     {
-        // ophalen alle producten (met id's) waarbij paid null is
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create($product_id, $id)
-    {
 
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-
-    public function show()
-    {
-
-        $user_id = \Auth::user()->id;
-
-        $this->contents[5] = [ 'amount' => 9 ];
-        $this->contents[7] = [ 'amount' => 11 ];
+//        $this->contents[5] = ['amount' => 9];
+//        $this->contents[7] = ['amount' => 11];
 
         $suggestions = [];
         $matchingSuggestions = [];
 
         //retrieving product data based on session product id's
-        foreach($this->contents as $product => $data) {
+        foreach ($this->contents as $product => $data) {
 
             $products[$product] = \App\Product::where('product_id', $product)->first();
 
@@ -159,7 +127,7 @@ class CartController extends Controller
 
         }
 
-        if(isset($products)) {
+        if (isset($products)) {
             //defining array items
             $products['total'] = 0;
             $products['totalprice'] = 0;
@@ -168,8 +136,8 @@ class CartController extends Controller
 
 
             //filling array items
-            foreach ($products as $product=>$data) {
-                if (isset($data['category_id']))  {
+            foreach ($products as $product => $data) {
+                if (isset($data['category_id'])) {
                     $products['total'] += $products[$product]['amount'];
                     $products['totalprice'] += $products[$product]['amount'] * $products[$product]['price'];
 
@@ -185,7 +153,7 @@ class CartController extends Controller
             }
 
 //        dump($products);
-            foreach($products['categories'] as $category){
+            foreach ($products['categories'] as $category) {
 //                dump(\App\Product::where('category', '=', $category)->first());
 //                die();
                 $data = \App\Product::where('category_id', '=', $category)->get();
@@ -202,23 +170,71 @@ class CartController extends Controller
 
 //        dd($matchingSuggestions);
 
-        for ($i = 0; $i < $max; $i++){
+        for ($i = 0; $i < $max; $i++) {
 
             do {
-                $randomindex = rand(0, count($matchingSuggestions)-1);
-                $randomvalue = rand(0, count($matchingSuggestions[$randomindex])-1);
+                $randomindex = rand(0, count($matchingSuggestions) - 1);
+                $randomvalue = rand(0, count($matchingSuggestions[$randomindex]) - 1);
             } while (in_array($matchingSuggestions[$randomindex][$randomvalue], $suggestions));
             array_push($suggestions, $matchingSuggestions[$randomindex][$randomvalue]);
 
         }
 
         unset($max);
+        return view('pages/shop/cart', compact('products', 'suggestions'));
 
 //        dump($products);
 //        dump($suggestions);
 //        die();
 
-        return view('pages/shop/cart', compact('products', 'suggestions'));
+
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+//    public function create($product_id, $id)
+    public function create($product_id, $id)
+    {
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        if(!isset($this->contents[$_POST['id']])) {
+            $this->contents[$_POST['id']] = ['amount' => $_POST['amount']];
+        } else {
+            $this->contents[$_POST['id']]['amount'] += $_POST['amount'];
+        }
+
+        $msg = 'Product added to the cart succesfully!';
+        if(!isset(\Auth::user()->id)) {
+            $msg .= ' Please Register/Login to check your cart';
+        }
+
+        return redirect('products')->with('message', $msg);
+//        return view('pages/products');
+
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show()
+    {
+        //
     }
 
 
@@ -242,7 +258,10 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->contents[$id] = ['amount' => $_POST['amount']];
+
+        return redirect('shop/cart');
+
     }
 
     /**
@@ -253,6 +272,8 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        unset($this->contents[$id]);
+
+        return redirect('shop/cart');
     }
 }
