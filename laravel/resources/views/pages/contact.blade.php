@@ -22,11 +22,7 @@
         <div id="map">
             <script type="text/javascript">
                 var locations = [
-                    ['Huis moeder', 51.51533, 4.73285, 4],
-                    ['Huis vader', 51.57400, 4.63665, 5],
-                    ['Vriendin', 51.56597, 4.63486, 3],
                     ['School', 51.60677, 4.77753, 2],
-                    ['Tennisclub', 51.52095, 4.69295, 1]
                 ];
 
                 var map = new google.maps.Map(document.getElementById('map'), {
