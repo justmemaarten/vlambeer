@@ -3,7 +3,6 @@
 @section('content')
 
     <h1>Shopping Cart</h1>
-{{--    {{dd($products)}}--}}
         @if($products != [])
         <div class="row row-shopping-cart">
             <table class="table table-striped table-hover col-md-12">
