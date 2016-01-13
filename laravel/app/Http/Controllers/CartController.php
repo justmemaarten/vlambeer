@@ -117,70 +117,73 @@ class CartController extends Controller
 
         $suggestions = [];
         $matchingSuggestions = [];
+        $products = [];
 
-        //retrieving product data based on session product id's
-        foreach ($this->contents as $product => $data) {
+        if(isset($this->contents)) {
+            //retrieving product data based on session product id's
+            foreach ($this->contents as $product => $data) {
 
-            $products[$product] = \App\Product::where('product_id', $product)->first();
+                $products[$product] = \App\Product::where('product_id', $product)->first();
 
-            $products[$product]['amount'] = $this->contents[$product]['amount'];
+                $products[$product]['amount'] = $this->contents[$product]['amount'];
 
-        }
+            }
 
-        if (isset($products)) {
-            //defining array items
-            $products['total'] = 0;
-            $products['totalprice'] = 0;
-            $products['categories'] = [];
-            $products['btw'] = 0.21;
-
-
-            //filling array items
-            foreach ($products as $product => $data) {
-                if (isset($data['category_id'])) {
-                    $products['total'] += $products[$product]['amount'];
-                    $products['totalprice'] += $products[$product]['amount'] * $products[$product]['price'];
+            if (!empty($products)) {
+                //defining array items
+                $products['total'] = 0;
+                $products['totalprice'] = 0;
+                $products['categories'] = [];
+                $products['btw'] = 0.21;
 
 
-                    $category = \App\Category::where('category_id', '=', $data['category_id'])->pluck('category_id');
+                //filling array items
+                foreach ($products as $product => $data) {
+                    if (isset($data['category_id'])) {
+                        $products['total'] += $products[$product]['amount'];
+                        $products['totalprice'] += $products[$product]['amount'] * $products[$product]['price'];
 
-                    if (!in_array($category, $products['categories'])) {
-                        array_push($products['categories'], $category);
+
+                        $category = \App\Category::where('category_id', '=', $data['category_id'])->pluck('category_id');
+
+                        if (!in_array($category, $products['categories'])) {
+                            array_push($products['categories'], $category);
+                        }
+
                     }
 
                 }
 
-            }
-
 //        dump($products);
-            foreach ($products['categories'] as $category) {
+                foreach ($products['categories'] as $category) {
 //                dump(\App\Product::where('category', '=', $category)->first());
 //                die();
-                $data = \App\Product::where('category_id', '=', $category)->get();
-                array_push($matchingSuggestions, $data);
+                    $data = \App\Product::where('category_id', '=', $category)->get();
+                    array_push($matchingSuggestions, $data);
 //                $matchingSuggestionsTotal += count($data);
-            }
-        }
+                }
+                $max = 5;
 
-        $max = 5;
-
-        if (count($matchingSuggestions) <= 5) {
-            $max = count($matchingSuggestions);
-        }
+                if (count($matchingSuggestions) <= 5) {
+                    $max = count($matchingSuggestions);
+                }
 
 //        dd($matchingSuggestions);
 
-        for ($i = 0; $i < $max; $i++) {
+                for ($i = 0; $i < $max; $i++) {
 
-            do {
-                $randomindex = rand(0, count($matchingSuggestions) - 1);
-                $randomvalue = rand(0, count($matchingSuggestions[$randomindex]) - 1);
-            } while (in_array($matchingSuggestions[$randomindex][$randomvalue], $suggestions));
-            array_push($suggestions, $matchingSuggestions[$randomindex][$randomvalue]);
+                    do {
+                        $randomindex = rand(0, count($matchingSuggestions) - 1);
+                        $randomvalue = rand(0, count($matchingSuggestions[$randomindex]) - 1);
+                    } while (in_array($matchingSuggestions[$randomindex][$randomvalue], $suggestions));
+                    array_push($suggestions, $matchingSuggestions[$randomindex][$randomvalue]);
+
+                }
+
+                unset($max);
+            }
 
         }
-
-        unset($max);
         return view('pages/shop/cart', compact('products', 'suggestions'));
 
 //        dump($products);
