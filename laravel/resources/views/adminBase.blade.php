@@ -32,7 +32,7 @@
                     <li><button id="eCommerce"><i class="fa fa-shopping-cart fa-fw"></i>eCommerce</button></li>
                     <ul id="eCommerceNav">
                         <li><a href="{{ action("OrdersController@index") }}"><i class="fa fa-tags fa-fw"></i>Orders</a></li>
-                        <li><a href=""><i class="fa fa-line-chart fa-fw"></i>Products</a></li>
+                        <li><a href="{{ action("CmsProductsController@index") }}"><i class="fa fa-line-chart fa-fw"></i>Products</a></li>
                         <li><a href="{{ action("CmsCartController@unPayedCart") }}"><i class="fa fa-exclamation-circle fa-fw"></i>Unpayed Carts</a></li>
                     </ul>
                     <li><button id="customer"><i class="fa fa-user fa-fw"></i>Customers</button></li>
@@ -42,8 +42,6 @@
                     </ul>
                 </ul>
             </nav>
-
-
         </aside>
     </div>
     <div class="content col-md-12">
