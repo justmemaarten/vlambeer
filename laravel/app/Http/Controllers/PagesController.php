@@ -115,6 +115,9 @@ class PagesController extends Controller
         return view('pages/admin/dashboard');
     }
 
+    public function paid() {
+        return view('pages/shop/paid');
+    }
 
 
 

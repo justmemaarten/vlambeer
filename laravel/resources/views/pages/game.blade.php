@@ -14,9 +14,7 @@
                 <h4 id="{{ $id }}rating">Rating</h4>
             </div>
             <div class="stores">
-                <a href="http://vlambeer.com/downloads/special/GUNGODZ.rar" target="_blank">
-                    <img src="{{ asset('media/img/downloadIcon.png') }}" alt="download" height="40px" width="40px">
-                </a>
+
             </div>
         </div>
     </div>
@@ -79,27 +77,27 @@
                             </tr>
                             <tr>
                                 <th>First release date</th>
-                                <td class="bar" id="{{ $id }}genre"></td>
+                                <td class="bar" id="{{ $id }}original_release_date"></td>
                             </tr>
                             <tr>
                                 <th>Platform</th>
-                                <td class="bar" id="{{ $id }}platforms"></td>
+                                <td class="bar" id="{{ $id }}platform"></td>
                             </tr>
                             <tr>
                                 <th>Developer</th>
-                                <td class="bar">developers hier</td>
+                                <td class="bar" id="{{ $id }}developer"></td>
                             </tr>
                             <tr>
                                 <th>Publisher</th>
-                                <td class="bar">publisher hier</td>
+                                <td class="bar" id="{{ $id }}publishers"></td>
                             </tr>
                             <tr>
                                 <th>Genre</th>
-                                <td class="bar">genre hier</td>
+                                <td class="bar" id="{{ $id }}genres"></td>
                             </tr>
                             <tr>
                                 <th>Theme</th>
-                                <td class="bar">theme hier</td>
+                                <td class="bar" id="{{ $id }}themes"></td>
                             </tr>
                         </tbody>
                     </table>

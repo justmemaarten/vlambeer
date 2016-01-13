@@ -61,7 +61,7 @@
     <br>
     <form id="element-to-hide" action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="jorrit-meeuwissen@hotmail.com">
+        <input type="hidden" name="business" value="jorritjeah@gmail.com">
         <input type="hidden" name="item_name" value="Merchandise Payment">
         <input type="hidden" name="currency_code" value="EUR">
         <input type="hidden" name="amount" value="{{ $products->totalprice }}">

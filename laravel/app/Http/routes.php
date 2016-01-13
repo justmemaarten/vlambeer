@@ -48,6 +48,7 @@ Route::resource('orders', 'CustomerOrderController');
  Route::get('/auth/login', 'PagesController@home');
  Route::get('/auth/logout', 'Auth\AuthController@getLogout');
  Route::get('/shop/cart/auth/logout', 'Auth\AuthController@getLogout');
+ Route::get('/cart/paid', 'PagesController@paid');
 
 
 // Registration routes...
