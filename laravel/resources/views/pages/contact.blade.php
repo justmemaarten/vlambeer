@@ -15,7 +15,10 @@
                     delectus deleniti ex fugiat hic mollitia nam quaerat quasi quis reprehenderit
                     sed sint vel! Ab amet doloribus ipsam nam quae!</p>
             </div>
-            <form class="col-md-4" action="mailto:jeroenstamkot@me.com" method="post">
+            <div class="col-md-4">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores commodi deserunt eius error excepturi harum id mollitia nostrum numquam odio placeat quaerat quisquam quod rem, reprehenderit rerum veritatis voluptatibus!</p>
+            </div>
+            <form class="col-md-4 pull-right" action="mailto:jeroenstamkot@me.com" method="post">
                 <div class="form-group">
                     <label for="">Firstname</label>
                     <input type="text" name="firstname"  placeholder="Firstname" class="form-control">
