@@ -1,7 +1,6 @@
 @extends('base')
 
 @section('content')
-
     <h1>Shopping Cart</h1>
         @if($products != [])
         <div class="row row-shopping-cart">
@@ -64,8 +63,9 @@
                 <p>&#8364; {{$products['totalprice'] * (1+$products['btw'])}}</p>
             </div>
         </div>
+
         @if (Auth::check())
-            <a href="{{ action("PagesController@data", ['products' => $products, 'suggestions' => $suggestions]) }}" class="btn btn-primary pull-right pay-button" type="submit">Next</a>
+            <a href="{{ action("PagesController@data", ['products' => $products])  }}" class="btn btn-primary pull-right pay-button" type="submit">Next</a>
         @else
             <div class="pull-right">
                 <h4>Please <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-register">

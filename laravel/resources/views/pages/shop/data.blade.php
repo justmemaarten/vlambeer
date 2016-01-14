@@ -8,6 +8,7 @@
             <form action="{{ action('PagesController@pay') }}" method="GET" >
                 {{ csrf_field() }}
                 <input type="radio" name="address" checked>I want to use a existing address
+
                 <select id="address" name="address" class="this">
                     <option value="1">{{ $user['firstname'] }} {{ $user['lastname'] }}, {{ $user['street'] }} {{ $user['house_nr'] }}, {{ $user['postalcode'] }}, {{ $user['city'] }}</option>
                     <option value="2">{{ $user['firstname'] }} {{ $user['lastname'] }}, {{ $user['street2'] }} {{ $user['house_nr2'] }}, {{ $user['postalcode2'] }}, {{ $user['city2'] }}</option>
@@ -19,8 +20,9 @@
 
 
             <div class="other" hidden>
-                <form action="{{ action("UserController@update") }}" method="POST" >
+                <form action="{{ action("UserController@update")}}" method="POST" >
                     <input type="hidden" name="_method" value="PUT">
+
                     <input type="hidden" name="id" value="{{ $user['id'] }}">
                     {{ csrf_field() }}
                     <div class="form-group">
