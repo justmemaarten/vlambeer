@@ -109,17 +109,13 @@ class CartController extends Controller
      */
     public function index()
     {
-
-
-
-//        $this->contents[5] = ['amount' => 9];
-//        $this->contents[7] = ['amount' => 11];
+        
 
         $suggestions = [];
         $matchingSuggestions = [];
         $products = [];
 
-        if(isset($this->contents)) {
+        if(isset($this->contents) || !($this->contents === [])) {
             //retrieving product data based on session product id's
             foreach ($this->contents as $product => $data) {
 
