@@ -73,10 +73,10 @@ if(!isset($_GET['id'])){
                             <a href="{{action('CartController@index')}}" >Cart</a> |
                         </li>
                         <li>
-                            <a href="" role="button">Contact</a> |
+                            <a href="{{ action("PagesController@about") }}" role="button">About</a> |
                         </li>
                         <li>
-                            <a href="" role="button">About</a> |
+                            <a href="" role="button">Contact</a> |
                         </li>
                         <li>
                             @if (Auth::check())
@@ -131,8 +131,8 @@ if(!isset($_GET['id'])){
     </div>
 </div>
 <div class="container games-container animatedParent animateOnce">
-    @if (Session::has('authMessage'))
-        {{ Session::get('authMessage') }}
+    @if (Session::has('authMessage', 'MessageBag'))
+        {{ Session::get('authMessage', 'MessageBag') }}
     @endif
     <div class="animated fadeInDownShort" id="quote"></div>
 
