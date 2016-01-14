@@ -76,7 +76,7 @@ if(!isset($_GET['id'])){
                             <a href="{{ action("PagesController@about") }}" role="button">About</a> |
                         </li>
                         <li>
-                            <a href="" role="button">Contact</a> |
+                            <a href="{{action('PagesController@contact')}}" role="button">Contact</a> |
                         </li>
                         <li>
                             @if (Auth::check())
