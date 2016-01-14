@@ -24,7 +24,7 @@
                             </td>
                             <td class="pull-right price">
                                 <p class="product-price">
-                                    &#8364; {{$data['price']}}
+                                    &#8364; {{$data['price'] * $data['amount']}}
                                 </p>
                             </td>
                             <td class="pull-right amount">
@@ -40,6 +40,11 @@
                                     </span>
                                     </div>
                                 </form>
+                            </td>
+                            <td class="pull-right price">
+                                <p class="product-price">
+                                    &#8364; {{$data['price']}}
+                                </p>
                             </td>
                         </tr>
 
