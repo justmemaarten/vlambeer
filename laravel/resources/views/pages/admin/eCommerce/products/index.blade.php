@@ -31,7 +31,7 @@
                     <td>&euro; {{$product->price}}</td>
                     <td>@if($product->is_sale == 1) Yes @else No @endif</td>
                     <td>{{$product->stock}}</td>
-                    <td style="white-space: normal">{{$product->img}}</td>
+                    <td style="white-space: normal; width: 40%;">{{$product->img}}</td>
                     <td><a class="btn btn-warning" href="{{ action("CmsProductsController@edit", $product->product_id) }}">Edit</a></td>
                     <td><form action="{{action("CmsProductsController@destroy", $product->product_id)}}" method="POST">
                         {{ csrf_field() }}
