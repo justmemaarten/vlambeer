@@ -6,38 +6,45 @@
         {{ csrf_field() }}
         <h1 class="text-center">Add Product</h1>
 
-        <input type="hidden" name="_method" value="put">
         <div class="form-group">
-            <label for="">Name</label>
-            <input class="form-control" type="text">
+            <label for="name">Name</label>
+            <input class="form-control" name="name" type="text">
         </div>
 
         <div class="form-group">
-            <label for="">Price</label>
-            <input type="text" class="form-control">
+            <label for="price">Price</label>
+            <input type="text" name="price" class="form-control">
         </div>
 
         <div class="form-group">
-            <label for="">Image</label>
-            <input type="text" class="form-control">
+            <label for="img">Image</label>
+            <input type="text" name="img" class="form-control">
         </div>
 
         <div class="form-group">
-            <label for="">Description</label>
-            <input type="text" class="form-control">
+            <label for="description">Description</label>
+            <input type="text" name="description" class="form-control">
         </div>
 
         <div class="form-group">
-            <label for="">Stock</label>
-            <input type="text" class="form-control">
+            <label for="stock">Stock</label>
+            <input type="text" name="stock" class="form-control">
         </div>
 
         <div class="form-group">
-            <label for="">Category</label>
-            <select name="category_id" class="form-control">
+            <label for="is_sale">On sale</label>
+            <select name="is_sale" class="form-control">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select name="category_id" name="category" class="form-control">
                 <option value=""></option>
                 @foreach($categories as $category)
-                    <option value="{{ $category->category_id }}">{{old('input') ? old('input') : $category->category}}</option>
+                    <option value="{{$category->category_id}}">{{$category->category}}</option>
                 @endforeach
             </select>
         </div>

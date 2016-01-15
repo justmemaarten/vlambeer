@@ -182,6 +182,20 @@ main {
         float: right;
     }
 
+.show-products {
+    border: 1px solid black;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.show-products ul {
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+.show-products ul li {
+    list-style-type: none;
+}
 
 
 /* ADMIN/ORDERS */
@@ -199,6 +213,10 @@ main {
 .order-overview .order-information {
     max-width: 30px;
     width: 30px;
+}
+
+td {
+    white-space: nowrap;
 }
 
 footer {
