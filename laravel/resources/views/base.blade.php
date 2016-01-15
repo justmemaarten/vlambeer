@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
     <link rel="stylesheet" href="{{asset('css/twitter-styles.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="http://maps.google.com/maps/api/js?sensor=false"
             type="text/javascript"></script>
     <script Src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=weather&sensor=false"></script>
@@ -67,10 +68,10 @@ if(!isset($_GET['id'])){
                             </div>
                         </li>
                         <li>
-                            <a href="{{action('ProductController@index')}}" >Store</a> |
+                            <a href="{{action('CartController@index')}}" ><i class="fa fa-shopping-cart white"></i></a> |
                         </li>
                         <li>
-                            <a href="{{action('CartController@index')}}" >Cart</a> |
+                            <a href="{{action('ProductController@index')}}" >Store</a> |
                         </li>
                         <li>
                             <a href="{{ action("PagesController@about") }}" role="button">About</a> |
@@ -79,13 +80,14 @@ if(!isset($_GET['id'])){
                             <a href="{{action('PagesController@contact')}}" role="button">Contact</a> |
                         </li>
                         <li>
-                            @if (Auth::check())
-                                <a href="{{action('Auth\AuthController@getLogout')}}" class="dropdown">Logout</a>
-                            @else
-                                <button type="button" class="dropdown" data-toggle="modal" data-target="#login-register">
+
+                    @if (Auth::check())
+                            <a href="{{action('Auth\AuthController@getLogout')}}" class="dropdown">Logout</a>
+                    @else
+                            <button type="button" class="dropdown" data-toggle="modal" data-target="#login-register">
                                     Login / Register
                                 </button>
-                            @endif
+                        @endif
                         </li>
 
                     </ul>
