@@ -17,7 +17,8 @@ class CmsProductsController extends Controller
     public function index()
     {
         $products = \App\product::orderBy('product_id')->get();
-        return view('pages/admin/eCommerce/products/index', compact('products'));
+        $categories = \App\Category::all();
+        return view('pages/admin/eCommerce/products/index', compact('products', 'categories'));
     }
 
     /**
@@ -27,7 +28,8 @@ class CmsProductsController extends Controller
      */
     public function create()
     {
-        //
+        $categories = \App\Category::all();
+        return view('pages/admin/eCommerce/products/add', compact('categories'));
     }
 
     /**

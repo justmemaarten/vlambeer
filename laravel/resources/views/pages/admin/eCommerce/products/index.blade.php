@@ -3,7 +3,6 @@
 @section('admin')
 
     <div class="main-content">
-<<<<<<< HEAD
         <h1 class="pull-left">Products</h1>
         <a class="pull-right btn btn-success" style="margin-top: 30px;" href="{{ action('CmsProductsController@create') }}">Add</a>
         @if(!empty(Session::get('message')))
@@ -11,9 +10,6 @@
                 <li style="clear: both; width: 95%;" class="list-group-item list-group-item-success">{{ Session::get('message')}}</li>
             </ul>
         @endif
-=======
-        <h1>Customers</h1>
->>>>>>> origin/master
         <table class="top-information table table-striped table-hover sortable">
             <thead style="font-weight: bold">
             <tr>
@@ -30,7 +26,6 @@
             <tbody>
             @foreach($products as $product)
                 <tr>
-<<<<<<< HEAD
                     <td>{{$product->product_id}}</td>
                     <td><a href="{{ action("CmsProductsController@show", $product->product_id) }}">{{$product->name}}</a></td>
                     <td>&euro; {{$product->price}}</td>
@@ -44,14 +39,6 @@
                         <input type="hidden" name="_method" value="delete">
                         <input type="submit" value="Delete" class="btn btn-danger">
                     </form></td>
-=======
-                    <td class="order-information">{{$product->product_id}}</td>
-                    <td class="order-information">{{$product->name}}</td>
-                    <td class="order-information">&euro; {{$product->price}}</td>
-                    <td class="order-information">{{$product->img}}</td>
-                    <td class="order-information">{{$product->stock}}</td>
-                    <td class="order-information"><a href="{{ action("CmsProductsController@edit", $product->id) }}">Edit</a></td>
->>>>>>> origin/master
                 </tr>
             @endforeach
             </tbody>
