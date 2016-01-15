@@ -38,8 +38,6 @@ class CmsProductsController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-
         $this->validate($request, [
             'name'          => 'required|max:32|string',
             'price'         => 'required|numeric',
@@ -53,9 +51,6 @@ class CmsProductsController extends Controller
         $product = \App\Product::create($request->except('_token'));
 
         return Redirect('admin/eCommerce/products')->with('message', 'Product created succesfully!');
-=======
-        //
->>>>>>> origin/master
     }
 
     /**
@@ -79,7 +74,9 @@ class CmsProductsController extends Controller
      */
     public function edit($id)
     {
-        return 'test';
+        $product = \App\Product::where('product_id', $id)->first();
+        $categories = \App\Category::all();
+        return view('pages/admin/eCommerce/products/edit', compact('product', 'categories'));
     }
 
     /**
