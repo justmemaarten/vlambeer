@@ -2,6 +2,7 @@
 
 @section('admin')
 
+<<<<<<< HEAD
     <form class="col-md-4 col-md-push-4" action="{{ action('CmsProductsController@update', $product->product_id) }}" method="POST">
         {{ csrf_field() }}
         <h1 class="text-center">Edit Product</h1>
@@ -58,6 +59,15 @@
         </div>
 
         <input class="btn btn-warning" type="submit" value="Edit">
+=======
+    <form action="">
+
+        <div class="form-group">
+            <label for="">Name</label>
+        </div>
+
+
+>>>>>>> origin/master
 
     </form>
 

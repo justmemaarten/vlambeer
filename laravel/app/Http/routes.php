@@ -40,8 +40,7 @@ Route::resource('/admin/eCommerce/paidCart', 'CmsCartController');
 
 Route::get('/admin/eCommerce/unPayedCart', 'CmsCartController@unPayedCart');
 
-Route::resource('/admin/eCommerce/products', 'CmsProductsController');
-
+Route::get('/admin/eCommerce/products', 'CmsProductsController@index');
 
 Route::resource('/admin/Customers/customers', 'CustomersController');
 Route::resource('orders', 'CustomerOrderController');

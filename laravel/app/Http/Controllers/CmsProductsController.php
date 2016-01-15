@@ -27,8 +27,7 @@ class CmsProductsController extends Controller
      */
     public function create()
     {
-        $categories = \App\Category::all();
-        return view('pages/admin/eCommerce/products/add', compact('categories'));
+        //
     }
 
     /**
@@ -39,6 +38,7 @@ class CmsProductsController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
 
         $this->validate($request, [
             'name'          => 'required|max:32|string',
@@ -53,6 +53,9 @@ class CmsProductsController extends Controller
         $product = \App\Product::create($request->except('_token'));
 
         return Redirect('admin/eCommerce/products')->with('message', 'Product created succesfully!');
+=======
+        //
+>>>>>>> origin/master
     }
 
     /**
@@ -76,9 +79,7 @@ class CmsProductsController extends Controller
      */
     public function edit($id)
     {
-        $product = \App\Product::where('product_id', $id)->first();
-        $categories = \App\Category::all();
-        return view('pages/admin/eCommerce/products/edit', compact('product', 'categories'));
+        return 'test';
     }
 
     /**
