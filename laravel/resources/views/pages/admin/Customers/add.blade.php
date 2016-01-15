@@ -45,7 +45,7 @@
                 <input type="date" name="birthdate" class="form-control" required/>
             </div>
 
-            <h4 class="text-center">First Adress information</h4>
+            <h4 class="text-center">First Address information</h4>
 
              <div class="form-group">
                  <label for="street">Street</label>
@@ -67,7 +67,7 @@
                  <input type="text" name="postal_code" class="form-control">
              </div>
 
-             <h4 class="text-center">Second Adress information</h4>
+             <h4 class="text-center">Second Address information</h4>
              <div class="form-group">
                  <label for="street2">Street 2</label>
                  <input type="text" name="faxNumber" class="form-control"/>
