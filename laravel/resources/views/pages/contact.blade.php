@@ -21,22 +21,22 @@
             <form class="col-md-4 pull-right" action="../../../app/mail.php" method="post">
                 <div class="form-group">
                     <label for="">Firstname</label>
-                    <input type="text" name="firstname"  placeholder="Firstname" class="form-control">
+                    <input type="text" name="firstname"  placeholder="Firstname" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="">Lastname</label>
-                    <input type="text" name="lastname" placeholder="Lastname" class="form-control">
+                    <input type="text" name="lastname" placeholder="Lastname" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="email" name="email" placeholder="Email" class="form-control">
+                    <input type="email" name="email" placeholder="Email" class="form-control" required>
                 </div>
 
                 <div class="form-group">
                     <label for="">Message</label>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="Type you're message here!" class="form-control"></textarea>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Type you're message here!" class="form-control" required></textarea>
                 </div>
 
                 <input type="submit" class="btn btn-primary">
