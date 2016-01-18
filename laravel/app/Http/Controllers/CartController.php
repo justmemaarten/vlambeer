@@ -119,7 +119,7 @@ class CartController extends Controller
         $matchingSuggestions = [];
         $products = [];
 
-        if(isset($this->contents)) {
+        if($this->contents != null) {
             //retrieving product data based on session product id's
             foreach ($this->contents as $product => $data) {
 
