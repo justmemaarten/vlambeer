@@ -580,6 +580,12 @@ body:after {
 
 .stores {
     float: right;
+    margin-right: 25px;
+
+}
+.stores .download {
+    font-size: 18px;
+    margin-right: 10px;
 }
 
 
