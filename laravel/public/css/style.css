@@ -958,3 +958,21 @@ body.game-3030-46090 {
     left: 46%;
     font-size: 25px;
 }
+
+/* Slider products style */
+.carousel-inner>.item.active,
+.carousel-inner>.item.next.left,
+.carousel-inner>.item.prev.right,
+.carousel-inner>.item.active.left,
+.carousel-inner>.item.prev,
+.carousel-inner>.item.active.right,
+.carousel-inner>.item.next {transform: inherit}
+.carousel-inner .item.active.left { left: -33.33333%; }
+.carousel-inner .item.next        { left:  33.33333%; }
+.carousel-inner .item.prev        { left: -33.33333%; }
+.carousel-control.left,.carousel-control.right {background-image:none;}
+.carousel-inner .item:not(.prev) {visibility: visible;}
+.carousel-inner .item.right:not(.prev) {visibility: hidden;}
+.rightest{ visibility: visible;}
+.carousel-inner>.item {transition: .6s ease-in-out left;}
+.carousel-inner>.item.active.right {left: 100%;transition: 1.03s ease-in-out left;}
