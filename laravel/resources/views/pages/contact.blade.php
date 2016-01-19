@@ -6,17 +6,14 @@
         <h1>Contact</h1>
         <div class="row">
             <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque,
-                    delectus deleniti ex fugiat hic mollitia nam quaerat quasi quis reprehenderit
-                    sed sint vel! Ab amet doloribus ipsam nam quae!</p>
+                <p>info@vlambeer.com Neude 5,<br> 3512 AD, Utrecht, <br> the Netherlands </p>
             </div>
             <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque,
-                    delectus deleniti ex fugiat hic mollitia nam quaerat quasi quis reprehenderit
-                    sed sint vel! Ab amet doloribus ipsam nam quae!</p>
+                <p>Looking for us? Check out the map below! this is where we work if you want
+                   to stop by make an appointment!</p>
             </div>
             <div class="col-md-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores commodi deserunt eius error excepturi harum id mollitia nostrum numquam odio placeat quaerat quisquam quod rem, reprehenderit rerum veritatis voluptatibus!</p>
+                <p>If you fill in the form below, we will get your message and contact you back as soon as possible!</p>
             </div>
             <form class="col-md-4 pull-right" action="../../../app/mail.php" method="post">
                 <div class="form-group">
