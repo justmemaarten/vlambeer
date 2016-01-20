@@ -102,6 +102,10 @@ header {
     margin-top: 125px;
 }
 
+.fa .fa-shopping-cart .white {
+    color: #ffffff;
+}
+
 
 /*========*/
 /* Footer */
@@ -576,6 +580,12 @@ body:after {
 
 .stores {
     float: right;
+    margin-right: 25px;
+
+}
+.stores .download {
+    font-size: 18px;
+    margin-right: 10px;
 }
 
 
@@ -585,11 +595,11 @@ body:after {
     /* Shopping cart style */
     /* Shopping cart style */
 .table-striped>tbody>tr:nth-of-type(odd) {
-    background-color:rgba(249,249,249,0.2) !important;
+    background-color:rgba(1,87,155,0.2) ;
 }
 
 .table-striped>tbody>tr:nth-of-type(even) {
-    background-color:rgba(249,249,249,0.1   ) !important;
+    background-color:rgba(1,87,155,0.3) ;
 }
 
 .cartproduct td {
@@ -675,12 +685,20 @@ body:after {
     padding: 20px;
     width: 100%;
     margin-top: 20px;
-    background: rgba(200, 100, 123, 0.6);
+    /*background: rgba(200, 100, 123, 0.6);*/
+    background: rgba(1, 87, 155, 0.8);
+}
+.table td {
+    border-top: none!important;
 }
 
 .price-info p {
     text-align: right;
+    color: #ffffff;
+}
 
+.line {
+    border-top: solid 1px #ffffff;
 }
 
 .pay-button {
@@ -709,7 +727,7 @@ body:after {
 }
 
 .suggestion-info {
-    background: rgba(0, 0, 255, 0.6);
+    background: rgba(1, 87, 155, 0.6);
     position: absolute;
     left: 0px;
     bottom: 0px;
@@ -941,6 +959,7 @@ body.game-3030-46090 {
     font-size: 25px;
 }
 
+<<<<<<< HEAD
 /* login alert message */
 
 .alert{
@@ -957,4 +976,24 @@ body.game-3030-46090 {
 
 .li-about{
     border-bottom: 1px solid black;
+=======
+/* Slider products style */
+.slider {
+    width: 100%;
+}
+.carousel-inner .active.left {
+    left: -25%;
+}
+.carousel-inner .active.right {
+    left: 25%;
+}
+.carousel-inner .next {
+    left: 25%;
+}
+.carousel-inner .prev {
+    left: -25%;
+}
+.left {
+    
+>>>>>>> origin/master
 }

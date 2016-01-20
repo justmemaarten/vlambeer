@@ -2,30 +2,38 @@
 
 @section('admin')
 
-    <div class="main-content">
-        <table class="top-information table table-striped table-hover sortable">
-            <thead style="font-weight: bold">
-            <tr>
-                <td>ID</td>
-                <td>Username</td>
-                <td>Firstname</td>
-                <td>Insertion</td>
-                <td>Lastname</td>
-                <td>Edit</td>
-            </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="order-information">test</td>
-                    <td class="order-information"><a href="{{ action("CustomersController@show", $customer->id) }}">{{$customer->username}}</a></td>
-                    <td class="order-information"><a href="{{action("CustomersController@show")}}">{{$customer->username}}</a></td>
-                    <td class="order-information">{{$customer->firstname}}</td>
-                    <td class="order-information">{{$customer->insertion}}</td>
-                    <td class="order-information">{{$customer->lastname}}</td>
-                    <td class="order-information"><a href="{{ action("CustomersController@edit", $customer->id) }}">Edit</a></td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="show-products col-md-3">
+        <h1>{{ $customer->firstname . ' ' . $customer->insertion . ' ' .  $customer->lastname }}</h1>
+        <ul>
+            <li><strong>Username:</strong> {{ $customer->username }}</li>
+            <li><strong>Email:</strong> {{ $customer->email }}</li>
+            <li><strong>Phone number:</strong> {{ $customer->phone_nr }}</li>
+            <li><strong>Birthdate:</strong> {{ $customer->birthdate }}</li>
+            <h5 style="text-align: center">First address:</h5>
+            <li><strong>Street:</strong> {{ $customer->street }}</li>
+            <li><strong>House number:</strong> {{ $customer->house_nr }}</li>
+            <li><strong>Postal code:</strong> {{ $customer->postalcode }}</li>
+            <h5 style="text-align: center">Second address:</h5>
+            <li><strong>Street 2:</strong> {{ $customer->street2 }}</li>
+            <li><strong>House number 2:</strong> {{ $customer->house_nr2 }}</li>
+            <li><strong>Postal code 2:</strong> {{ $customer->postalcode2 }}</li>
+            <h5></h5>
+            <li><strong>Is admin:</strong>@if($customer->isadmin == 0) No @else Yes @endif</li>
+
+
+            <li><strong>Created at:</strong> {{ $customer->created_at }}</li>
+            <li><strong>Updated at:</strong> {{ $customer->updated_at }}</li>
+        </ul>
+        <a class="btn btn-warning pull-left" href="{{ action("CustomersController@edit", $customer->id) }}">Edit</a>
+        <form class="pull-right" action="{{action("CustomersController@destroy", $customer->id)}}" method="POST">
+            {{ csrf_field() }}
+
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Delete" class="btn btn-danger">
+        </form>
+    </div>
+    <div class="col-md-6" style="margin-top: 20px;;">
+        <img src="{{ $customer->img }}" alt="" width="500px" height="500px">
     </div>
 
 

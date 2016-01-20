@@ -1,7 +1,6 @@
 @extends('base')
 
 @section('content')
-
     <h1>Shopping Cart</h1>
         @if($products != [])
         <div class="row row-shopping-cart">
@@ -25,7 +24,7 @@
                             </td>
                             <td class="pull-right price">
                                 <p class="product-price">
-                                    &#8364; {{$data['price']}}
+                                    &#8364; {{$data['price'] * $data['amount']}}
                                 </p>
                             </td>
                             <td class="pull-right amount">
@@ -42,6 +41,11 @@
                                     </div>
                                 </form>
                             </td>
+                            <td class="pull-right price">
+                                <p class="product-price">
+                                    &#8364; {{$data['price']}}
+                                </p>
+                            </td>
                         </tr>
 
                     @endif
@@ -52,7 +56,7 @@
         </div>
 
 
-        <div class="total-price">
+        <div class="total-price col-md-12">
             <div class="price-info">
                 <p>Totaal prijs excl.({{$products['total']}} artikelen)</p>
                 <p>&#8364; {{$products['totalprice']}}</p>
@@ -60,12 +64,13 @@
                 <p>BTW({{round((float)$products['btw'] * 100 )}}%)</p>
                 <p>&#8364; {{$products['totalprice'] * $products['btw']}}</p>
                 <br>
-                <p>Totaal prijs incl.</p>
+                <p class="line">Totaal prijs incl.</p>
                 <p>&#8364; {{$products['totalprice'] * (1+$products['btw'])}}</p>
             </div>
         </div>
+
         @if (Auth::check())
-            <a href="{{ action("PagesController@data", ['products' => $products, 'suggestions' => $suggestions]) }}" class="btn btn-primary pull-right pay-button" type="submit">Next</a>
+            <a href="{{ action("PagesController@data", ['products' => $products])  }}" class="btn btn-primary pull-right pay-button" type="submit">Next</a>
         @else
             <div class="pull-right">
                 <h4>Please <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-register">
@@ -79,13 +84,15 @@
                 <h2>Maybe you'd like:</h2>
                 <div class="row">
                     @foreach($suggestions as $suggestion)
-                        <div class="col-md-2 suggestion">
-                            <img src="{{$suggestion['img']}}" alt="">
+                        <a href="{{ action("ProductController@show", $suggestion['product_id']) }}">
+                            <div class="col-md-2 suggestion">
+                                <img src="{{$suggestion['img']}}" alt="">
 
-                            <div class="suggestion-info">
-                                <h4>{{$suggestion['name']}}</h4>
+                                <div class="suggestion-info">
+                                    <h4>{{$suggestion['name']}}</h4>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     @endforeach
                 </div>
             </div>

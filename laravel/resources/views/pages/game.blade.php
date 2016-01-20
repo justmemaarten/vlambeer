@@ -13,8 +13,8 @@
                     links naar de stores weergeven met de icons--></h4>
                 <h4 id="{{ $id }}rating">Rating</h4>
             </div>
-            <div class="stores">
-
+            <div class="{{ $id }}stores stores">
+                <span class="download">Download:</span>
             </div>
         </div>
     </div>

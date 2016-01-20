@@ -126,7 +126,7 @@
             <div class="panel-collapse collapse" id="super-bread-box">
                 <div class="panel-body">
                     <p><a href="{{ action("PagesController@product",'id=3030-46090') }}">Super Bread Box</a></p>
-                    <a href="https://play.google.com/store/apps/details?id=com.vlambeer.RidiculousFishing" target="_blank">
+                    <a href="http://superbreadbox.com/play.php" target="_blank">
                         <img src="{{ asset('media/img/Commodore-64.png') }}" alt="Commodore64" height="25px" width="25px">
                     </a>
                 </div>

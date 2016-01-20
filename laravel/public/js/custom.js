@@ -12,6 +12,25 @@ var dots = window.setInterval( function() {
 }, 650);
 
 $(document).ready(function () {
+ $('#myCarousel').carousel({
+  interval: 10000
+ });
+ $('.carousel .item').each(function () {
+  var next = $(this).next();
+  if (!next.length) {
+   next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+
+  for (var i = 0; i < 2; i++) {
+   next = next.next();
+   if (!next.length) {
+    next = $(this).siblings(':first');
+   }
+
+   next.children(':first-child').clone().appendTo($(this));
+  }
+ });
  var phrases =
 [
  ['"KARATE is that scene where Bruce Lee fights like a thousand men in a row, ad infinitum."', ' - RPS','http://www.rockpapershotgun.com/2011/04/12/free-karate-game/'],
@@ -554,29 +573,11 @@ $(function () {
   $('.more-less > span').toggleClass('hidden');
 
  });
-
- $('.read-more2').on('click', function(){
-  $('#info-read-more2').css('display', 'block' ).animate({
-   'height':$('#info-read-more2').height()
-  }, 300 , function(){
-   $(this).height('auto')
-  });
-  $('.more-less2 > span').toggleClass('hidden');
- });
-
- $('.read-less2').on('click', function(){
-  $('#info-read-more2').animate({
-   'height':0
-  }, 300 , function(){
-   $(this).css('display','none');
-  });
-  $('.more-less2 > span').toggleClass('hidden');
-
- });
 });
 
 
 //end read more
 
+// products slider
+// JS also have some changes
 
-//>>>>>>> origin/master

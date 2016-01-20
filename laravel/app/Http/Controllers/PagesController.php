@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cart;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -37,19 +38,17 @@ class PagesController extends Controller
         return view('pages/shop/cart')->with($id);
     }
 
-    public function data() {
+    public function data(Request $request) {
+        $products = $request['products'];
         $user_id = \Auth::user()->id;
         $user = \App\User::where('id', $user_id)->first();
-
-        return view('pages/shop/data', compact('user'));
+        return view('pages/shop/data', compact('user', 'products'));
     }
     public function pay() {
         $user_id = \Auth::user()->id;
-        $products = \App\Cart::where('id' , '=',  $user_id)
-            ->where('paid', '=', NULL)
-            ->get();
+        //$products = $_GET['products'];
         $user = \App\User::where('id', $user_id)->first();
-        if(!empty($_GET)) {
+        if(!empty($_GET['address'])) {
         if($_GET['address'] == 1) {
             $address = array(
                 'street'        => $user['street'],
@@ -73,17 +72,7 @@ class PagesController extends Controller
             );
         }
 
-        $products->totalprice = 0;
-        $products->total = 0;
-        $products->btw = 0.21;
-        foreach($products as $product) {
-            $product->productInfo = \App\Product::where('product_id', '=', $product['product_id'])->first();
-            $price = ($product->productInfo['price']);
-            $products->total += $product->amount;
-            $products->totalprice += $price * $product->amount;
-        }
-
-        return view('pages/shop/pay', compact('products'), compact('address'));
+        return view('pages/shop/pay', compact('address'));
 
     }
     public function invoice() {
@@ -116,6 +105,10 @@ class PagesController extends Controller
     }
 
     public function paid() {
+        $user = Cart::where ("id","rok"); // note that this shortcut is available if the comparison is =
+        $new_user_data = array("status" => "paid");
+        $user->fill($new_user_data);
+        $user->save();
         return view('pages/shop/paid');
     }
 

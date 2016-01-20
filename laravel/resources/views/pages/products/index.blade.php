@@ -39,6 +39,83 @@
         @endforeach
     </div>
     <div class="space"></div>
+    <div class="slider">
+        <div class="row">
+            <div class="carousel slide" id="myCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 1</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 2</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 3</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 4</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 5</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 6</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+        </div>
+    </div>
+
+
 @endsection
 
 @stop

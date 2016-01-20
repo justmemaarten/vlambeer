@@ -72,7 +72,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        dd($request['products']);
+        $products = ($request['products']);
         $user_id = \Auth::user()->id;
         $this->validate($request, [
             'street2'            =>  'required|max:255|string',
@@ -90,7 +91,7 @@ class UserController extends Controller
                 'city2'              => $request['city2']
             ));
 
-        return Redirect::action('PagesController@pay');
+        return Redirect::action('PagesController@pay', compact('products'));
     }
 
     /**

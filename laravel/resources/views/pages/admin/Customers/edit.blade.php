@@ -14,11 +14,6 @@
             </div>
 
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" class="form-control" required/>
-            </div>
-
-            <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" name="email" class="form-control" value="{{$customer->email}}" required/>
             </div>
@@ -45,7 +40,15 @@
 
             <div class="form-group">
                 <label for="birthdate">Birthdate</label>
-                <input type="datetime" name="birthdate" class="form-control" value="{{$customer->birthdate}}" required/>
+                <input type="date" name="birthdate" class="form-control" value="{{$customer->birthdate}}" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="isadmin">Admin</label>
+                <select name="isadmin" class="form-control">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
             </div>
 
             <h4 class="text-center">First Address information</h4>
@@ -92,8 +95,11 @@
                 <input type="text" name="postal_code2" class="form-control" value="{{$customer->postalcode2}}"/>
             </div>
 
+            <h1>PASSWORD!!</h1>
 
-            <input type="submit" value="Update user" class="btn btn-success"/>
+
+            <input type="submit" value="Update user" class="btn btn-warning pull-right"/>
+            <a class="btn btn-danger pull-left" href="{{ action("CustomersController@index") }}">Cancel</a>
         </form>
     </content>
 
