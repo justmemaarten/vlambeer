@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id', false, true);
             $table->foreign('category_id')->references('category_id')->on('tbl_categories');
             $table->boolean('is_sale');
+            $table->text('size');
             $table->timestamps();
         });
     }

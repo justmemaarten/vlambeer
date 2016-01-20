@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-3" >
             <div class="sidebar-nav">
                 <div class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
@@ -29,17 +29,27 @@
             <img class="pull-left product-img" src="{{ $product['img'] }}" alt="" height="250">
 
             <h1>{{ $product['name'] }}</h1>
-            <p>{{ $product['description'] }}</p>
+            <p>{!! $product['description'] !!}</p>
             <p>{{ $product['price'] }}</p>
-            <p>Stock: {{ $product['stock'] }}</p>
+            <p>Stock: {{ $product['stock'] }}
+
+            <br>
+                @if(!empty($sizes))
+                    Size:
+            <select>
+                @foreach($sizes as $size)
+                    <option value="size">{{ $size }}</option>
+                @endforeach
+            </select>
+            @endif
+
 
             <form class="form-horizontal" action="{{action("CartController@store")}}" method="post">
                 {{ csrf_field() }}
                 <input type="hidden" name="id" value="{{$product['product_id']}}">
-                <div class="form-group">
+                <div class="form-group tocart pull-right">
                     <label class="control-label">Amount</label>
                     <div class="input-group">
-                        <span class="input-group-addon">#</span>
                         <input type="number" class="form-control" min="1" value="1" name="amount">
                 <span class="input-group-btn">
                     <input type="submit" class="btn btn-default" value="Add to cart">

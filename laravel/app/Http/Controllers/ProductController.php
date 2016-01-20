@@ -64,8 +64,10 @@ class ProductController extends Controller
     {
 
         $product = \App\Product::where('product_id', $id)->first();
+        $sizes = explode(',', $product['size']);
+        $sizes = array_filter($sizes);
         $categories = \App\Category::all();
-        return view('pages/products/show',compact('product', 'categories', 'ses'));
+        return view('pages/products/show',compact('product', 'categories', 'sizes'));
     }
 
     /**

@@ -12,16 +12,21 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         DB::table('tbl_categories')->truncate();
-        $faker = \Faker\Factory::create();
 
 
-        for ($i = 0; $i <10; $i++)
-        {
             \App\Category::create([
-                'category' => $faker->word
+                'category' => 'Clothes'
 
             ]);
-        }
+            \App\Category::create([
+                'category' => 'Miscellaneous'
+
+            ]);
+            \App\Category::create([
+                'category' => 'Music'
+
+            ]);
+
 
 
 

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-3 side" >
             <div class="sidebar-nav">
                 <div class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
@@ -39,7 +39,6 @@
                             @if($product->is_sale)
                                 <div class="item">
                                     <div class="col-xs-3" style="padding-left: 11px;">	<a href="{{ action("ProductController@show", $product['product_id']) }}" title="texto1">
-                                            <p class="lead text-center" style="padding-top: 20px;">{{ $product['name']  }}</p>
                                             <img src="{{ $product['img']  }}" class="center-block" height="150px"/>
                                             <p class="lead text-center" style="padding-top: 20px;">&euro; {{ $product['price'] }}</p>
                                         </a>

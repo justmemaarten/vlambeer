@@ -1013,6 +1013,11 @@ body.game-3030-46090 {
 .product-img {
     margin-right: 15px;
 }
+.tocart {
+    width: 25%;
+
+}
+
 /* make sidebar nav vertical */
 @media (min-width: 768px) {
     .sidebar-nav .navbar .navbar-collapse {
