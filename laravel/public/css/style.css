@@ -852,7 +852,7 @@ body.game-3030-46090 {
 }
 
 /* merchandise store */
-
+/*
 .product-link:hover {
     text-decoration-color: #8a8a8a !important;
     text-decoration: underline !important;
@@ -929,7 +929,7 @@ body.game-3030-46090 {
     height: 35px;
     overflow: hidden;
 }
-
+*/
 
 /* contact page map */
 #map
@@ -1016,6 +1016,20 @@ body.game-3030-46090 {
 .tocart {
     width: 25%;
 
+}
+.merchandise-product {
+    width: 23.6666666%;
+    float: left;
+    margin-right: 1.779%;
+    margin-bottom: 23px;
+    border-radius: 15px;
+
+}
+.merchandise-product:nth-child(4n) {
+    margin-right: 0px;
+}
+.merchandise-name {
+    height: 30px;
 }
 
 /* make sidebar nav vertical */

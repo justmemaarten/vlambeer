@@ -31,7 +31,7 @@ Route::resource('/shop/cart', 'CartController');
 
 Route::resource('/user', "UserController");
 
-Route::resource('/products', "ProductController");
+Route::resource('/store', "ProductController");
 
 Route::post('/mail', 'PagesController@mail');
 
