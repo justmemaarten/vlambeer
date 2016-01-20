@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 class CartController extends Controller
 {
 
+
+
     private $contents = array();
 
     #   Important! Change this value for redistribution!
@@ -20,23 +22,22 @@ class CartController extends Controller
     const SESSION_KEY               = 'bc204c7a10324cd8b5276051cef08bc2f2ade029fdebfe5f1d317e2ffb2a05a3';
 
 
-
     public function __construct() {
-
-        session_start();
 
         if ( empty( $_SESSION['cart'] ) )
         {
-            $_SESSION['cart'] = null;
+            $_SESSION['cart'] = array();
         }
 
         $this->contents = $this->getCartSession();
     }
 
+
     public function __destruct() {
 
         $this->setCartSession($this->contents);
     }
+
 
     /**
      *
@@ -49,7 +50,6 @@ class CartController extends Controller
      *
      *  @return bool|User
      */
-//    public final function setCartSession( User $oUser )
     public final function setCartSession( $input )
     {
         $sPlain                 = serialize( $input );
@@ -63,7 +63,6 @@ class CartController extends Controller
             MCRYPT_MODE_CBC,
             $sInitVector
         );
-
 
         $_SESSION['cart'] = base64_encode( $sInitVector . $sEncrypted );
     }
@@ -109,9 +108,6 @@ class CartController extends Controller
      */
     public function index()
     {
-
-
-
 //        $this->contents[5] = ['amount' => 9];
 //        $this->contents[7] = ['amount' => 11];
 
@@ -149,9 +145,7 @@ class CartController extends Controller
                         if (!in_array($category, $products['categories'])) {
                             array_push($products['categories'], $category);
                         }
-
                     }
-
                 }
 
 //        dump($products);
@@ -212,16 +206,90 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
+//        $json = ["products"["id" => "1","amount"=> "1"], ["id"=> "3","amount"=> "2"]];
+//        $json = json_encode($json);
+//        dump($json);
+//
+//        $json = json_decode($json);
+//        dd($json);
+//
+//        $input = [
+//            'id' => $_POST['id'],
+//            'amount' => $_POST['amount']
+//        ];
+//
+//        dump($encoded = json_encode($input));
+//
+//        session()->push('products', $encoded);
+//
+//        if(!$products = session()->pull('products')){
+//            $products = [];
+//        }
+
+
+//        dd(json_decode($products[0]));
+
+
+//        $input = [
+//            'id' => $_POST['id'],
+//            'amount' => $_POST['amount']
+//        ];
+//
+//        $encoded = json_encode($input);
+//
+//        session()->push('products', $encoded);
+
+
+
+//        $array = [];
+//        if($products = session()->pull('products')){
+//            foreach($products as $product) {
+//                if(!in_array(json_decode($product), $array)){
+//                    array_push($array, json_decode($product));
+//                }
+//            }
+//        }
+//
+//        $input = [
+//            'id' => $_POST['id'],
+//            'amount' => $_POST['amount']
+//        ];
+//
+//        if(!in_array($input['id'], $array)) {
+//            array_push();
+//        }
+
+
+
+//        dd($array);
+//
+//
+//        $encoded = json_encode($array);
+
+//        session()->push('products', $encoded);
+//        dump(session()->all());
+//        $products = session()->pull('products');
+//        foreach($products as $product) {
+//            dump(json_decode($product));
+//        }
+////        dump(json_decode(session('products')));
+//        dump(session()->all());
+
+//        die();
+//
+//
+//        dd( $request );
+
         if(!isset($this->contents[$_POST['id']])) {
             $this->contents[$_POST['id']] = ['amount' => $_POST['amount']];
         } else {
             $this->contents[$_POST['id']]['amount'] += $_POST['amount'];
         }
-
+//
         $msg = 'Product added to the cart succesfully!';
-        if(!isset(\Auth::user()->id)) {
-            $msg .= ' Please Register/Login to check your cart';
-        }
+//        if(!isset(\Auth::user()->id)) {
+//            $msg .= ' Please Register/Login to check your cart';
+//        }
 
         return redirect('products')->with('message', $msg);
 //        return view('pages/products');

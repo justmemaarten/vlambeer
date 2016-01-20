@@ -10,8 +10,21 @@ use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
+    public $cartContents;
+
+    public function __construct()
+    {
+        $cart = new CartController();
+        $cartContents = $cart->getCartSession();
+//        dd( $iProducts );
+    }
+
+
     public function home() {
-        return view('pages/home');
+        $cart = new CartController();
+        $cartContents = $cart->getCartSession();
+
+        return view('pages/home', compact('cartContents'));
     }
 
     public function products() {
