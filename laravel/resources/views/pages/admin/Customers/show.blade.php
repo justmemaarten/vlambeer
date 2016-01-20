@@ -24,8 +24,8 @@
             <li><strong>Created at:</strong> {{ $customer->created_at }}</li>
             <li><strong>Updated at:</strong> {{ $customer->updated_at }}</li>
         </ul>
-        <a class="btn btn-warning pull-left" href="{{ action("CmsProductsController@edit", $customer->product_id) }}">Edit</a>
-        <form class="pull-right" action="{{action("CmsProductsController@destroy", $customer->product_id)}}" method="POST">
+        <a class="btn btn-warning pull-left" href="{{ action("CustomersController@edit", $customer->id) }}">Edit</a>
+        <form class="pull-right" action="{{action("CustomersController@destroy", $customer->id)}}" method="POST">
             {{ csrf_field() }}
 
             <input type="hidden" name="_method" value="delete">

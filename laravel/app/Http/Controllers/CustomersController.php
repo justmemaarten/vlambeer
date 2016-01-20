@@ -39,30 +39,29 @@ class CustomersController extends Controller
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
-            'username'          => 'required|max:32|string',
+            'username'          => 'required|max:255|unique:tbl_users',
+            'email'             => 'required|email|max:255|unique:tbl_users',
             'firstname'         => 'required|string',
             'lastname'          => 'required|string',
             'insertion'         => 'string',
             'phone_nr'          => 'string',
             'birhdate'          => 'date',
             'isadmin'           => 'required|boolean',
-            'hasnewsletter'     => 'required|boolean',
             'city'              => 'required|string',
             'street'            => 'required|string',
             'house_nr'          => 'required|string',
-            'postalcode'        => 'required|string',
+            'postal_code'       => 'required|string',
             'city2'             => 'string',
             'street2'           => 'string',
             'house_nr2'         => 'string',
-            'postalcode2'       => 'string',
-            'email'             => 'required|email',
-            'password'          => 'required|password'
+            'postal_code2'      => 'string'
         ]);
 
-        $user = \App\User::create($request->except('_token'));
+        $customer = \App\User::create($request->except('_token'));
 
-        return Redirect('user')->with('message', 'Customer created succesfully!');
+        return Redirect('admin/Customers/customers')->with('message', 'Customer created succesfully!');
     }
 
     /**
@@ -75,7 +74,7 @@ class CustomersController extends Controller
     {
         //haal orders hier binnen
         $customer = \App\User::orderBy('id')->where('id', $id)->first();
-        return view('pages/admin/Customers/show', compact('customer'));
+        return view('admin/Customers/show', compact('customer'));
     }
 
 
@@ -106,35 +105,43 @@ class CustomersController extends Controller
             'lastname'          => 'required|string',
             'insertion'         => 'string',
             'phone_nr'          => 'string',
-            'birhdate'          => '',
-            'isadmin'           => '',
-            'hasnewsletter'     => '',
-            'city'              => '',
-            'street'            => '',
-            'house_nr'          => '',
-            'postalcode'        => '',
-            'city2'             => '',
-            'street2'           => '',
-            'house_nr2'         => '',
-            'postalcode2'       => '',
-            'email'             => '',
-            'password'          => ''
-
-
-
+            'birthdate'         => 'date',
+            'isadmin'           => 'required|boolean',
+            'hasnewsletter'     => 'required|boolean',
+            'city'              => 'required|string',
+            'street'            => 'required|string',
+            'house_nr'          => 'required|string',
+            'postalcode'        => 'required|string',
+            'city2'             => 'string',
+            'street2'           => 'string',
+            'house_nr2'         => 'string',
+            'postalcode2'       => 'string',
+            'email'             => 'required|email'
         ]);
 
-        $product = \App\Product::find($id);
+        $user = \App\Product::find($id);
 
-        $product->name = $request->name;
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->category_id = $request->category_id;
+        $user->username = $request->username;
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->insertion = $request->insertion;
+        $user->phone_nr = $request->phone_nr;
+        $user->birthdate = $request->birthdate;
+        $user->isadmin = $request->isadmin;
+        $user->hasnewsletter = $request->hasnewsletter;
+        $user->city = $request->city;
+        $user->street = $request->street;
+        $user->house_nr = $request->house_nr;
+        $user->postalcode = $request->postalcode;
+        $user->city2 = $request->city2;
+        $user->street2 = $request->street2;
+        $user->house_nr2 = $request->house_nr2;
+        $user->postalcode2 = $request->postalcode2;
 
-        $product->save();
+        $user->save();
 
 
-        return Redirect('products')->with('message', 'Product changed succesfully');
+        return Redirect('pages/admin/Customers/customers')->with('message', 'Product changed succesfully');
     }
 
     /**
@@ -145,6 +152,9 @@ class CustomersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $customer = \App\User::find($id);
+        $customer->delete();
+        return Redirect('admin/Customers/customers')->with('message', 'Product deleted succesfully');
     }
+
 }
