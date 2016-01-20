@@ -2,26 +2,6 @@
 
 @section('content')
     <h1 class="merchandise-title">Sale</h1>
-        <div class="col-md-12">
-            <div class="carousel slide" id="product">
-                <div class="carousel-inner">
-                    @foreach($products as $product)
-                        @if($product->is_sale)
-                    <div class="item">
-                        <div class="col-lg-4 col-xs-4 col-md-4 col-sm-4">
-                            <a class="product-link" href={{ action("ProductController@show", $product['product_id']) }}>
-                                <h1 class="merchandise-name">{{ $product['name']  }}</h1>
-                            </a>
-                            <a href="#"><img src="{{ $product['img'] }}" class="img-responsive">2</a></div>
-                        <p class="pull-right merchandise-price">&euro; {{ $product['price'] }}</p>
-                    </div>
-                        @endif
-                    @endforeach
-                </div>
-                <a class="left carousel-control" href="#product" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-                <a class="right carousel-control" href="#product" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-            </div>
-        </div>
     <div class="animated pulse">
 
         @foreach($products as $product)
@@ -59,6 +39,83 @@
         @endforeach
     </div>
     <div class="space"></div>
+    <div class="slider">
+        <div class="row">
+            <div class="carousel slide" id="myCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 1</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 2</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 3</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 4</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 5</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 6</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3" style="padding-left: 11px;">	<a href="#" title="texto1"> <img
+                                        src="http://musiccaptains.com/zh/wp-content/uploads/2012/09/Account.png" class="center-block"
+                                />
+                            </a>
+
+                            <p class="lead text-center" style="padding-top: 20px;">texto 7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+        </div>
+    </div>
+
+
 @endsection
 
 @stop

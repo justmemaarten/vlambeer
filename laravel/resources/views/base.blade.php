@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Vlambeer</title>
 
-    <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick-theme.css') }}"/>
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
     <link rel="stylesheet" href="{{asset('css/twitter-styles.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -234,10 +236,10 @@ if(!isset($_GET['id'])){
     });
     $('#info-text').readmore({speed: 500});
 </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
 <script src="{{ asset('js/css3-animate-it.js') }}"></script>
 <script src="{{ asset('js/twitterfeed.js') }}"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="{{ asset('js/giantbomb.js') }}"></script>
 <script src="{{ asset('js/games.js') }}"></script>
 </body>
