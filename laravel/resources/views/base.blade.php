@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Vlambeer</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
-=======
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
->>>>>>> origin/master
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('slick/slick-theme.css') }}"/>
