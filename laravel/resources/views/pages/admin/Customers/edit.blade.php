@@ -53,7 +53,6 @@
 
             <div class="form-group">
                 <label for="birthdate">Birthdate</label>
-<<<<<<< HEAD
                 <input type="date" name="birthdate" class="form-control" value="{{$customer->birthdate}}" required/>
             </div>
 
@@ -73,13 +72,16 @@
             <div class="form-group">
                 <label for="hasnewsletter">Newsletter</label>
                 <select name="hasnewsletter" class="form-control">
-                    <option value="0">No</option>
-                    <option value="1">Yes</option>
+                    @if ($customer->hasnewsletter == 0)
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    @else
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    @endif
                 </select>
-=======
-                <input type="datetime" name="birthdate" class="form-control" value="{{$customer->birthdate}}" required/>
->>>>>>> origin/master
             </div>
+
 
             <h4 class="text-center">First Address information</h4>
 
@@ -125,7 +127,6 @@
                 <input type="text" name="postalcode2" class="form-control" value="{{$customer->postal_code2}}"/>
             </div>
 
-<<<<<<< HEAD
             <h4 class="text-center">Password reset</h4>
 
             <div class="form-group">
@@ -135,9 +136,6 @@
                     <option value="1">Yes</option>
                 </select>
             </div>
-
-=======
->>>>>>> origin/master
 
             <input type="submit" value="Update user" class="btn btn-success"/>
         </form>
