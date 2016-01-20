@@ -959,6 +959,24 @@ body.game-3030-46090 {
     font-size: 25px;
 }
 
+/* login alert message */
+
+.alert{
+    margin-top: 140px;
+    margin-bottom: -90px;
+}
+
+/* about page */
+
+.ul-about {
+    list-style-type: circle;
+    display: inline-block;
+}
+
+.li-about {
+    border-bottom: 1px solid black;
+}
+
 /* Slider products style */
 .slider {
     width: 100%;
@@ -975,6 +993,7 @@ body.game-3030-46090 {
 .carousel-inner .prev {
     left: -25%;
 }
+<<<<<<< HEAD
 .sliderbutton {
     position: relative;
     top: -170px;
@@ -987,4 +1006,8 @@ body.game-3030-46090 {
 }
 .lead {
     color: black;
+=======
+.left {
+
+>>>>>>> origin/master
 }
