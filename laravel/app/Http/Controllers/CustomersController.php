@@ -41,18 +41,15 @@ class CustomersController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'username'          => 'required|max:32|string',
+            'username'          => 'required|max:255|unique:tbl_users',
+            'email'             => 'required|email|max:255|unique:tbl_users',
             'firstname'         => 'required|string',
             'lastname'          => 'required|string',
             'insertion'         => 'string',
             'phone_nr'          => 'string',
             'birhdate'          => 'date',
             'isadmin'           => 'required|boolean',
-<<<<<<< HEAD
-            'hasnewsletter'     => 'required',
-=======
             'hasnewsletter'     => 'required|boolean',
->>>>>>> origin/master
             'city'              => 'required|string',
             'street'            => 'required|string',
             'house_nr'          => 'required|string',
@@ -60,18 +57,12 @@ class CustomersController extends Controller
             'city2'             => 'string',
             'street2'           => 'string',
             'house_nr2'         => 'string',
-<<<<<<< HEAD
             'postalcode2'       => 'string'
-=======
-            'postalcode2'       => 'string',
-            'email'             => 'required|email',
-            'password'          => 'required|password'
->>>>>>> origin/master
         ]);
 
         $user = \App\User::create($request->except('_token'));
 
-        return Redirect('user')->with('message', 'Customer created succesfully!');
+        return Redirect('admin/Customers/customers')->with('message', 'Customer created succesfully!');
     }
 
     /**
@@ -117,7 +108,6 @@ class CustomersController extends Controller
             'lastname'          => 'required|string',
             'insertion'         => 'string',
             'phone_nr'          => 'string',
-<<<<<<< HEAD
             'birhdate'          => 'date',
             'isadmin'           => 'required|boolean',
             'hasnewsletter'     => 'required',
@@ -158,37 +148,7 @@ class CustomersController extends Controller
 
 
         return Redirect('admin/Customers/customers')->with('message', 'Customer changed succesfully');
-=======
-            'birhdate'          => '',
-            'isadmin'           => '',
-            'hasnewsletter'     => '',
-            'city'              => '',
-            'street'            => '',
-            'house_nr'          => '',
-            'postalcode'        => '',
-            'city2'             => '',
-            'street2'           => '',
-            'house_nr2'         => '',
-            'postalcode2'       => '',
-            'email'             => '',
-            'password'          => ''
 
-
-
-        ]);
-
-        $product = \App\Product::find($id);
-
-        $product->name = $request->name;
-        $product->description = $request->description;
-        $product->price = $request->price;
-        $product->category_id = $request->category_id;
-
-        $product->save();
-
-
-        return Redirect('products')->with('message', 'Product changed succesfully');
->>>>>>> origin/master
     }
 
     /**
@@ -199,12 +159,8 @@ class CustomersController extends Controller
      */
     public function destroy($id)
     {
-<<<<<<< HEAD
         $customer = \App\User::find($id);
         $customer->delete();
         return Redirect('admin/Customers/customers')->with('message', 'Customer deleted succesfully');
-=======
-        //
->>>>>>> origin/master
     }
 }
