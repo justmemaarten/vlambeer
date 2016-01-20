@@ -18,7 +18,8 @@ class ProductController extends Controller
      */
     public function index() {
         $products = \App\Product::all();
-        return view('pages/products/index',compact('products'));
+        $categories = \App\Category::all();
+        return view('pages/products/index',compact('products', 'categories'));
     }
 
     /**
@@ -61,8 +62,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+
         $product = \App\Product::where('product_id', $id)->first();
-        return view('pages/products/show',compact('product'));
+        $categories = \App\Category::all();
+        return view('pages/products/show',compact('product', 'categories', 'ses'));
     }
 
     /**
