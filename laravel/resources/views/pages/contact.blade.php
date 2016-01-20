@@ -36,7 +36,7 @@
                     <textarea name="message" id="" cols="30" rows="10" placeholder="Type you're message here!" class="form-control" required></textarea>
                 </div>
 
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" name="button_pressed" class="btn btn-primary">
             </form>
 
 

@@ -32,6 +32,10 @@ class PagesController extends Controller
 
     }
 
+    public function mail() {
+        return view('pages/contact');
+    }
+
     public function cart() {
         $id = $_GET['id'];
         dd(view('pages/shop/cart')->with($id));
