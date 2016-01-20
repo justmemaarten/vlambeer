@@ -6,6 +6,14 @@
             {{ csrf_field() }}
             <h1 class="text-center">Edit Contact</h1>
 
+            @if ($errors->has())
+                <ul class="list-group">
+                    @foreach($errors->all() as $error)
+                        <li class="list-group-item list-group-item-warning">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            @endif
+
             <input type="hidden" name="_method" value="put"/>
 
             <div class="form-group">
@@ -20,7 +28,7 @@
 
             <div class="form-group">
                 <label for="firstName">First name</label>
-                <input type="text" name="firstName" class="form-control" value="{{$customer->firstname}}" required/>
+                <input type="text" name="firstname" class="form-control" value="{{$customer->firstname}}" required/>
             </div>
 
             <div class="form-group">
@@ -46,6 +54,19 @@
             <div class="form-group">
                 <label for="isadmin">Admin</label>
                 <select name="isadmin" class="form-control">
+                    @if ($customer->isadmin == 0)
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    @else
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    @endif
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hasnewsletter">Newsletter</label>
+                <select name="hasnewsletter" class="form-control">
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>
@@ -70,7 +91,7 @@
 
             <div class="form-group">
                 <label for="postal_code">Postal Code</label>
-                <input type="text" name="postal_code" class="form-control" value="{{$customer->postalcode}}"/>
+                <input type="text" name="postalcode" class="form-control" value="{{$customer->postalcode}}"/>
             </div>
 
             <h4 class="text-center">Second Address information</h4>
@@ -92,10 +113,18 @@
 
             <div class="form-group">
                 <label for="postal_code2">Postal Code 2</label>
-                <input type="text" name="postal_code2" class="form-control" value="{{$customer->postalcode2}}"/>
+                <input type="text" name="postalcode2" class="form-control" value="{{$customer->postal_code2}}"/>
             </div>
 
-            <h1>PASSWORD!!</h1>
+            <h4 class="text-center">Password reset</h4>
+
+            <div class="form-group">
+                <label for="passwordreset">Set password to lastname</label>
+                <select name="passwordreset" class="form-control">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
 
 
             <input type="submit" value="Update user" class="btn btn-warning pull-right"/>

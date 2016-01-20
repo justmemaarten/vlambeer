@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class CustomersController extends Controller
 {
@@ -49,14 +50,15 @@ class CustomersController extends Controller
             'phone_nr'          => 'string',
             'birhdate'          => 'date',
             'isadmin'           => 'required|boolean',
+            'hasnewsletter'     => 'required',
             'city'              => 'required|string',
             'street'            => 'required|string',
             'house_nr'          => 'required|string',
-            'postal_code'       => 'required|string',
+            'postalcode'        => 'required|string',
             'city2'             => 'string',
             'street2'           => 'string',
             'house_nr2'         => 'string',
-            'postal_code2'      => 'string'
+            'postalcode2'       => 'string'
         ]);
 
         $customer = \App\User::create($request->except('_token'));
@@ -99,15 +101,17 @@ class CustomersController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $this->validate($request, [
-            'username'          => 'required|max:32|string',
+            'username'          => 'required|max:255',
+            'email'             => 'required|email|max:255',
             'firstname'         => 'required|string',
             'lastname'          => 'required|string',
             'insertion'         => 'string',
             'phone_nr'          => 'string',
-            'birthdate'         => 'date',
+            'birhdate'          => 'date',
             'isadmin'           => 'required|boolean',
-            'hasnewsletter'     => 'required|boolean',
+            'hasnewsletter'     => 'required',
             'city'              => 'required|string',
             'street'            => 'required|string',
             'house_nr'          => 'required|string',
@@ -115,13 +119,13 @@ class CustomersController extends Controller
             'city2'             => 'string',
             'street2'           => 'string',
             'house_nr2'         => 'string',
-            'postalcode2'       => 'string',
-            'email'             => 'required|email'
+            'postalcode2'       => 'string'
         ]);
 
-        $user = \App\Product::find($id);
+        $user = \App\User::find($id);
 
         $user->username = $request->username;
+        $user->email = $request->email;
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
         $user->insertion = $request->insertion;
@@ -137,11 +141,14 @@ class CustomersController extends Controller
         $user->street2 = $request->street2;
         $user->house_nr2 = $request->house_nr2;
         $user->postalcode2 = $request->postalcode2;
+        if ($request->passwordreset == 1) {
+            $user->password = Hash::make($request->lastname);
+        }
 
         $user->save();
 
 
-        return Redirect('pages/admin/Customers/customers')->with('message', 'Product changed succesfully');
+        return Redirect('admin/Customers/customers')->with('message', 'Customer changed succesfully');
     }
 
     /**
@@ -154,7 +161,7 @@ class CustomersController extends Controller
     {
         $customer = \App\User::find($id);
         $customer->delete();
-        return Redirect('admin/Customers/customers')->with('message', 'Product deleted succesfully');
+        return Redirect('admin/Customers/customers')->with('message', 'Customer deleted succesfully');
     }
 
 }

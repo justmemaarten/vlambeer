@@ -4,11 +4,6 @@
      <form class="col-md-4 col-md-push-4" action="{{ action("CustomersController@store") }}" method="POST">
          {{ csrf_field() }}
         <h1 class="text-center">Add Contact</h1>
-         @if(!empty(Session::get('message')))
-             <ul>
-                 <li style="clear: both; width: 95%;" class="list-group-item list-group-item-success">{{ Session::get('message')}}</li>
-             </ul>
-         @endif
 
          @if ($errors->has())
             <ul class="list-group">
@@ -66,6 +61,14 @@
              </select>
          </div>
 
+         <div class="form-group">
+             <label for="hasnewsletter">Newsletter</label>
+             <select name="hasnewsletter" class="form-control">
+                 <option value="0">No</option>
+                 <option value="1">Yes</option>
+             </select>
+         </div>
+
         <h4 class="text-center">First Address information</h4>
 
          <div class="form-group">
@@ -85,7 +88,7 @@
 
          <div class="form-group">
              <label for="postal_code">Postal Code</label>
-             <input type="text" name="postal_code" class="form-control">
+             <input type="text" name="postalcode" class="form-control">
          </div>
 
          <h4 class="text-center">Second Address information</h4>
@@ -106,7 +109,7 @@
 
          <div class="form-group">
              <label for="postal_code2">Postal Code 2</label>
-             <input type="text" name="postal_code2" class="form-control">
+             <input type="text" name="postalcode2" class="form-control">
          </div>
 
         <input type="submit" value="Create user" class="btn btn-success"/>
