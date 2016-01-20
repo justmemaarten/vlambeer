@@ -9,16 +9,16 @@
             On 2 December 2012, Vlambeer announced a sequel to Luftrauser called Luftrausers. On 19 December 2012, Vlambeer released the iOS version of Super Crate Box. Its success prevented the studio from going out of business due to the financial ramifications of the decreased motivation caused by the cloning incident. On 14 March 2013, Vlambeer released Ridiculous Fishing on iOS, after resuming its development.</p>
         <div class="space"></div>
         <h3>Games</h3>
-        <ul>
-            <li>Super Crate Box (2010)</li>
-            <li>Karate (2011)</li>
-            <li>Serious Sam: The Random Encounter (2011)</li>
-            <li>Gun Godz (2012)</li>
-            <li>Yeti Hunter (2012)</li>
-            <li>Ridiculous Fishing (2013)</li>
-            <li>Luftrausers (2014)</li>
-            <li>Nuclear Throne (2015)</li>
-            <li>Space Murder (in development)</li>
+        <ul class="ul-about">
+            <li class="li-about">Super Crate Box (2010)</li>
+            <li class="li-about">Karate (2011)</li>
+            <li class="li-about">Serious Sam: The Random Encounter (2011)</li>
+            <li class="li-about">Gun Godz (2012)</li>
+            <li class="li-about">Yeti Hunter (2012)</li>
+            <li class="li-about">Ridiculous Fishing (2013)</li>
+            <li class="li-about">Luftrausers (2014)</li>
+            <li class="li-about">Nuclear Throne (2015)</li>
+            <li class="li-about">Space Murder (in development)</li>
         </ul>
         <div class="space"></div>
         <div class="space"></div>

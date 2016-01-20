@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Vlambeer</title>
-
     <link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/animations.css')}}">
@@ -131,9 +130,19 @@ if(!isset($_GET['id'])){
     </div>
 </div>
 <div class="container games-container animatedParent animateOnce">
-    @if (Session::has('authMessage', 'MessageBag'))
-        {{ Session::get('authMessage', 'MessageBag') }}
+
+    @include('flash::message')
+
+    @if($errors->has())
+        <div class="alert alert-warning">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
     @endif
+
     <div class="animated fadeInDownShort" id="quote"></div>
 
     @yield('content')

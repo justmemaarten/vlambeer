@@ -940,3 +940,21 @@ body.game-3030-46090 {
     left: 46%;
     font-size: 25px;
 }
+
+/* login alert message */
+
+.alert{
+    margin-top: 140px;
+    margin-bottom: -90px;
+}
+
+/* about page */
+
+.ul-about {
+    list-style-type: circle;
+    display: inline-block;
+}
+
+.li-about{
+    border-bottom: 1px solid black;
+}

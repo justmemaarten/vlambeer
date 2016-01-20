@@ -137,6 +137,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
+        Laracasts\Flash\FlashServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -159,6 +162,9 @@ return [
     */
 
     'aliases' => [
+
+        'Flash'     => Laracasts\Flash\Flash::class,
+
 
         'App'       => Illuminate\Support\Facades\App::class,
         'Artisan'   => Illuminate\Support\Facades\Artisan::class,
