@@ -959,7 +959,6 @@ body.game-3030-46090 {
     font-size: 25px;
 }
 
-<<<<<<< HEAD
 /* login alert message */
 
 .alert{
@@ -974,9 +973,10 @@ body.game-3030-46090 {
     display: inline-block;
 }
 
-.li-about{
+.li-about {
     border-bottom: 1px solid black;
-=======
+}
+
 /* Slider products style */
 .slider {
     width: 100%;
@@ -994,6 +994,5 @@ body.game-3030-46090 {
     left: -25%;
 }
 .left {
-    
->>>>>>> origin/master
+
 }
