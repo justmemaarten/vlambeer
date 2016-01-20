@@ -15,7 +15,7 @@
     <div class="user">
         <img src="http://www.lorempixel.com/40/40" alt="">
         <h4>{{Auth::user()->email}}</h4>
-        <a href="auth/logout" class="dropdown"><i class="fa fa-sign-out fa-2x"></i></a>
+        <a href="{{action('Auth\AuthController@getLogout')}}" class="dropdown"><i class="fa fa-sign-out fa-2x"></i></a>
     </div>
 
 </header>
