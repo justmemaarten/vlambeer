@@ -136,7 +136,7 @@ footer {
         color: #B8B8B8;
         list-style: none;
     }
-    
+
     footer a:hover {
         color: #B8B8B8;
     }
@@ -689,7 +689,7 @@ body:after {
     background: rgba(1, 87, 155, 0.8);
 }
 .table td {
-    border-top: none!important;
+    border-top: none !important;
 }
 
 .price-info p {
@@ -854,8 +854,8 @@ body.game-3030-46090 {
 /* merchandise store */
 
 .product-link:hover {
-    text-decoration-color: #8a8a8a;!important
-    text-decoration: underline;!important
+    text-decoration-color: #8a8a8a !important;
+    text-decoration: underline !important;
 }
 
 .col-lg-3-store {
@@ -864,14 +864,15 @@ body.game-3030-46090 {
 }
 
 .merchandise-product {
-     background-color: #171717;
-     width: 23.6666666%;!important;
+
+     width: 23.6666666% !important;
      float: left;
      margin-right: 1.779%;
      margin-bottom: 23px;
      border-radius: 15px;
      color: white;
      max-height: 427px;
+     box-shadow: 0px 0px 1px 1px black;
  }
 
 .merchandise-product:nth-child(4n) {
@@ -908,7 +909,7 @@ body.game-3030-46090 {
 
 .order-btn {
     background-color: #171717;
-    border: #5a5a5a 2px solid!important;
+    border: #5a5a5a 2px solid !important;
     color: white;
     margin-top: 5px;
     margin-left: 15px;
@@ -959,6 +960,24 @@ body.game-3030-46090 {
     font-size: 25px;
 }
 
+/* login alert message */
+
+.alert{
+    margin-top: 140px;
+    margin-bottom: -90px;
+}
+
+/* about page */
+
+.ul-about {
+    list-style-type: circle;
+    display: inline-block;
+}
+
+.li-about {
+    border-bottom: 1px solid black;
+}
+
 /* Slider products style */
 .slider {
     width: 100%;
@@ -975,6 +994,20 @@ body.game-3030-46090 {
 .carousel-inner .prev {
     left: -25%;
 }
+
+.sliderbutton {
+    position: relative;
+    top: -170px;
+    color: black;
+    text-decoration: none;
+}
+.sliderbutton:hover {
+    color: black;
+    text-decoration: none;
+}
+.lead {
+    color: black;
+}
 .left {
-    
+
 }

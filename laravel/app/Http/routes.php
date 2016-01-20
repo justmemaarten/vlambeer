@@ -33,6 +33,8 @@ Route::resource('/user', "UserController");
 
 Route::resource('/products', "ProductController");
 
+Route::post('/mail', 'PagesController@mail');
+
 
 
 Route::get('/admin', "PagesController@admin");
