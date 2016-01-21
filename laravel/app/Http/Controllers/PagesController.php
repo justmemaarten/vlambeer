@@ -13,12 +13,6 @@ class PagesController extends Controller
 
     public $cartContents;
 
-    public function __construct() {
-        $cart = new cartController();
-        $cartContents = $cart->getCartSession();
-
-    }
-
     public function home() {
         $cart = new cartController();
         $cartContents = $cart->getCartSession();
