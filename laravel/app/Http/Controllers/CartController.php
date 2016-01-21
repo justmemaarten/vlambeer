@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-
+    public $cartContents;
     private $contents = array();
 
     #   Important! Change this value for redistribution!
@@ -108,7 +108,8 @@ class CartController extends Controller
      */
     public function index()
     {
-
+        $cart = new cartController();
+        $cartContents = $cart->getCartSession();
 
 
 //        $this->contents[5] = ['amount' => 9];
@@ -183,7 +184,7 @@ class CartController extends Controller
             }
 
         }
-        return view('pages/shop/cart', compact('products', 'suggestions'));
+        return view('pages/shop/cart', compact('products', 'suggestions', 'cartContents'));
 
 //        dump($products);
 //        dump($suggestions);
