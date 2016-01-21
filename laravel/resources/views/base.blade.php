@@ -141,10 +141,22 @@ if(!isset($_GET['id'])){
     </div>
 </div>
 <div class="container games-container animatedParent animateOnce">
-    @if (Session::has('authMessage', 'MessageBag'))
-        {{ Session::get('authMessage', 'MessageBag') }}
-    @endif
-    <div class="animated fadeInDownShort" id="quote"></div>
+    <div class="alert-container">
+        <div class="quote-space"></div>
+        @include('flash::message')
+
+        @if($errors->has())
+            <div class="alert-msg alert-warning">
+                <ul class="">
+                    @foreach($errors->all() as $error)
+                        <li class="">{{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <div class="animated fadeInDownShort" id="quote"></div>
+    </div>
+
 
     @yield('content')
 

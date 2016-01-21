@@ -302,7 +302,7 @@ footer {
 
 #quote
 {
-    margin-top: 75px;
+    margin-top: 45px !important;
     margin-bottom: 40px;
     text-align:center;
     padding-top:10px;
@@ -324,6 +324,10 @@ footer {
 {
     font-size:10px;
     color:#666;
+}
+
+.quote-space{
+    margin-top: 215px !important;
 }
 
 /*game style per pagina */
@@ -962,9 +966,14 @@ body.game-3030-46090 {
 
 /* login alert message */
 
-.alert{
-    margin-top: 140px;
+.alert-msg {
+    margin-top: 20px;
+}
+
+.alert-container {
+    margin-top: -70px;
     margin-bottom: -90px;
+    padding-bottom: 100px;
 }
 
 /* about page */
