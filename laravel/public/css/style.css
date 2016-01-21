@@ -1040,6 +1040,17 @@ body.game-3030-46090 {
 .merchandise-name {
     height: 30px;
 }
+.product-desc ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+
+}
+.product-desc ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
 
 /* make sidebar nav vertical */
 @media (min-width: 768px) {

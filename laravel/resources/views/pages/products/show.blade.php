@@ -28,11 +28,12 @@
         <div class="col-sm-9">
             <img class="pull-left product-img" src="{{ $product['img'] }}" alt="" height="250">
 
-            <h1>{{ $product['name'] }}</h1>
-            <p>{!! $product['description'] !!}</p>
-            <p>{{ $product['price'] }}</p>
-            <p>Stock: {{ $product['stock'] }}
-
+                <h1>{{ $product['name'] }}</h1>
+            <div class="product-desc">
+                <p>{!! $product['description'] !!}</p>
+                <p>{{ $product['price'] }}</p>
+                <p>Stock: {{ $product['stock'] }}
+            </div>
             <br>
                 @if(!empty($sizes))
                     Size:

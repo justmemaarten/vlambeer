@@ -55,6 +55,10 @@ class PagesController extends Controller
         return view('pages/shop/data', compact('user', 'products'));
     }
     public function pay() {
+
+        $cart = new cartController();
+        $cartContents = $cart->getCartSession();
+
         $user_id = \Auth::user()->id;
         //$products = $_GET['products'];
         $user = \App\User::where('id', $user_id)->first();
@@ -82,7 +86,7 @@ class PagesController extends Controller
             );
         }
 
-        return view('pages/shop/pay', compact('address'));
+        return view('pages/shop/pay', compact('address', 'cartContents'));
 
     }
     public function invoice() {
