@@ -62,6 +62,36 @@ class PagesController extends Controller
         $user_id = \Auth::user()->id;
         //$products = $_GET['products'];
         $user = \App\User::where('id', $user_id)->first();
+
+        foreach ($cartContents as $product => $data) {
+
+            $products[$product] = \App\Product::where('product_id', $product)->first();
+
+            $products[$product]['amount'] = $cartContents[$product]['amount'];
+
+        }
+        $products['total'] = 0;
+        $products['totalprice'] = 0;
+        $products['categories'] = [];
+        $products['btw'] = 0.21;
+
+
+        //filling array items
+        foreach ($products as $product => $data) {
+            if (isset($data['category_id'])) {
+                $products['total'] += $products[$product]['amount'];
+                $products['totalprice'] += $products[$product]['amount'] * $products[$product]['price'];
+
+
+                $category = \App\Category::where('category_id', '=', $data['category_id'])->pluck('category_id');
+
+                if (!in_array($category, $products['categories'])) {
+                    array_push($products['categories'], $category);
+                }
+
+            }
+
+        }
         if(!empty($_GET['address'])) {
         if($_GET['address'] == 1) {
             $address = array(
@@ -86,7 +116,7 @@ class PagesController extends Controller
             );
         }
 
-        return view('pages/shop/pay', compact('address', 'cartContents'));
+        return view('pages/shop/pay', compact('address', 'products'));
 
     }
     public function invoice() {

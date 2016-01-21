@@ -1,9 +1,60 @@
 @extends('base')
 
 @section('content')
-
     <h1>Shipping address:</h1>
     <h3>{{ $address['street'] }} {{ $address['house_nr'] }}, {{ $address['postalcode'] }}, {{ $address['city'] }}</h3>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>
+                <h4>Product</h4>
+            </th>
+            <th>
+                <h4>Description</h4>
+            </th>
+            <th>
+                <h4>Amount</h4>
+            </th>
+            <th>
+                <h4>Price</h4>
+            </th>
+            <th>
+                <h4>Sub Total</h4>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ($products as $product => $data)
+            <tr>
+                <td>{{ $data['name'] }}</td>
+                <td>{{ $data['description'] }}</td>
+                <td class="text-right">{{ $data->amount }}</td>
+                <td class="text-right">{{ $data->price }}</td>
+                <td class="text-right">{{ $data->amount * $data->price }}</td>
+            </tr>
+        @endforeach
+
+        </tbody>
+    </table>
+    <div class="row text-right">
+        <div class="col-xs-2 col-xs-offset-8">
+            <p>
+                <strong>
+                    Sub Total : <br>
+                    TAX : <br>
+                    Total : <br>
+                </strong>
+            </p>
+        </div>
+        <div class="col-xs-2">
+            <strong>
+                {{ $products->totalprice }} <br>
+                {{round((float)$products->btw * 100 )}}% <br>
+                {{$products->totalprice * (1+$products->btw)}} <br>
+            </strong>
+        </div>
+    </div>
 
 <div class="pay pull-right">
     <h2>Paying methods:</h2>
