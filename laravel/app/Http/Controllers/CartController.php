@@ -23,11 +23,10 @@ class CartController extends Controller
 
     public function __construct() {
 
-        session_start();
 
         if ( empty( $_SESSION['cart'] ) )
         {
-            $_SESSION['cart'] = null;
+            $_SESSION['cart'] = array();
         }
 
         $this->contents = $this->getCartSession();
@@ -49,7 +48,7 @@ class CartController extends Controller
      *
      *  @return bool|User
      */
-//    public final function setCartSession( User $oUser )
+
     public final function setCartSession( $input )
     {
         $sPlain                 = serialize( $input );

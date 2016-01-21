@@ -10,8 +10,20 @@ use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
+
+    public $cartContents;
+
+    public function __construct() {
+        $cart = new cartController();
+        $cartContents = $cart->getCartSession();
+
+    }
+
     public function home() {
-        return view('pages/home');
+        $cart = new cartController();
+        $cartContents = $cart->getCartSession();
+
+        return view('pages/home', compact('cartContents'));
     }
 
     public function products() {
