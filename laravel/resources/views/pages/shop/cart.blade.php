@@ -1,6 +1,7 @@
 @extends('base')
 
 @section('content')
+    {{--{{dd($cartContents)}}--}}
     <h1>Shopping Cart</h1>
         @if($products != [])
         <div class="row row-shopping-cart">

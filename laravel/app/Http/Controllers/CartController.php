@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
-    public $cartContents;
     private $contents = array();
 
     #   Important! Change this value for redistribution!
@@ -108,12 +107,6 @@ class CartController extends Controller
      */
     public function index()
     {
-        $cart = new cartController();
-        $cartContents = $cart->getCartSession();
-
-
-//        $this->contents[5] = ['amount' => 9];
-//        $this->contents[7] = ['amount' => 11];
 
         $suggestions = [];
         $matchingSuggestions = [];
@@ -184,7 +177,7 @@ class CartController extends Controller
             }
 
         }
-        return view('pages/shop/cart', compact('products', 'suggestions', 'cartContents'));
+        return view('pages/shop/cart', compact('products', 'suggestions'));
 
 //        dump($products);
 //        dump($suggestions);
@@ -218,13 +211,15 @@ class CartController extends Controller
             $this->contents[$_POST['id']]['amount'] += $_POST['amount'];
         }
 
+
         $msg = 'Product added to the cart succesfully!';
         if(!isset(\Auth::user()->id)) {
             $msg .= ' Please Register/Login to check your cart';
         }
 
-        return redirect('products')->with('message', $msg);
-//        return view('pages/products');
+
+
+        return redirect('store')->with('message', $msg);
 
     }
 
