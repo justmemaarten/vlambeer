@@ -935,6 +935,10 @@ body.game-3030-46090 {
 }
 */
 
+.top-contact {
+    margin-bottom: 20px;
+}
+
 /* contact page map */
 #map
 {
@@ -942,6 +946,7 @@ body.game-3030-46090 {
     height: 750px;
     margin-left: 0;
     float: left;
+    margin-bottom: 20px;
 }
 
 /* loading screen */

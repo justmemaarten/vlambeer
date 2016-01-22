@@ -5,14 +5,14 @@
     <div class="container">
         <h1>Contact</h1>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 top-contact">
                 <p>info@vlambeer.com Neude 5,<br> 3512 AD, Utrecht, <br> the Netherlands </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 top-contact">
                 <p>Looking for us? Check out the map below! this is where we work if you want
                    to stop by make an appointment!</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 top-contact">
                 <p>If you fill in the form below, we will get your message and contact you back as soon as possible!</p>
             </div>
             <form class="col-md-4 pull-right" action="../../../app/mail.php" method="post">
