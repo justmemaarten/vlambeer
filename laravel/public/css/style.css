@@ -160,7 +160,7 @@ footer {
 }
 
 .panel-group .panel .row {
-    padding-bottom: 30px;
+    padding-bottom: 90px;
 }
 
 .panel-group .panel .game-img {
@@ -950,7 +950,7 @@ body.game-3030-46090 {
     height: 490px;
     margin-left: 0px;
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 /* loading screen */
