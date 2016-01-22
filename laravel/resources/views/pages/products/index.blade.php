@@ -60,7 +60,7 @@
     <div class="space"></div>
             <img src="https://ssl.static-iceb.org/hitcase/images/home/our-products.png" alt="our products" class="center-block ourproducts">
 
-    <div class="animated pulse">
+    <div class="animated pulse ourproducts">
         @foreach($products as $product)
 
             <div class="col-lg-3-store merchandise-product">

@@ -58,7 +58,6 @@ class PagesController extends Controller
 
         $cart = new cartController();
         $cartContents = $cart->getCartSession();
-
         $user_id = \Auth::user()->id;
         //$products = $_GET['products'];
         $user = \App\User::where('id', $user_id)->first();
@@ -149,10 +148,23 @@ class PagesController extends Controller
     }
 
     public function paid() {
-        $user = Cart::where ("id","rok"); // note that this shortcut is available if the comparison is =
-        $new_user_data = array("status" => "paid");
-        $user->fill($new_user_data);
-        $user->save();
+        $user_id = \Auth::user()->id;
+        $cart = new cartController();
+        $date = date('Y/m/d H:i:s');
+        $cartContents = $cart->getCartSession();
+        $carttable = \App\Cart::orderBy('id', 'DESC')->first();
+        $orderid = $carttable['id'] + 1;
+        foreach($cartContents as $product => $data) {
+        $orderdata = [
+            'id'            => $orderid,
+            'user_id'       => $user_id,
+            'product_id'    => $product,
+            'amount'        => $data['amount'],
+            'paid'          => $date,
+            'status'        => 'paid'
+        ];
+            $product = \App\Cart::create($orderdata);
+        }
         return view('pages/shop/paid');
     }
 
