@@ -44,8 +44,8 @@
         </div>
 
         <div class="form-group">
-            <label for="phone">Phone number</label>
-            <input type="text" name="phonenumber" class="form-control" required/>
+            <label for="phone_nr">Phone number</label>
+            <input type="text" name="phone_nr" class="form-control" required/>
         </div>
 
         <div class="form-group">
@@ -94,7 +94,7 @@
          <h4 class="text-center">Second Address information</h4>
          <div class="form-group">
              <label for="street2">Street 2</label>
-             <input type="text" name="faxNumber" class="form-control"/>
+             <input type="text" name="street2" class="form-control"/>
          </div>
 
          <div class="form-group">

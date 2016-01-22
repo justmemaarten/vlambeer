@@ -47,7 +47,7 @@ class CustomersController extends Controller
             'lastname'          => 'required|string',
             'insertion'         => 'string',
             'phone_nr'          => 'string',
-            'birhdate'          => 'date',
+            'birthdate'         => 'date',
             'isadmin'           => 'required|boolean',
             'hasnewsletter'     => 'required|boolean',
             'city'              => 'required|string',
@@ -57,10 +57,31 @@ class CustomersController extends Controller
             'city2'             => 'string',
             'street2'           => 'string',
             'house_nr2'         => 'string',
-            'postalcode2'       => 'string'
+            'postalcode2'       => 'string',
+            'password'          => 'required|string'
         ]);
 
-        $user = \App\User::create($request->except('_token'));
+        $user = new \App\User();
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->insertion = $request->insertion;
+        $user->phone_nr = $request->phone_nr;
+        $user->birthdate = $request->birthdate;
+        $user->isadmin = $request->isadmin;
+        $user->hasnewsletter = $request->hasnewsletter;
+        $user->city = $request->city;
+        $user->street = $request->street;
+        $user->house_nr = $request->house_nr;
+        $user->postalcode = $request->postalcode;
+        $user->city2 = $request->city2;
+        $user->street2 = $request->street2;
+        $user->house_nr2 = $request->house_nr2;
+        $user->postalcode2 = $request->postalcode2;
+        $user->password = Hash::make($request->password);
+
+        $user->save();
 
         return Redirect('admin/Customers/customers')->with('message', 'Customer created succesfully!');
     }
@@ -108,7 +129,7 @@ class CustomersController extends Controller
             'lastname'          => 'required|string',
             'insertion'         => 'string',
             'phone_nr'          => 'string',
-            'birhdate'          => 'date',
+            'birthdate'         => 'date',
             'isadmin'           => 'required|boolean',
             'hasnewsletter'     => 'required',
             'city'              => 'required|string',
