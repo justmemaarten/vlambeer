@@ -8,11 +8,11 @@
     <style>
         @media print {
             #printbtn {
-                display :  none;
+                        display :  none;
             }
-        }
+    }
     </style>
-    </head>
+</head>
 <body>
     <div class="container">
         <img src="{{ asset('media/img/logo.png') }}" alt="Logo" height="90px" width="100px" class="pull-left">
@@ -75,15 +75,17 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($products as $product)
-                <?php $productI = \App\Product::where('product_id', $product['product_id'])->first() ?>
-            <tr>
-                <td>{{ $productI['name'] }}</td>
-                <td>{{ $productI['description'] }}</td>
-                <td class="text-right">{{ $product->amount }}</td>
-                <td class="text-right">{{ $productI->price }}</td>
-                <td class="text-right">{{ $product->amount * $productI->price }}</td>
-            </tr>
+            @foreach($products as $product => $data)
+                @if(isset($data['category_id']))
+                    <?php $productI = \App\Product::where('product_id', $data['product_id'])->first() ?>
+                    <tr>
+                        <td>{{ $productI['name'] }}</td>
+                        <td>{{ $productI['description'] }}</td>
+                        <td class="text-right">{{ $data['amount'] }}</td>
+                        <td class="text-right">{{ $productI['price'] }}</td>
+                        <td class="text-right">{{ $data['amount'] * $productI['price']  }}</td>
+                    </tr>
+                @endif
             @endforeach
 
             </tbody>
@@ -100,9 +102,9 @@
             </div>
             <div class="col-xs-2">
                 <strong>
-                    {{ $products->totalprice }} <br>
-                    {{round((float)$products->btw * 100 )}}% <br>
-                    {{$products->totalprice * (1+$products->btw)}} <br>
+                    {{ $products['totalprice'] }} <br>
+                    {{round((float)$products['btw'] * 100 )}}% <br>
+                    {{$products['totalprice'] * (1+$products['btw'])}} <br>
                 </strong>
             </div>
         </div>
