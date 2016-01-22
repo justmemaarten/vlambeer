@@ -26,13 +26,15 @@
             </div>
         </div>
         <div class="col-sm-9">
+
             <img class="pull-left product-img" src="{{ $product['img'] }}" alt="" height="250">
 
                 <h1>{{ $product['name'] }}</h1>
             <div class="product-desc">
                 <p>{!! $product['description'] !!}</p>
-                <p>{{ $product['price'] }}</p>
-                <p>Stock: {{ $product['stock'] }}
+                @if($product['stock'] > 0)
+                <p class="price">Price: &euro; {{ $product['price'] }}</p>
+
             </div>
             <br>
                 @if(!empty($sizes))
@@ -48,7 +50,7 @@
             <form class="form-horizontal" action="{{action("CartController@store")}}" method="post">
                 {{ csrf_field() }}
                 <input type="hidden" name="id" value="{{$product['product_id']}}">
-                <div class="form-group tocart pull-right">
+                <div class="form-group tocart">
                     <label class="control-label">Amount</label>
                     <div class="input-group">
                         <input type="number" class="form-control" min="1" value="1" name="amount">
@@ -59,6 +61,10 @@
                     </div>
                 </div>
             </form>
+            @endif
+            @if($product['stock'] == 0)
+                <p class="alert-danger pull-right stock">Out of stock</p>
+            @endif
         </div>
     </div>
 

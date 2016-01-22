@@ -19,6 +19,7 @@
             <li><strong>Postal code 2:</strong> {{ $customer->postalcode2 }}</li>
             <h5></h5>
             <li><strong>Is admin:</strong>@if($customer->isadmin == 0) No @else Yes @endif</li>
+            <li><strong>Has newsletter:</strong>@if($customer->hasnewsletter == 0) No @else Yes @endif</li>
 
 
             <li><strong>Created at:</strong> {{ $customer->created_at }}</li>

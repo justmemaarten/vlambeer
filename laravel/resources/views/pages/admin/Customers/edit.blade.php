@@ -18,12 +18,7 @@
 
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" name="username" class="form-control" value="{{$customer->username}}" required/>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" class="form-control" required/>
+                <input type="text" name="username" class="form-control" value="{{ $customer->username }}" required/>
             </div>
 
             <div class="form-group">
@@ -47,8 +42,8 @@
             </div>
 
             <div class="form-group">
-                <label for="phone">Phone number</label>
-                <input type="text" name="phonenumber" class="form-control" value="{{$customer->phone_nr}}" required/>
+                <label for="phone_nr">Phone number</label>
+                <input type="text" name="phone_nr" class="form-control" value="{{$customer->phone_nr}}" required/>
             </div>
 
             <div class="form-group">
@@ -109,7 +104,7 @@
 
             <div class="form-group">
                 <label for="street2">Street 2</label>
-                <input type="text" name="faxNumber" class="form-control" value="{{$customer->street2}}"/>
+                <input type="text" name="street2" class="form-control" value="{{$customer->street2}}"/>
             </div>
 
             <div class="form-group">

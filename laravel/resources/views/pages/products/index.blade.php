@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="col-sm-9">
-    <h1 class="merchandise-title text-center">Sale</h1>
+            <img src="http://www.the-help-plus.com/uploads/2/5/0/0/25002886/7167602_orig.png" alt="sale" width="250" class="center-block">
     <div class="animated pulse">
         <div class="slider">
             <div class="row">
@@ -58,7 +58,7 @@
 
     </div>
     <div class="space"></div>
-    <h1 class="merchandise-title">All Products</h1>
+            <img src="https://ssl.static-iceb.org/hitcase/images/home/our-products.png" alt="our products" class="center-block ourproducts">
 
     <div class="animated pulse">
         @foreach($products as $product)
