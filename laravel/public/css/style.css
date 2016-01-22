@@ -54,6 +54,10 @@ header {
             select:focus;
             outline: none;
         }
+        
+        header nav li p {
+            float: right;
+        }
 
             header nav li a, header nav li button {
                 height: 90px;
