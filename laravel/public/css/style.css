@@ -627,6 +627,10 @@ body:after {
     width: 120px;
 }
 
+.form-horizontal .tocart {
+    margin-left: 266px;
+}
+
 .product-info {
     background: rgba(0, 0, 255, 0.8);
     width: 329px;
