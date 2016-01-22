@@ -1,6 +1,7 @@
 @extends('base')
 
 @section('content')
+{{--    {{dd($products)}}--}}
     <h1>Shipping address:</h1>
     <h3>{{ $address['street'] }} {{ $address['house_nr'] }}, {{ $address['postalcode'] }}, {{ $address['city'] }}</h3>
 
@@ -26,13 +27,15 @@
         </thead>
         <tbody>
         @foreach ($products as $product => $data)
-            <tr>
-                <td>{{ $data['name'] }}</td>
-                <td>{{ $data['description'] }}</td>
-                <td class="text-right">{{ $data->amount }}</td>
-                <td class="text-right">{{ $data->price }}</td>
-                <td class="text-right">{{ $data->amount * $data->price }}</td>
-            </tr>
+            @if(isset($data['category_id']))
+                <tr>
+                    <td>{{ $data['name'] }}</td>
+                    <td>{{ $data['description'] }}</td>
+                    <td class="text-right">{{ $data['amount'] }}</td>
+                    <td class="text-right">{{ $data['price'] }}</td>
+                    <td class="text-right">{{ $data['amount'] * $data['price'] }}</td>
+                </tr>
+            @endif
         @endforeach
 
         </tbody>
@@ -49,9 +52,9 @@
         </div>
         <div class="col-xs-2">
             <strong>
-                {{ $products->totalprice }} <br>
-                {{round((float)$products->btw * 100 )}}% <br>
-                {{$products->totalprice * (1+$products->btw)}} <br>
+                {{ $products['totalprice'] }} <br>
+                {{round((float)$products['btw'] * 100 )}}% <br>
+                {{$products['totalprice'] * (1+$products['btw'])}} <br>
             </strong>
         </div>
     </div>
