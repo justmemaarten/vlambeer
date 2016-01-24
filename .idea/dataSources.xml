@@ -13,6 +13,7 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
+      <libraries />
     </data-source>
     <data-source source="LOCAL" name="MySQL - vlambeer@localhost [2]" uuid="bf6ecfe8-b9eb-4a04-8f52-a03a359f10d1">
       <driver-ref>mysql</driver-ref>
@@ -26,6 +27,7 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
+      <libraries />
     </data-source>
   </component>
 </project>

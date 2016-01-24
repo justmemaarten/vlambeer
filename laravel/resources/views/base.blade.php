@@ -70,15 +70,6 @@ if(!isset($_GET['id'])){
                             </div>
                         </li>
                         <li>
-                            <a href="{{action('CartController@index')}}" ><i class="fa fa-shopping-cart white"></i></a>
-                            <p>
-                            @if(isset($cartContents))
-                                {{count($cartContents)}}
-                            @endif
-                            </p>
-                            |
-                        </li>
-                        <li>
                             <a href="{{action('ProductController@index')}}" >Store</a> |
                         </li>
                         <li>
@@ -97,7 +88,15 @@ if(!isset($_GET['id'])){
                                 </button>
                         @endif
                         </li>
-
+                        <li>
+                            <p>
+                                <a href="{{action('CartController@index')}}" ><i class="fa fa-shopping-cart white"></i></a>
+                                @if(isset($cartContents))
+                                    {{count($cartContents)}}
+                                @endif
+                            </p>
+                            |
+                        </li>
                     </ul>
                 </div>
             </nav>

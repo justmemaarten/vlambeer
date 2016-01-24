@@ -54,6 +54,10 @@ header {
             select:focus;
             outline: none;
         }
+        
+        header nav li p {
+            float: right;
+        }
 
             header nav li a, header nav li button {
                 height: 90px;
@@ -156,7 +160,7 @@ footer {
 }
 
 .panel-group .panel .row {
-    padding-bottom: 30px;
+    padding-bottom: 90px;
 }
 
 .panel-group .panel .game-img {
@@ -623,6 +627,10 @@ body:after {
     width: 120px;
 }
 
+.form-horizontal .tocart {
+    margin-left: 266px;
+}
+
 .product-info {
     background: rgba(0, 0, 255, 0.8);
     width: 329px;
@@ -669,6 +677,25 @@ body:after {
 /*right: 90px;*/
 /*width: 80px;*/
 /*}*/
+
+.product-page h1 {
+    margin-top: -4px;
+}
+
+.product-desc ul li{
+    display: list-item !important;
+}
+
+.product-desc ul li:last-of-type {
+    margin-left: 266px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
 
 .product-price {
     text-align: center;
@@ -943,10 +970,10 @@ body.game-3030-46090 {
 #map
 {
     width: 74%;
-    height: 750px;
-    margin-left: 0;
+    height: 490px;
+    margin-left: 0px;
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 /* loading screen */

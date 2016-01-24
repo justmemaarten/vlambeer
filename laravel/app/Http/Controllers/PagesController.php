@@ -119,23 +119,68 @@ class PagesController extends Controller
 
     }
     public function invoice() {
+        $user = \Auth::user();
+
+        $cart = new cartController();
+        $cartContents = $cart->getCartSession();
+
         $user_id = \Auth::user()->id;
-        $products = \App\Cart::where('id' , '=',  $user_id)
-            ->where('paid', '=', NULL)
-            ->get();
+        //$products = $_GET['products'];
         $user = \App\User::where('id', $user_id)->first();
 
-        $products->totalprice = 0;
-        $products->total = 0;
-        $products->btw = 0.21;
+        foreach ($cartContents as $product => $data) {
 
-        foreach($products as $product) {
-            $product->productInfo = \App\Product::where('product_id', '=', $product['product_id'])->first();
-            $price = ($product->productInfo['price']);
-            $products->total += $product->amount;
-            $products->totalprice += $price * $product->amount;
+            $products[$product] = \App\Product::where('product_id', $product)->first();
+
+            $products[$product]['amount'] = $cartContents[$product]['amount'];
+
         }
-        return view('pages/shop/invoice', compact('products', 'user'));
+        $products['total'] = 0;
+        $products['totalprice'] = 0;
+        $products['categories'] = [];
+        $products['btw'] = 0.21;
+
+
+        //filling array items
+        foreach ($products as $product => $data) {
+            if (isset($data['category_id'])) {
+                $products['total'] += $products[$product]['amount'];
+                $products['totalprice'] += $products[$product]['amount'] * $products[$product]['price'];
+
+
+                $category = \App\Category::where('category_id', '=', $data['category_id'])->pluck('category_id');
+
+                if (!in_array($category, $products['categories'])) {
+                    array_push($products['categories'], $category);
+                }
+
+            }
+
+        }
+        if(!empty($_GET['address'])) {
+            if($_GET['address'] == 1) {
+                $address = array(
+                    'street'        => $user['street'],
+                    'city'          => $user['city'],
+                    'house_nr'      => $user['house_nr'],
+                    'postalcode'    => $user['postalcode']
+                );
+            } else if($_GET['address'] == 2) {
+                $address = array(
+                    'street'        => $user['street2'],
+                    'city'          => $user['city2'],
+                    'house_nr'      => $user['house_nr2'],
+                    'postalcode'    => $user['postalcode2']
+                );
+            }} else {
+            $address = array(
+                'street'        => $user['street2'],
+                'city'          => $user['city2'],
+                'house_nr'      => $user['house_nr2'],
+                'postalcode'    => $user['postalcode2']
+            );
+        }
+        return view('pages/shop/invoice', compact('address', 'products', 'user'));
     }
 
 
