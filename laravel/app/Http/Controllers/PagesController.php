@@ -163,7 +163,11 @@ class PagesController extends Controller
             'paid'          => $date,
             'status'        => 'paid'
         ];
-            $product = \App\Cart::create($orderdata);
+            $order = \App\Cart::create($orderdata);
+
+            $product = \App\Product::where('product_id', $product)->first();
+            $product->stock = $product->stock - $data['amount'];
+            $product->save();
         }
         return view('pages/shop/paid');
     }
