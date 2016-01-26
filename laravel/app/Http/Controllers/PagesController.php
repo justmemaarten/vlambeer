@@ -157,29 +157,6 @@ class PagesController extends Controller
             }
 
         }
-        if(!empty($_GET['address'])) {
-            if($_GET['address'] == 1) {
-                $address = array(
-                    'street'        => $user['street'],
-                    'city'          => $user['city'],
-                    'house_nr'      => $user['house_nr'],
-                    'postalcode'    => $user['postalcode']
-                );
-            } else if($_GET['address'] == 2) {
-                $address = array(
-                    'street'        => $user['street2'],
-                    'city'          => $user['city2'],
-                    'house_nr'      => $user['house_nr2'],
-                    'postalcode'    => $user['postalcode2']
-                );
-            }} else {
-            $address = array(
-                'street'        => $user['street2'],
-                'city'          => $user['city2'],
-                'house_nr'      => $user['house_nr2'],
-                'postalcode'    => $user['postalcode2']
-            );
-        }
         return view('pages/shop/invoice', compact('address', 'products', 'user'));
     }
 
@@ -213,7 +190,9 @@ class PagesController extends Controller
             $product = \App\Product::where('product_id', $product)->first();
             $product->stock = $product->stock - $data['amount'];
             $product->save();
+            $cart->destroy($product);
         }
+
         return view('pages/shop/paid');
     }
 

@@ -17,16 +17,19 @@ class CustomerOrderController extends Controller
     public function index()
     {
         $user_id = \Auth::user()->id;
-        $order = \App\Cart::where('user_id', $user_id)->first();
-        $products = \App\Cart::where('id' , $order->id );
+        $orders = \App\Cart::where('user_id', $user_id)->groupby('id')->get();
         $total = 0;
-
-//        foreach($products as $product) {
-//            $productInfo = \App\Product::where('product_id', $product['product_id'])->first();
-//            $price = ($productInfo['price']);
-//            $total += $price * $product->amount;
-//            dd($total);
-//        }
+        $order = [];
+        for ($i = 0; $i < sizeof($orders); $i++) {
+            $order[$i] = \App\Cart::where('id', $orders[$i]['id']);
+        }
+        dd($order);
+        foreach($orders as $order) {
+            $productInfo = \App\Product::where('product_id', $order['product_id'])->first();
+            $price = ($productInfo['price']);
+            $total += $price * $product->amount;
+            dd($total);
+        }
 
         $totalprice = $total * 1.21;
         return view('pages/orders/index', compact('order', 'totalprice'));

@@ -1,6 +1,7 @@
 @extends('base')
 
 @section('content')
+
     <div class="row">
         <div class="col-sm-3" >
             <div class="sidebar-nav">
@@ -17,7 +18,7 @@
                     <div class="navbar-collapse collapse sidebar-navbar-collapse">
                         <ul class="nav navbar-nav">
                             @foreach($categories as $category)
-                            <li><a href="#">{{ $category['category'] }}</a></li>
+                            <li><a href="{{ action('ProductController@categorie', ['category' => $category['category_id']]) }}">{{ $category['category'] }}</a></li>
                             @endforeach
 
                         </ul>

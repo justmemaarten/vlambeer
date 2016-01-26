@@ -109,4 +109,12 @@ class ProductController extends Controller
     {
         //
     }
+    public function categorie()
+    {
+        $id = (int) $_GET['category'];
+        $products = \App\Product::all();
+        $categories = \App\Category::all();
+        return view('pages/products/categorie',compact('products', 'categories', 'id'));
+
+    }
 }

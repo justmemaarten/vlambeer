@@ -602,6 +602,9 @@ body:after {
     /* Shopping cart style */
     /* Shopping cart style */
     /* Shopping cart style */
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: transparent;
+}
 .table-striped>tbody>tr:nth-of-type(odd) {
     background-color:rgba(1,87,155,0.2) ;
 }
@@ -1052,6 +1055,10 @@ body.game-3030-46090 {
 }
 
 /* Product */
+.merchandise-name {
+    color: #000;
+    text-decoration: none;
+}
 .product-img {
     margin-right: 15px;
 }
@@ -1065,7 +1072,12 @@ body.game-3030-46090 {
     margin-right: 1.779%;
     margin-bottom: 23px;
     border-radius: 15px;
+    border: solid gray 1px;
 
+}
+.merchandise-price {
+    font-size: 20px;
+    margin-right: 5px;
 }
 .merchandise-product:nth-child(4n) {
     margin-right: 0px;

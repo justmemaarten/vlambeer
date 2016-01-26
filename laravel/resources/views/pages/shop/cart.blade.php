@@ -5,7 +5,7 @@
     <h1>Shopping Cart</h1>
         @if($products != [])
         <div class="row row-shopping-cart">
-            <table class="table table-striped table-hover col-md-12">
+            <table class="table table-striped col-md-12">
                 @foreach ($products as $product => $data)
                     @if(isset($products[$product]['product_id']))
                         {{ $product['product_id'] }}
